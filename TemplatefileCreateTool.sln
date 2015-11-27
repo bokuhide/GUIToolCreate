@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUITool", "構成マップ見た目\GUITool.csproj", "{A532404D-E803-4834-BD6C-578B2123FF26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "構成マップ見た目", "構成マップ見た目\構成マップ見た目.csproj", "{A532404D-E803-4834-BD6C-578B2123FF26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
