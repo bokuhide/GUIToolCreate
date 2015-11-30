@@ -16,7 +16,7 @@ namespace 構成マップ見た目
         int index_iamge = 0;
         int index_flavor = 0;
         int index_net = 0;
-
+        Form map;
         
         public static List<string> edit_data1 = new List<string> { };
 
@@ -38,19 +38,21 @@ namespace 構成マップ見た目
         private void button1_Click(object sender, EventArgs e)
         {
             index_iamge = comboBox2.SelectedIndex;
-            edit_data1.Add(comboBox2.Items[index_iamge].ToString());
+           // edit_data1.Add(comboBox2.Items[index_iamge].ToString());
 
-            index_flavor = comboBox4.SelectedIndex;
-            edit_data1.Add(comboBox4.Items[index_flavor].ToString());
+           // index_flavor = comboBox4.SelectedIndex;
+          //  edit_data1.Add(comboBox4.Items[index_flavor].ToString());
 
-            index_net = comboBox3.SelectedIndex;
-            edit_data1.Add(comboBox3.Items[index_net].ToString());
+           // index_net = comboBox3.SelectedIndex;
+          //  edit_data1.Add(comboBox3.Items[index_net].ToString());
 
            
 
 
             string instance_name = textBox1.Text;
-            MessageBox.Show(edit_data1[0]);
+            // MessageBox.Show(edit_data1[0]);
+
+            this.Close();
 
         }
     }

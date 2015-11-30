@@ -26,13 +26,19 @@ namespace 構成マップ見た目
             editor = new EditorForm();
             editor.Owner = this;
             editor.Show();
+ 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             //edit_data[0] = EditorForm.edit_data1[0];
             MessageBox.Show(EditorForm.edit_data1[0]);
+        }
+
+        private void routerCopy_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("Hello!!");
+            Console.WriteLine("Button1がクリックされました");
         }
     }
 }
