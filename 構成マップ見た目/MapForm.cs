@@ -37,7 +37,7 @@ namespace 構成マップ見た目
 
         private void routerCopy_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show("Hello!!");
+            MessageBox.Show("Hello!!");
             Console.WriteLine("Button1がクリックされました");
         }
     }
