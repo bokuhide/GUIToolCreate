@@ -1,4 +1,6 @@
-﻿namespace 構成マップ見た目
+﻿using System.Collections.Generic;
+
+namespace 構成マップ見た目
 {
     partial class EditorForm
     {
@@ -28,6 +30,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,11 +40,45 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "centos-test",
+            "windows8",
+            "cirros-0.3.3-i386",
+            "cirros-0.3.3-x86_64"});
+            this.comboBox2.Location = new System.Drawing.Point(173, 164);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 20);
+            this.comboBox2.TabIndex = 8;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "demo-net"});
+            this.comboBox3.Location = new System.Drawing.Point(173, 214);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 20);
+            this.comboBox3.TabIndex = 9;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "m1.tiny",
+            "m1.small",
+            "m1.medium",
+            "m1.large",
+            "m1.xlarge"});
+            this.comboBox4.Location = new System.Drawing.Point(173, 189);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 20);
+            this.comboBox4.TabIndex = 10;
             // 
             // button1
             // 
@@ -49,6 +88,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "決定";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -107,47 +147,6 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "接続先";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-                "centos-test",
-                "windows8",
-                "cirros-0.3.3-i386",
-                "cirros-0.3.3-x86_64"
-            });
-            this.comboBox2.Location = new System.Drawing.Point(173, 164);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 8;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-                "demo-net"
-            });
-
-            this.comboBox3.Location = new System.Drawing.Point(173, 214);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 20);
-            this.comboBox3.TabIndex = 9;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-                "m1.tiny",
-                "m1.small",
-                "m1.medium",
-                "m1.large",
-                "m1.xlarge"
-            });
-            this.comboBox4.Location = new System.Drawing.Point(173, 189);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 20);
-            this.comboBox4.TabIndex = 10;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(174, 142);
@@ -157,6 +156,7 @@
             // 
             // EditorForm
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -193,5 +193,17 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.TextBox textBox1;
+        private MapForm mapForm;
+        private List<string> edit_data;
+
+        public EditorForm(MapForm mapForm)
+        {
+            this.mapForm = mapForm;
+        }
+
+        public EditorForm(MapForm mapForm, List<string> edit_data) : this(mapForm)
+        {
+            this.edit_data = edit_data;
+        }
     }
 }
