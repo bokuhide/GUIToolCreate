@@ -28,3 +28,13 @@ C:\Users\matsuoka\Documents\GitHub\GUIToolCreate\構成マップ見た目\obj\De
 C:\Users\matsuoka\Documents\GitHub\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.csproj.GenerateResource.Cache
 C:\Users\matsuoka\Documents\GitHub\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.exe
 C:\Users\matsuoka\Documents\GitHub\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.pdb
+C:\GUIToolLocalrepository\構成マップ見た目\bin\Debug\構成マップ見た目.exe.config
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.exe
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.pdb
+C:\GUIToolLocalrepository\構成マップ見た目\bin\Debug\構成マップ見た目.exe
+C:\GUIToolLocalrepository\構成マップ見た目\bin\Debug\構成マップ見た目.pdb
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.csprojResolveAssemblyReference.cache
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.EditorForm.resources
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.MapForm.resources
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.Properties.Resources.resources
+C:\GUIToolLocalrepository\構成マップ見た目\obj\Debug\構成マップ見た目.csproj.GenerateResource.Cache
