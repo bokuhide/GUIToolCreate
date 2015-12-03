@@ -14,6 +14,7 @@ namespace 構成マップ見た目
     public partial class MapForm : Form
     {
         Form editor;
+        Form editor1;
         //public List<string> edit_data = new List<string> { };
 
         public MapForm()
@@ -21,6 +22,7 @@ namespace 構成マップ見た目
             InitializeComponent();
         }
 
+        //初期配置、最初のinstance編集ボタンイベント
         private void instanceEdit_Click(object sender, EventArgs e)
         {
             
@@ -28,6 +30,14 @@ namespace 構成マップ見た目
             editor.Owner = this;
             editor.Show();
  
+        }
+
+        //次の配置、２つ目のinstance編集ボタンイベント
+        private void instanceEdit1_Click(object sender, EventArgs e)
+        {
+            editor1 = new EditorForm1();
+            editor1.Owner = this;
+            editor1.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -98,5 +108,7 @@ namespace 構成マップ見た目
 
 
         }
+
+        
     }
 }

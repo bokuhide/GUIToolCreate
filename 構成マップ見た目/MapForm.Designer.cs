@@ -34,7 +34,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.routerCopy = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.instancePicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.instanceEdit = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -43,17 +43,24 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.instanceEdit1 = new System.Windows.Forms.Button();
+            this.instancePicture１ = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instancePicture)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.instancePicture１)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -105,20 +112,20 @@
             this.routerCopy.UseVisualStyleBackColor = true;
             this.routerCopy.Click += new System.EventHandler(this.routerCopy_Click);
             // 
-            // pictureBox4
+            // instancePicture
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 62);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.instancePicture.Image = ((System.Drawing.Image)(resources.GetObject("instancePicture.Image")));
+            this.instancePicture.Location = new System.Drawing.Point(0, 3);
+            this.instancePicture.Name = "instancePicture";
+            this.instancePicture.Size = new System.Drawing.Size(100, 62);
+            this.instancePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.instancePicture.TabIndex = 4;
+            this.instancePicture.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.instanceEdit);
-            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.instancePicture);
             this.panel2.Location = new System.Drawing.Point(287, 31);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(100, 92);
@@ -194,11 +201,52 @@
             this.pictureBox9.TabIndex = 11;
             this.pictureBox9.TabStop = false;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(255, 168);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(37, 10);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.instanceEdit1);
+            this.panel3.Controls.Add(this.instancePicture１);
+            this.panel3.Location = new System.Drawing.Point(287, 133);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 92);
+            this.panel3.TabIndex = 12;
+            // 
+            // instanceEdit1
+            // 
+            this.instanceEdit1.Location = new System.Drawing.Point(12, 66);
+            this.instanceEdit1.Name = "instanceEdit1";
+            this.instanceEdit1.Size = new System.Drawing.Size(75, 23);
+            this.instanceEdit1.TabIndex = 5;
+            this.instanceEdit1.Text = "編集";
+            this.instanceEdit1.UseVisualStyleBackColor = true;
+            this.instanceEdit1.Click += new System.EventHandler(this.instanceEdit1_Click);
+            // 
+            // instancePicture１
+            // 
+            this.instancePicture１.Image = ((System.Drawing.Image)(resources.GetObject("instancePicture１.Image")));
+            this.instancePicture１.Location = new System.Drawing.Point(0, 3);
+            this.instancePicture１.Name = "instancePicture１";
+            this.instancePicture１.Size = new System.Drawing.Size(100, 62);
+            this.instancePicture１.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.instancePicture１.TabIndex = 4;
+            this.instancePicture１.TabStop = false;
+            // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 617);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button3);
@@ -215,13 +263,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instancePicture)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.instancePicture１)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,7 +284,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button routerCopy;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox instancePicture;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button instanceEdit;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -242,6 +293,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button instanceEdit1;
+        private System.Windows.Forms.PictureBox instancePicture１;
     }
 }
 

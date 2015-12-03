@@ -8,20 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//ひとつ目のinstance編集画面
+//２つ目のinstance編集画面
 namespace 構成マップ見た目
 {
-    public partial class EditorForm : Form
+    public partial class EditorForm1 : Form
     {
 
         int index_iamge = 0;
         int index_flavor = 0;
         int index_net = 0;
-        //Form map;
-        
+        Form map;
+
         public static List<string> edit_data1 = new List<string> { };
 
-        public EditorForm()
+        public EditorForm1()
         {
             InitializeComponent();
         }
@@ -41,13 +41,13 @@ namespace 構成マップ見た目
             index_iamge = comboBox2.SelectedIndex;
             edit_data1.Add(comboBox2.Items[index_iamge].ToString());
 
-           index_flavor = comboBox4.SelectedIndex;
-          edit_data1.Add(comboBox4.Items[index_flavor].ToString());
+            index_flavor = comboBox4.SelectedIndex;
+            edit_data1.Add(comboBox4.Items[index_flavor].ToString());
 
-          index_net = comboBox3.SelectedIndex;
-           edit_data1.Add(comboBox3.Items[index_net].ToString());
+            index_net = comboBox3.SelectedIndex;
+            edit_data1.Add(comboBox3.Items[index_net].ToString());
 
-           
+
 
 
             string instance_name = textBox1.Text;
