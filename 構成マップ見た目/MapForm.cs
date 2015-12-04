@@ -13,6 +13,8 @@ namespace 構成マップ見た目
 {
     public partial class MapForm : Form
     {
+        int count = 0;
+        int count2 = 0;
         Form editor;
         Form editor1;
         //public List<string> edit_data = new List<string> { };
@@ -51,8 +53,15 @@ namespace 構成マップ見た目
 
         private void routerCopy_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello!!");
-            Console.WriteLine("Button1がクリックされました");
+            count++;
+            if (count == 1)
+            {
+                this.pictureBox9.Location = new System.Drawing.Point(210, 1000);
+            }
+            else if (count == 2)
+            {
+                this.pictureBox15.Location = new System.Drawing.Point(210, 1000);
+            }
         }
 
         //テンプレートファイル出力部分
@@ -109,6 +118,37 @@ namespace 構成マップ見た目
 
         }
 
-        
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            count2++;
+            if (count2 == 1)
+            {
+                this.pictureBox16.Location = new System.Drawing.Point(210, 1000);
+            }
+            else if (count2 == 2)
+            {
+                this.pictureBox17.Location = new System.Drawing.Point(210, 1000);
+            }
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
