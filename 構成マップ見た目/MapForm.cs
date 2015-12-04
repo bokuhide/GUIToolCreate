@@ -13,6 +13,8 @@ namespace 構成マップ見た目
 {
     public partial class MapForm : Form
     {
+        int count = 0;
+        int count2 = 0;
         Form editor;
         Form editor1;
         //public List<string> edit_data = new List<string> { };
@@ -51,8 +53,15 @@ namespace 構成マップ見た目
 
         private void routerCopy_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello!!");
-            Console.WriteLine("Button1がクリックされました");
+            count++;
+            if (count == 1)
+            {
+                this.pictureBox9.Location = new System.Drawing.Point(210, 1000);
+            }
+            else if (count == 2)
+            {
+                this.pictureBox15.Location = new System.Drawing.Point(210, 1000);
+            }
         }
 
         //テンプレートファイル出力部分
@@ -75,13 +84,21 @@ namespace 構成マップ見た目
             string resourcesRouterInterface = " ext-router-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router, private1-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router}\r\n    subnet_id: {get_resource: private1-sub}\r\n";
             string instance1Firsthalf = " instance1:\r\n   type: OS::Nova::Server\r\n   depends_on: private1-sub\r\n   properties:\r\n    image: ";
 
+            string instance2Firsthalf = " instance2:\r\n   type: OS::Nova::Server\r\n   depends_on: private1-sub\r\n   properties:\r\n    image: ";
+
             //ここに入力されたimage名を入力
             string instance1image = " ";
             string instance1Secondhalf = "    flavor: ";
 
+            string instance2image = "";
+            string instance2Secondhalf = "    flavor: ";
+
             //ここに入力されたflavorを入力
             string instance1flavor = "";
             string instance1Threadhalf = "    networks:\r\n     - network: {get_resource: private1}\r\n";
+
+            string instance2flavor = "";
+            string instance2Threadhalf = "    networks:\r\n     - network: {get_resource: private1}\r\n";
 
             //入力された値を格納
             net_name = EditorForm.edit_data1[2];
@@ -93,6 +110,7 @@ namespace 構成マップ見た目
             writer.WriteLine("{0}", parameters);
             writer.WriteLine("{0}", resources);
             writer.Write("{0}", resourcesPrivatenet);
+            //ここに最初の内部networkの様子が書き込まれる。
             writer.WriteLine("{0}", net_name);
             writer.WriteLine("{0}", resourcesSubnet);
             writer.WriteLine("{0}", resourcesRouter);
@@ -102,6 +120,10 @@ namespace 構成マップ見た目
             writer.Write("{0}", instance1Secondhalf);
             writer.WriteLine("{0}", instance1flavor);
             writer.WriteLine("{0}", instance1Threadhalf);
+            if (count2>=2)
+            {
+                //ここに２つ目のinstance編集内容を記述。おそらくフォーカス元のFormを変えるだけで基本操作は変わらない。
+            }
             writer.Close();
 
             return;
@@ -109,6 +131,38 @@ namespace 構成マップ見た目
 
         }
 
-        
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            count2++;
+            if (count2 == 1)
+            {
+                this.pictureBox16.Location = new System.Drawing.Point(210, 1000);
+
+            }
+            else if (count2 == 2)
+            {
+                this.pictureBox17.Location = new System.Drawing.Point(210, 1000);
+            }
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
