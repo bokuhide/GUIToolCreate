@@ -73,17 +73,27 @@ namespace 構成マップ見た目
             string head = "heat_template_version: 2013-05-23\r\n";
             string parameters = "parameters:\r\n  ext-net:\r\n   type: string\r\n   description: ext-netID\r\n   default: ext-net\r\n";
             string resources = "resources:";
-            string resourcesPrivatenet = " private1:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";
+
+            string resourcesPrivatenet1 = " private1:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";            
+            string resourcesPrivatenet2 = " private2:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";
 
             //ここに入力された内部ネットワークの名前を挿入
-            string net_name = " ";
+            string instance1_net = "";
+            string instance2_net = "";
 
-           
-            string resourcesSubnet = " \r\n private1-sub:\r\n   type: OS::Neutron::Subnet\r\n   depends_on: private1\r\n   properties:\r\n    network_id: {get_resource: private1}\r\n    cidr: 192.168.2.0/24\r\n";
-            string resourcesRouter = " ext-router:\r\n   type: OS::Neutron::Router\r\n   properties:\r\n    external_gateway_info:\r\n     network: {get_param: ext-net}\r\n";
-            string resourcesRouterInterface = " ext-router-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router, private1-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router}\r\n    subnet_id: {get_resource: private1-sub}\r\n";
+            string net_name1 = "demo-net";
+            string net_name2 = "demo-net2";
+
+            string resourcesSubnet1 = " \r\n private1-sub:\r\n   type: OS::Neutron::Subnet\r\n   depends_on: private1\r\n   properties:\r\n    network_id: {get_resource: private1}\r\n    cidr: 192.168.2.0/24\r\n";
+            string resourcesSubnet2 = " \r\n private2-sub:\r\n   type: OS::Neutron::Subnet\r\n   depends_on: private2\r\n   properties:\r\n    network_id: {get_resource: private2}\r\n    cidr: 192.168.3.0/24\r\n";
+
+            string resourcesRouter1 = " ext-router1:\r\n   type: OS::Neutron::Router\r\n   properties:\r\n    external_gateway_info:\r\n     network: {get_param: ext-net}\r\n";
+            string resourcesRouter2 = " ext-router2:\r\n   type: OS::Neutron::Router\r\n   properties:\r\n    external_gateway_info:\r\n     network: {get_param: ext-net}\r\n";
+
+            string resourcesRouterInterface1 = " ext-router1-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router1, private1-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router1}\r\n    subnet_id: {get_resource: private1-sub}\r\n";
+            string resourcesRouterInterface2 = " ext-router2-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router2, private2-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router2}\r\n    subnet_id: {get_resource: private2-sub}\r\n";
+
             string instance1Firsthalf = " instance1:\r\n   type: OS::Nova::Server\r\n   depends_on: private1-sub\r\n   properties:\r\n    image: ";
-
             string instance2Firsthalf = " instance2:\r\n   type: OS::Nova::Server\r\n   depends_on: private1-sub\r\n   properties:\r\n    image: ";
 
             //ここに入力されたimage名を入力
@@ -101,7 +111,7 @@ namespace 構成マップ見た目
             string instance2Threadhalf = "    networks:\r\n     - network: {get_resource: private1}\r\n";
 
             //入力された値を格納
-            net_name = EditorForm.edit_data1[2];
+            instance1_net = EditorForm.edit_data1[2];
             instance1image = EditorForm.edit_data1[0];
             instance1flavor = EditorForm.edit_data1[1];
 
@@ -109,12 +119,21 @@ namespace 構成マップ見た目
             writer.WriteLine("{0}", head);
             writer.WriteLine("{0}", parameters);
             writer.WriteLine("{0}", resources);
-            writer.Write("{0}", resourcesPrivatenet);
-            //ここに最初の内部networkの様子が書き込まれる。
-            writer.WriteLine("{0}", net_name);
-            writer.WriteLine("{0}", resourcesSubnet);
-            writer.WriteLine("{0}", resourcesRouter);
-            writer.WriteLine("{0}", resourcesRouterInterface);
+            writer.Write("{0}", resourcesPrivatenet1);
+            writer.WriteLine("{0}", net_name1);
+            writer.WriteLine("{0}", resourcesSubnet1);
+            writer.WriteLine("{0}", resourcesRouter1);
+            writer.WriteLine("{0}", resourcesRouterInterface1);
+
+            if (count >= 1)
+            {
+                
+                writer.Write("{0}", resourcesPrivatenet2);
+                writer.WriteLine("{0}", net_name2);
+                writer.WriteLine("{0}", resourcesSubnet2);
+                writer.WriteLine("{0}", resourcesRouter2);
+                writer.WriteLine("{0}", resourcesRouterInterface2);
+            }
             writer.Write("{0}", instance1Firsthalf);
             writer.WriteLine("{0}", instance1image);
             writer.Write("{0}", instance1Secondhalf);
@@ -122,7 +141,16 @@ namespace 構成マップ見た目
             writer.WriteLine("{0}", instance1Threadhalf);
             if (count2>=2)
             {
+                instance2_net = EditorForm1.edit_data1[2];
+                instance2image = EditorForm1.edit_data1[0];
+                instance2flavor = EditorForm1.edit_data1[1];
                 //ここに２つ目のinstance編集内容を記述。おそらくフォーカス元のFormを変えるだけで基本操作は変わらない。
+                writer.Write("{0}", instance2Firsthalf);
+                writer.WriteLine("{0}", instance2image);
+                writer.Write("{0}", instance2Secondhalf);
+                writer.WriteLine("{0}", instance2flavor);
+                writer.WriteLine("{0}", instance2Threadhalf);
+
             }
             writer.Close();
 
