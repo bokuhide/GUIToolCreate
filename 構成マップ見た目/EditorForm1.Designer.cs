@@ -52,7 +52,6 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "m1.tiny",
             "m1.small",
             "m1.medium",
             "m1.large",
@@ -65,8 +64,16 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "demo-net"});
+            if (MapForm.count == 0) {
+                this.comboBox3.Items.AddRange(new object[] {
+                "demo-net1"});
+            }
+            else if (MapForm.count == 1)
+            {
+                this.comboBox3.Items.AddRange(new object[] {
+                "demo-net1",
+                "demo-net2"});
+            }
             this.comboBox3.Location = new System.Drawing.Point(173, 214);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 20);

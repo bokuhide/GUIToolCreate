@@ -13,8 +13,8 @@ namespace 構成マップ見た目
 {
     public partial class MapForm : Form
     {
-        int count = 0;
-        int count2 = 0;
+        static public int count = 0;
+        static public int count2 = 0;
         Form editor;
         Form editor1;
         //public List<string> edit_data = new List<string> { };
@@ -78,8 +78,8 @@ namespace 構成マップ見た目
             string resourcesPrivatenet2 = " private2:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";
 
             //ここに入力された内部ネットワークの名前を挿入
-            string instance1_net = "";
-            string instance2_net = "";
+            //string instance1_net = "";
+            //string instance2_net = "";
 
             string net_name1 = "demo-net";
             string net_name2 = "demo-net2";
@@ -93,8 +93,12 @@ namespace 構成マップ見た目
             string resourcesRouterInterface1 = " ext-router1-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router1, private1-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router1}\r\n    subnet_id: {get_resource: private1-sub}\r\n";
             string resourcesRouterInterface2 = " ext-router2-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router2, private2-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router2}\r\n    subnet_id: {get_resource: private2-sub}\r\n";
 
-            string instance1Firsthalf = " instance1:\r\n   type: OS::Nova::Server\r\n   depends_on: private1-sub\r\n   properties:\r\n    image: ";
-            string instance2Firsthalf = " instance2:\r\n   type: OS::Nova::Server\r\n   depends_on: private1-sub\r\n   properties:\r\n    image: ";
+            string instance1Firsthalf = " instance1:\r\n   type: OS::Nova::Server\r\n   depends_on: ";
+            string instance1depend_subnet = "";
+            string instance1Firsthalf2 = "\r\n   properties:\r\n    image: ";
+            string instance2Firsthalf = " instance2:\r\n   type: OS::Nova::Server\r\n   depends_on: ";
+            string instance2depend_subnet = "";
+            string instance2Firsthalf2 = "\r\n   properties:\r\n    image: ";
 
             //ここに入力されたimage名を入力
             string instance1image = " ";
@@ -105,13 +109,26 @@ namespace 構成マップ見た目
 
             //ここに入力されたflavorを入力
             string instance1flavor = "";
-            string instance1Threadhalf = "    networks:\r\n     - network: {get_resource: private1}\r\n";
+            string instance1Threadhalf = "    networks:\r\n     - network: {get_resource: ";
+            string instance1connect_net = "";
+            string instance1Forthhalf = "}\r\n";
 
             string instance2flavor = "";
-            string instance2Threadhalf = "    networks:\r\n     - network: {get_resource: private1}\r\n";
+            string instance2Threadhalf = "    networks:\r\n     - network: {get_resource: ";
+            string instance2connect_net = "";
+            string instance2Forthhalf = "}\r\n";
 
             //入力された値を格納
-            instance1_net = EditorForm.edit_data1[2];
+            if (EditorForm.edit_data1[2] == "demo-net1")
+            {
+                instance1depend_subnet = "private1-sub";
+                instance1connect_net = "private1";
+            }
+            else if (EditorForm.edit_data1[2] == "demo-net2")
+            {
+                instance1depend_subnet = "private2-sub";
+                instance1connect_net = "private2";
+            }
             instance1image = EditorForm.edit_data1[0];
             instance1flavor = EditorForm.edit_data1[1];
 
@@ -135,21 +152,38 @@ namespace 構成マップ見た目
                 writer.WriteLine("{0}", resourcesRouterInterface2);
             }
             writer.Write("{0}", instance1Firsthalf);
+            writer.Write("{0}", instance1depend_subnet);
+            writer.Write("{0}", instance1Firsthalf2);
             writer.WriteLine("{0}", instance1image);
             writer.Write("{0}", instance1Secondhalf);
             writer.WriteLine("{0}", instance1flavor);
-            writer.WriteLine("{0}", instance1Threadhalf);
+            writer.Write("{0}", instance1Threadhalf);
+            writer.Write("{0}", instance1connect_net);
+            writer.WriteLine("{0}", instance1Forthhalf);
             if (count2>=2)
             {
-                instance2_net = EditorForm1.edit_data1[2];
+                if (EditorForm1.edit_data1[2] == "demo-net1")
+                {
+                    instance2depend_subnet = "private1-sub";
+                    instance2connect_net = "private1";
+                }
+                else if (EditorForm1.edit_data1[2] == "demo-net2")
+                {
+                    instance2depend_subnet = "private2-sub";
+                    instance2connect_net = "private2";
+                }
                 instance2image = EditorForm1.edit_data1[0];
                 instance2flavor = EditorForm1.edit_data1[1];
                 //ここに２つ目のinstance編集内容を記述。おそらくフォーカス元のFormを変えるだけで基本操作は変わらない。
                 writer.Write("{0}", instance2Firsthalf);
+                writer.Write("{0}", instance2depend_subnet);
+                writer.Write("{0}", instance2Firsthalf2);
                 writer.WriteLine("{0}", instance2image);
                 writer.Write("{0}", instance2Secondhalf);
                 writer.WriteLine("{0}", instance2flavor);
-                writer.WriteLine("{0}", instance2Threadhalf);
+                writer.Write("{0}", instance2Threadhalf);
+                writer.Write("{0}", instance2connect_net);
+                writer.WriteLine("{0}", instance2Forthhalf);
 
             }
             writer.Close();
