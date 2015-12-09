@@ -17,7 +17,7 @@ namespace 構成マップ見た目
         int index_iamge = 0;
         int index_flavor = 0;
         int index_net = 0;
-        Form map;
+        //Form map;
 
         public static List<string> edit_data1 = new List<string> { };
 
@@ -72,6 +72,8 @@ namespace 構成マップ見た目
 
 
             string instance_name = textBox1.Text;
+
+            edit_data1.Add(instance_name);
             // MessageBox.Show(edit_data1[0]);
 
             this.Close();

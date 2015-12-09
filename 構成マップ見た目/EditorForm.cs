@@ -24,6 +24,7 @@ namespace 構成マップ見た目
         public EditorForm()
         {
             InitializeComponent();
+            //this.Controls.Find.
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,12 +48,9 @@ namespace 構成マップ見た目
           index_net = comboBox3.SelectedIndex;
            edit_data1.Add(comboBox3.Items[index_net].ToString());
 
-           
-
-
             string instance_name = textBox1.Text;
+            edit_data1.Add(instance_name);
             // MessageBox.Show(edit_data1[0]);
-
             this.Close();
 
         }
