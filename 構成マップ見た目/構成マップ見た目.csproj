@@ -53,12 +53,6 @@
     <Compile Include="EditorForm.Designer.cs">
       <DependentUpon>EditorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditorForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditorForm1.Designer.cs">
-      <DependentUpon>EditorForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="InstanceConfig.cs" />
     <Compile Include="MapForm.cs">
       <SubType>Form</SubType>
@@ -70,9 +64,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EditorForm.resx">
       <DependentUpon>EditorForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditorForm1.resx">
-      <DependentUpon>EditorForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapForm.resx">
       <DependentUpon>MapForm.cs</DependentUpon>
