@@ -48,7 +48,7 @@
             this.textBox1.Size = new System.Drawing.Size(120, 19);
             this.textBox1.TabIndex = 22;
             // 
-            // comboBox4
+            // flavorComboBox
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
@@ -61,7 +61,7 @@
             this.comboBox4.Size = new System.Drawing.Size(121, 20);
             this.comboBox4.TabIndex = 21;
             // 
-            // comboBox3
+            // networkComboBox
             // 
             this.comboBox3.FormattingEnabled = true;
             if (MapForm.count == 0) {
@@ -79,7 +79,7 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 20);
             this.comboBox3.TabIndex = 20;
             // 
-            // comboBox2
+            // imageComboBox
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {

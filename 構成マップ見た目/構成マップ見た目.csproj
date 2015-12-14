@@ -59,6 +59,7 @@
     <Compile Include="EditorForm1.Designer.cs">
       <DependentUpon>EditorForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstanceConfig.cs" />
     <Compile Include="MapForm.cs">
       <SubType>Form</SubType>
     </Compile>

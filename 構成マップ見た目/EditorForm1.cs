@@ -38,14 +38,14 @@ namespace 構成マップ見た目
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //index_iamge = comboBox2.SelectedIndex;
-            //edit_data1.Add(comboBox2.Items[index_iamge].ToString());
+            //index_iamge = imageComboBox.SelectedIndex;
+            //edit_data1.Add(imageComboBox.Items[index_iamge].ToString());
 
-            //index_flavor = comboBox4.SelectedIndex;
-            //edit_data1.Add(comboBox4.Items[index_flavor].ToString());
+            //index_flavor = flavorComboBox.SelectedIndex;
+            //edit_data1.Add(flavorComboBox.Items[index_flavor].ToString());
 
-           // index_net = comboBox3.SelectedIndex;
-            //edit_data1.Add(comboBox3.Items[index_net].ToString());
+           // index_net = networkComboBox.SelectedIndex;
+            //edit_data1.Add(networkComboBox.Items[index_net].ToString());
 
 
 

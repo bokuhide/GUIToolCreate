@@ -32,14 +32,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.routerCopy = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.instanceEdit1 = new System.Windows.Forms.Button();
             this.instancePicture１ = new System.Windows.Forms.PictureBox();
+            this.instanceEdit1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -49,18 +50,17 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.instanceEdit3 = new System.Windows.Forms.Button();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.instanceEdit4 = new System.Windows.Forms.Button();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
@@ -74,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -87,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -135,6 +135,14 @@
             this.panel1.Size = new System.Drawing.Size(118, 96);
             this.panel1.TabIndex = 3;
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(262, 217);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(210, 95);
+            this.pictureBox18.TabIndex = 26;
+            this.pictureBox18.TabStop = false;
+            // 
             // routerCopy
             // 
             this.routerCopy.Location = new System.Drawing.Point(321, 524);
@@ -179,7 +187,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(33, 271);
+            this.pictureBox9.Location = new System.Drawing.Point(33, 258);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(210, 95);
             this.pictureBox9.TabIndex = 11;
@@ -195,16 +203,6 @@
             this.panel3.Size = new System.Drawing.Size(100, 92);
             this.panel3.TabIndex = 12;
             // 
-            // instanceEdit1
-            // 
-            this.instanceEdit1.Location = new System.Drawing.Point(12, 66);
-            this.instanceEdit1.Name = "instanceEdit1";
-            this.instanceEdit1.Size = new System.Drawing.Size(75, 23);
-            this.instanceEdit1.TabIndex = 5;
-            this.instanceEdit1.Text = "編集";
-            this.instanceEdit1.UseVisualStyleBackColor = true;
-            this.instanceEdit1.Click += new System.EventHandler(this.instanceEdit1_Click);
-            // 
             // instancePicture１
             // 
             this.instancePicture１.Image = ((System.Drawing.Image)(resources.GetObject("instancePicture１.Image")));
@@ -214,6 +212,16 @@
             this.instancePicture１.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.instancePicture１.TabIndex = 4;
             this.instancePicture１.TabStop = false;
+            // 
+            // instanceEdit1
+            // 
+            this.instanceEdit1.Location = new System.Drawing.Point(12, 66);
+            this.instanceEdit1.Name = "instanceEdit1";
+            this.instanceEdit1.Size = new System.Drawing.Size(75, 23);
+            this.instanceEdit1.TabIndex = 5;
+            this.instanceEdit1.Text = "編集";
+            this.instanceEdit1.UseVisualStyleBackColor = true;
+            this.instanceEdit1.Click += new System.EventHandler(this.instanceEdit1_Click);
             // 
             // pictureBox4
             // 
@@ -277,7 +285,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(33, 372);
+            this.pictureBox15.Location = new System.Drawing.Point(33, 359);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(210, 95);
             this.pictureBox15.TabIndex = 22;
@@ -303,14 +311,6 @@
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Location = new System.Drawing.Point(262, 220);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(210, 95);
-            this.pictureBox18.TabIndex = 26;
-            this.pictureBox18.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button2);
@@ -328,6 +328,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "編集";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox21
             // 
@@ -351,21 +352,22 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.instanceEdit3);
             this.panel5.Controls.Add(this.pictureBox19);
             this.panel5.Location = new System.Drawing.Point(287, 321);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(100, 92);
             this.panel5.TabIndex = 31;
             // 
-            // button4
+            // instanceEdit3
             // 
-            this.button4.Location = new System.Drawing.Point(12, 66);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "編集";
-            this.button4.UseVisualStyleBackColor = true;
+            this.instanceEdit3.Location = new System.Drawing.Point(12, 66);
+            this.instanceEdit3.Name = "instanceEdit3";
+            this.instanceEdit3.Size = new System.Drawing.Size(75, 23);
+            this.instanceEdit3.TabIndex = 5;
+            this.instanceEdit3.Text = "編集";
+            this.instanceEdit3.UseVisualStyleBackColor = true;
+            this.instanceEdit3.Click += new System.EventHandler(this.instanceEdit3_Click);
             // 
             // pictureBox19
             // 
@@ -398,21 +400,22 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.instanceEdit4);
             this.panel6.Controls.Add(this.pictureBox23);
             this.panel6.Location = new System.Drawing.Point(287, 419);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(100, 92);
             this.panel6.TabIndex = 33;
             // 
-            // button5
+            // instanceEdit4
             // 
-            this.button5.Location = new System.Drawing.Point(12, 66);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "編集";
-            this.button5.UseVisualStyleBackColor = true;
+            this.instanceEdit4.Location = new System.Drawing.Point(12, 66);
+            this.instanceEdit4.Name = "instanceEdit4";
+            this.instanceEdit4.Size = new System.Drawing.Size(75, 23);
+            this.instanceEdit4.TabIndex = 5;
+            this.instanceEdit4.Text = "編集";
+            this.instanceEdit4.UseVisualStyleBackColor = true;
+            this.instanceEdit4.Click += new System.EventHandler(this.instanceEdit4_Click);
             // 
             // pictureBox23
             // 
@@ -436,7 +439,7 @@
             // 
             // pictureBox25
             // 
-            this.pictureBox25.Location = new System.Drawing.Point(262, 315);
+            this.pictureBox25.Location = new System.Drawing.Point(263, 315);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(210, 95);
             this.pictureBox25.TabIndex = 35;
@@ -444,7 +447,7 @@
             // 
             // pictureBox26
             // 
-            this.pictureBox26.Location = new System.Drawing.Point(263, 419);
+            this.pictureBox26.Location = new System.Drawing.Point(262, 419);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(210, 95);
             this.pictureBox26.TabIndex = 35;
@@ -514,17 +517,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 617);
-            this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox25);
             this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.pictureBox24);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox25);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.routerCopy);
             this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button3);
@@ -545,12 +546,15 @@
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pictureBox24);
             this.Name = "MapForm";
             this.Text = "構成マップ";
             this.Load += new System.EventHandler(this.MapForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -564,7 +568,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
@@ -616,11 +619,11 @@
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button instanceEdit3;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button instanceEdit4;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.PictureBox pictureBox26;

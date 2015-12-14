@@ -30,9 +30,9 @@ namespace 構成マップ見た目
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.imageComboBox = new System.Windows.Forms.ComboBox();
+            this.networkComboBox = new System.Windows.Forms.ComboBox();
+            this.flavorComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,49 +43,47 @@ namespace 構成マップ見た目
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // imageComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.imageComboBox.FormattingEnabled = true;
+            this.imageComboBox.Items.AddRange(new object[] {
             "centos-test",
-            "windows8",
             "cirros-0.3.3-i386",
             "cirros-0.3.3-x86_64"});
-            this.comboBox2.Location = new System.Drawing.Point(173, 164);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 8;
+            this.imageComboBox.Location = new System.Drawing.Point(173, 164);
+            this.imageComboBox.Name = "comboBox2";
+            this.imageComboBox.Size = new System.Drawing.Size(121, 20);
+            this.imageComboBox.TabIndex = 8;
             // 
-            // comboBox3
+            // networkComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
+            this.networkComboBox.FormattingEnabled = true;
             if (MapForm.count == 0) {
-                this.comboBox3.Items.AddRange(new object[] {
+                this.networkComboBox.Items.AddRange(new object[] {
                 "demo-net1"});
             }
             else if (MapForm.count == 1)
             {
-                this.comboBox3.Items.AddRange(new object[] {
+                this.networkComboBox.Items.AddRange(new object[] {
                 "demo-net1",
                 "demo-net2"});
             }
-            this.comboBox3.Location = new System.Drawing.Point(173, 214);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 20);
-            this.comboBox3.TabIndex = 9;
+            this.networkComboBox.Location = new System.Drawing.Point(173, 214);
+            this.networkComboBox.Name = "comboBox3";
+            this.networkComboBox.Size = new System.Drawing.Size(121, 20);
+            this.networkComboBox.TabIndex = 9;
             // 
-            // comboBox4
+            // flavorComboBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.flavorComboBox.FormattingEnabled = true;
+            this.flavorComboBox.Items.AddRange(new object[] {
             "m1.small",
             "m1.medium",
-            "m1.large",
-            "m1.xlarge"});
-            this.comboBox4.Location = new System.Drawing.Point(173, 189);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 20);
-            this.comboBox4.TabIndex = 10;
+            "m1.large"});
+            this.flavorComboBox.Location = new System.Drawing.Point(173, 189);
+            this.flavorComboBox.Name = "comboBox4";
+            this.flavorComboBox.Size = new System.Drawing.Size(121, 20);
+            this.flavorComboBox.TabIndex = 10;
             // 
             // button1
             // 
@@ -169,9 +167,9 @@ namespace 構成マップ見た目
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(636, 440);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.flavorComboBox);
+            this.Controls.Add(this.networkComboBox);
+            this.Controls.Add(this.imageComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -196,9 +194,9 @@ namespace 構成マップ見た目
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox imageComboBox;
+        private System.Windows.Forms.ComboBox networkComboBox;
+        private System.Windows.Forms.ComboBox flavorComboBox;
         private System.Windows.Forms.TextBox textBox1;
         private MapForm mapForm;
         private List<string> edit_data;

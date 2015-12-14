@@ -13,18 +13,18 @@ namespace 構成マップ見た目
 {
     public partial class EditorForm : Form
     {
-
-        int index_iamge = 0;
-        int index_flavor = 0;
-        int index_net = 0;
-        //Form map;
+        InstanceConfig instanceConfig;
         
-        public static List<string> edit_data1 = new List<string> { };
-
-        public EditorForm()
+        public EditorForm(InstanceConfig ic)
         {
             InitializeComponent();
-            //this.Controls.Find.
+
+            this.instanceConfig = ic;
+
+            textBox1.Text = ic.instanceName;
+            imageComboBox.SelectedIndex = ic.imageNum;
+            networkComboBox.SelectedIndex = ic.networkNum;
+            flavorComboBox.SelectedIndex = ic.flavorNum;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,18 +39,18 @@ namespace 構成マップ見た目
 
         private void button1_Click(object sender, EventArgs e)
         {
-            index_iamge = comboBox2.SelectedIndex;
-            edit_data1.Add(comboBox2.Items[index_iamge].ToString());
+            this.instanceConfig.imageNum = imageComboBox.SelectedIndex;
+            this.instanceConfig.imageName = imageComboBox.SelectedItem.ToString();
+            this.instanceConfig.flavorNum = flavorComboBox.SelectedIndex;
+            this.instanceConfig.flavorName = flavorComboBox.SelectedItem.ToString();
+            this.instanceConfig.networkNum = networkComboBox.SelectedIndex;
+            this.instanceConfig.networkName = networkComboBox.SelectedItem.ToString();
 
-           index_flavor = comboBox4.SelectedIndex;
-          edit_data1.Add(comboBox4.Items[index_flavor].ToString());
-
-          index_net = comboBox3.SelectedIndex;
-           edit_data1.Add(comboBox3.Items[index_net].ToString());
-
-            string instance_name = textBox1.Text;
-            edit_data1.Add(instance_name);
+            this.instanceConfig.instanceName = textBox1.Text;
             // MessageBox.Show(edit_data1[0]);
+            
+
+
             this.Close();
 
         }
