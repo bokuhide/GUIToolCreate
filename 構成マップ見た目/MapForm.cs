@@ -192,7 +192,7 @@ namespace 構成マップ見た目
         private void fileExport()
         {
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");
-            StreamWriter writer = new StreamWriter(@"..\..\text.txt", false, sjisEnc);
+            StreamWriter writer = new StreamWriter(@"..\..\..\text.txt", false, sjisEnc);
 
             string head = "heat_template_version: 2013-05-23\r\n";
             string parameters = "parameters:\r\n  ext-net:\r\n   type: string\r\n   description: ext-netID\r\n   default: ext-net\r\n";
@@ -460,7 +460,7 @@ namespace 構成マップ見た目
             count2++;
             if (count2 == 1)
             {
-                this.BlindA1b.Location = new System.Drawing.Point(210, 1000);
+                this.BlindA1.Location = new System.Drawing.Point(210, 1000);
 
             }
             else if (count2 == 2)
@@ -478,8 +478,6 @@ namespace 構成マップ見た目
             else if (count2 == 5)
             {
                 this.BlindA5.Location = new System.Drawing.Point(210, 1000);
-                //this.instancePicture.Location  = new System.Drawing.Point(69, 41);
-                //this.pictureBox27.Location = new System.Drawing.Point(130, 51);
             }
 
         }
@@ -489,6 +487,5 @@ namespace 構成マップ見た目
             Networkconnect();
 
         }
-    
     }
 }

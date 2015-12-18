@@ -59,13 +59,13 @@ resources:
 
  instance1:
    type: OS::Nova::Server
-   depends_on: private1-sub
+   depends_on: private2-sub
    properties:
     name: ""
     image: centos-test
     flavor: m1.small
     networks:
-     - network: {get_resource: private1}
+     - network: {get_resource: private2}
 
  instance2:
    type: OS::Nova::Server
@@ -79,11 +79,31 @@ resources:
 
  instance3:
    type: OS::Nova::Server
-   depends_on: private1-sub
+   depends_on: private2-sub
    properties:
     name: ""
     image: centos-test
     flavor: m1.small
     networks:
-     - network: {get_resource: private1}
+     - network: {get_resource: private2}
+
+ instance4:
+   type: OS::Nova::Server
+   depends_on: private2-sub
+   properties:
+    name: ""
+    image: centos-test
+    flavor: m1.small
+    networks:
+     - network: {get_resource: private2}
+
+ instance5:
+   type: OS::Nova::Server
+   depends_on: private2-sub
+   properties:
+    name: ""
+    image: centos-test
+    flavor: m1.small
+    networks:
+     - network: {get_resource: private2}
 

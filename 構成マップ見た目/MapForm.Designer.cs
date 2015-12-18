@@ -86,7 +86,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.BlindA1b = new System.Windows.Forms.PictureBox();
+            this.BlindA1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA3)).BeginInit();
@@ -135,7 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BlindA1b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlindA1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -454,7 +454,7 @@
             // 
             // BlindC
             // 
-            this.BlindC.Location = new System.Drawing.Point(630, 31);
+            this.BlindC.Location = new System.Drawing.Point(652, 23);
             this.BlindC.Name = "BlindC";
             this.BlindC.Size = new System.Drawing.Size(476, 548);
             this.BlindC.TabIndex = 44;
@@ -654,7 +654,7 @@
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(12, 321);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(82, 14);
+            this.pictureBox7.Size = new System.Drawing.Size(82, 10);
             this.pictureBox7.TabIndex = 74;
             this.pictureBox7.TabStop = false;
             // 
@@ -663,38 +663,34 @@
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(28, 118);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 14);
+            this.pictureBox8.Size = new System.Drawing.Size(100, 10);
             this.pictureBox8.TabIndex = 75;
             this.pictureBox8.TabStop = false;
             // 
-            // BlindA1b
+            // BlindA1
             // 
-            this.BlindA1b.Location = new System.Drawing.Point(260, 23);
-            this.BlindA1b.Name = "BlindA1b";
-            this.BlindA1b.Size = new System.Drawing.Size(200, 100);
-            this.BlindA1b.TabIndex = 76;
-            this.BlindA1b.TabStop = false;
+            this.BlindA1.Location = new System.Drawing.Point(260, 23);
+            this.BlindA1.Name = "BlindA1";
+            this.BlindA1.Size = new System.Drawing.Size(200, 100);
+            this.BlindA1.TabIndex = 76;
+            this.BlindA1.TabStop = false;
             // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(516, 617);
-            this.Controls.Add(this.BlindA1b);
+            this.ClientSize = new System.Drawing.Size(491, 617);
+            this.Controls.Add(this.BlindA1);
             this.Controls.Add(this.BlindC);
             this.Controls.Add(this.BlindB);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.demo1A3a);
             this.Controls.Add(this.demo1A3b);
-            this.Controls.Add(this.demo1A4a);
             this.Controls.Add(this.demo1A4b);
-            this.Controls.Add(this.demo1A5a);
             this.Controls.Add(this.demo1A5b);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.netstick1);
-            this.Controls.Add(this.demo1A1c);
             this.Controls.Add(this.NetworkConnecter);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.BlindA3);
@@ -711,7 +707,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.demo1A1a);
             this.Controls.Add(this.demo1A1b);
             this.Controls.Add(this.demo2A1a);
             this.Controls.Add(this.demo2A2a);
@@ -729,8 +724,14 @@
             this.Controls.Add(this.demo1A2b);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.demo1A4a);
+            this.Controls.Add(this.demo1A5a);
+            this.Controls.Add(this.demo1A3a);
+            this.Controls.Add(this.demo1A1c);
+            this.Controls.Add(this.demo1A1a);
             this.Name = "MapForm";
             this.Text = "構成マップ";
+   //         this.Load += new System.EventHandler(this.MapForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA3)).EndInit();
@@ -779,7 +780,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BlindA1b)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlindA1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -843,7 +844,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox BlindA1b;
+        private System.Windows.Forms.PictureBox BlindA1;
     }
 }
 
