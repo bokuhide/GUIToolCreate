@@ -478,6 +478,7 @@ namespace 構成マップ見た目
             else if (count2 == 5)
             {
                 this.BlindA5.Location = new System.Drawing.Point(210, 1000);
+                this.instantiation.Location = new System.Drawing.Point(900, 1000);
             }
 
         }
