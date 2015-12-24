@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ext_net = new System.Windows.Forms.PictureBox();
+            this.router1 = new System.Windows.Forms.PictureBox();
             this.BlindA3 = new System.Windows.Forms.PictureBox();
             this.routerCopy = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -39,7 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.instancePicture１ = new System.Windows.Forms.PictureBox();
             this.instanceEdit1 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.router2 = new System.Windows.Forms.PictureBox();
             this.instantiation = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,8 +56,8 @@
             this.instancePicture = new System.Windows.Forms.PictureBox();
             this.instanceEdit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.demo_net1 = new System.Windows.Forms.PictureBox();
+            this.demo_net2 = new System.Windows.Forms.PictureBox();
             this.NetworkConnecter = new System.Windows.Forms.Button();
             this.demo1A1a = new System.Windows.Forms.PictureBox();
             this.demo1A1b = new System.Windows.Forms.PictureBox();
@@ -83,18 +83,34 @@
             this.demo2A4b = new System.Windows.Forms.PictureBox();
             this.demo2A5a = new System.Windows.Forms.PictureBox();
             this.demo2A5b = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.netstick2 = new System.Windows.Forms.PictureBox();
+            this.ext_net_connecter2 = new System.Windows.Forms.PictureBox();
+            this.ext_net_connecter1 = new System.Windows.Forms.PictureBox();
             this.BlindA1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.BlindD = new System.Windows.Forms.PictureBox();
+            this.router3 = new System.Windows.Forms.PictureBox();
+            this.ext_net_connecter3 = new System.Windows.Forms.PictureBox();
+            this.netstick3 = new System.Windows.Forms.PictureBox();
+            this.demo_net3 = new System.Windows.Forms.PictureBox();
+            this.demo3A1a = new System.Windows.Forms.PictureBox();
+            this.demo3A2a = new System.Windows.Forms.PictureBox();
+            this.demo3A3a = new System.Windows.Forms.PictureBox();
+            this.demo3A1c = new System.Windows.Forms.PictureBox();
+            this.demo3A5a = new System.Windows.Forms.PictureBox();
+            this.demo3A3b = new System.Windows.Forms.PictureBox();
+            this.demo3A2b = new System.Windows.Forms.PictureBox();
+            this.demo3A1b = new System.Windows.Forms.PictureBox();
+            this.demo3A4b = new System.Windows.Forms.PictureBox();
+            this.demo3A5b = new System.Windows.Forms.PictureBox();
+            this.demo3A4a = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.router1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindB)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.instancePicture１)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.router2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.panel5.SuspendLayout();
@@ -106,8 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BlindA5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.instancePicture)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo_net1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo_net2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo1A1a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo1A1b)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo1A1c)).BeginInit();
@@ -132,31 +148,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.demo2A4b)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5b)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.netstick2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlindD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.router3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.netstick3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo_net3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A1a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A2a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A3a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A1c)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A5a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A3b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A2b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A1b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A4b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A5b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A4a)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ext_net
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 597);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ext_net.Image = ((System.Drawing.Image)(resources.GetObject("ext_net.Image")));
+            this.ext_net.Location = new System.Drawing.Point(12, 12);
+            this.ext_net.Name = "ext_net";
+            this.ext_net.Size = new System.Drawing.Size(24, 803);
+            this.ext_net.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ext_net.TabIndex = 0;
+            this.ext_net.TabStop = false;
             // 
-            // pictureBox3
+            // router1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(52, 87);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 72);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.router1.Image = ((System.Drawing.Image)(resources.GetObject("router1.Image")));
+            this.router1.Location = new System.Drawing.Point(52, 87);
+            this.router1.Name = "router1";
+            this.router1.Size = new System.Drawing.Size(120, 72);
+            this.router1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.router1.TabIndex = 2;
+            this.router1.TabStop = false;
             // 
             // BlindA3
             // 
@@ -168,7 +200,7 @@
             // 
             // routerCopy
             // 
-            this.routerCopy.Location = new System.Drawing.Point(240, 520);
+            this.routerCopy.Location = new System.Drawing.Point(249, 594);
             this.routerCopy.Name = "routerCopy";
             this.routerCopy.Size = new System.Drawing.Size(75, 45);
             this.routerCopy.TabIndex = 3;
@@ -190,7 +222,7 @@
             // 
             this.file_output.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.file_output.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.file_output.Location = new System.Drawing.Point(330, 573);
+            this.file_output.Location = new System.Drawing.Point(338, 655);
             this.file_output.Name = "file_output";
             this.file_output.Size = new System.Drawing.Size(137, 32);
             this.file_output.TabIndex = 9;
@@ -200,7 +232,7 @@
             // 
             // BlindB
             // 
-            this.BlindB.Location = new System.Drawing.Point(33, 282);
+            this.BlindB.Location = new System.Drawing.Point(36, 280);
             this.BlindB.Name = "BlindB";
             this.BlindB.Size = new System.Drawing.Size(153, 221);
             this.BlindB.TabIndex = 11;
@@ -235,19 +267,19 @@
             this.instanceEdit1.UseVisualStyleBackColor = true;
             this.instanceEdit1.Click += new System.EventHandler(this.instanceEdit1_Click);
             // 
-            // pictureBox4
+            // router2
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(59, 294);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 72);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
+            this.router2.Image = ((System.Drawing.Image)(resources.GetObject("router2.Image")));
+            this.router2.Location = new System.Drawing.Point(59, 294);
+            this.router2.Name = "router2";
+            this.router2.Size = new System.Drawing.Size(120, 72);
+            this.router2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.router2.TabIndex = 14;
+            this.router2.TabStop = false;
             // 
             // instantiation
             // 
-            this.instantiation.Location = new System.Drawing.Point(320, 520);
+            this.instantiation.Location = new System.Drawing.Point(330, 594);
             this.instantiation.Name = "instantiation";
             this.instantiation.Size = new System.Drawing.Size(75, 45);
             this.instantiation.TabIndex = 23;
@@ -395,29 +427,29 @@
             this.panel2.Size = new System.Drawing.Size(100, 92);
             this.panel2.TabIndex = 5;
             // 
-            // pictureBox16
+            // demo_net1
             // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(52, 165);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(115, 116);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 37;
-            this.pictureBox16.TabStop = false;
+            this.demo_net1.Image = ((System.Drawing.Image)(resources.GetObject("demo_net1.Image")));
+            this.demo_net1.Location = new System.Drawing.Point(52, 165);
+            this.demo_net1.Name = "demo_net1";
+            this.demo_net1.Size = new System.Drawing.Size(115, 116);
+            this.demo_net1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.demo_net1.TabIndex = 37;
+            this.demo_net1.TabStop = false;
             // 
-            // pictureBox2
+            // demo_net2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(42, 385);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(144, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 38;
-            this.pictureBox2.TabStop = false;
+            this.demo_net2.Image = ((System.Drawing.Image)(resources.GetObject("demo_net2.Image")));
+            this.demo_net2.Location = new System.Drawing.Point(42, 385);
+            this.demo_net2.Name = "demo_net2";
+            this.demo_net2.Size = new System.Drawing.Size(144, 116);
+            this.demo_net2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.demo_net2.TabIndex = 38;
+            this.demo_net2.TabStop = false;
             // 
             // NetworkConnecter
             // 
-            this.NetworkConnecter.Location = new System.Drawing.Point(400, 520);
+            this.NetworkConnecter.Location = new System.Drawing.Point(411, 594);
             this.NetworkConnecter.Name = "NetworkConnecter";
             this.NetworkConnecter.Size = new System.Drawing.Size(75, 45);
             this.NetworkConnecter.TabIndex = 39;
@@ -428,7 +460,7 @@
             // demo1A1a
             // 
             this.demo1A1a.Image = ((System.Drawing.Image)(resources.GetObject("demo1A1a.Image")));
-            this.demo1A1a.Location = new System.Drawing.Point(900, 146);
+            this.demo1A1a.Location = new System.Drawing.Point(661, 51);
             this.demo1A1a.Name = "demo1A1a";
             this.demo1A1a.Size = new System.Drawing.Size(85, 10);
             this.demo1A1a.TabIndex = 40;
@@ -437,7 +469,7 @@
             // demo1A1b
             // 
             this.demo1A1b.Image = ((System.Drawing.Image)(resources.GetObject("demo1A1b.Image")));
-            this.demo1A1b.Location = new System.Drawing.Point(927, 120);
+            this.demo1A1b.Location = new System.Drawing.Point(642, 47);
             this.demo1A1b.Name = "demo1A1b";
             this.demo1A1b.Size = new System.Drawing.Size(10, 160);
             this.demo1A1b.TabIndex = 41;
@@ -446,7 +478,7 @@
             // demo1A1c
             // 
             this.demo1A1c.Image = ((System.Drawing.Image)(resources.GetObject("demo1A1c.Image")));
-            this.demo1A1c.Location = new System.Drawing.Point(928, 197);
+            this.demo1A1c.Location = new System.Drawing.Point(661, 117);
             this.demo1A1c.Name = "demo1A1c";
             this.demo1A1c.Size = new System.Drawing.Size(53, 10);
             this.demo1A1c.TabIndex = 42;
@@ -454,9 +486,9 @@
             // 
             // BlindC
             // 
-            this.BlindC.Location = new System.Drawing.Point(652, 23);
+            this.BlindC.Location = new System.Drawing.Point(500, 0);
             this.BlindC.Name = "BlindC";
-            this.BlindC.Size = new System.Drawing.Size(476, 548);
+            this.BlindC.Size = new System.Drawing.Size(600, 800);
             this.BlindC.TabIndex = 44;
             this.BlindC.TabStop = false;
             // 
@@ -472,7 +504,7 @@
             // demo1A5b
             // 
             this.demo1A5b.Image = ((System.Drawing.Image)(resources.GetObject("demo1A5b.Image")));
-            this.demo1A5b.Location = new System.Drawing.Point(1072, 192);
+            this.demo1A5b.Location = new System.Drawing.Point(791, 54);
             this.demo1A5b.Name = "demo1A5b";
             this.demo1A5b.Size = new System.Drawing.Size(10, 245);
             this.demo1A5b.TabIndex = 47;
@@ -481,7 +513,7 @@
             // demo1A5a
             // 
             this.demo1A5a.Image = ((System.Drawing.Image)(resources.GetObject("demo1A5a.Image")));
-            this.demo1A5a.Location = new System.Drawing.Point(896, 252);
+            this.demo1A5a.Location = new System.Drawing.Point(661, 101);
             this.demo1A5a.Name = "demo1A5a";
             this.demo1A5a.Size = new System.Drawing.Size(85, 10);
             this.demo1A5a.TabIndex = 48;
@@ -490,7 +522,7 @@
             // demo1A4b
             // 
             this.demo1A4b.Image = ((System.Drawing.Image)(resources.GetObject("demo1A4b.Image")));
-            this.demo1A4b.Location = new System.Drawing.Point(864, 80);
+            this.demo1A4b.Location = new System.Drawing.Point(775, 54);
             this.demo1A4b.Name = "demo1A4b";
             this.demo1A4b.Size = new System.Drawing.Size(10, 140);
             this.demo1A4b.TabIndex = 50;
@@ -499,7 +531,7 @@
             // demo1A4a
             // 
             this.demo1A4a.Image = ((System.Drawing.Image)(resources.GetObject("demo1A4a.Image")));
-            this.demo1A4a.Location = new System.Drawing.Point(676, 481);
+            this.demo1A4a.Location = new System.Drawing.Point(661, 67);
             this.demo1A4a.Name = "demo1A4a";
             this.demo1A4a.Size = new System.Drawing.Size(85, 10);
             this.demo1A4a.TabIndex = 51;
@@ -508,7 +540,7 @@
             // demo1A2b
             // 
             this.demo1A2b.Image = ((System.Drawing.Image)(resources.GetObject("demo1A2b.Image")));
-            this.demo1A2b.Location = new System.Drawing.Point(943, 165);
+            this.demo1A2b.Location = new System.Drawing.Point(755, 220);
             this.demo1A2b.Name = "demo1A2b";
             this.demo1A2b.Size = new System.Drawing.Size(10, 70);
             this.demo1A2b.TabIndex = 52;
@@ -517,7 +549,7 @@
             // demo1A3b
             // 
             this.demo1A3b.Image = ((System.Drawing.Image)(resources.GetObject("demo1A3b.Image")));
-            this.demo1A3b.Location = new System.Drawing.Point(959, 120);
+            this.demo1A3b.Location = new System.Drawing.Point(692, 160);
             this.demo1A3b.Name = "demo1A3b";
             this.demo1A3b.Size = new System.Drawing.Size(10, 50);
             this.demo1A3b.TabIndex = 54;
@@ -526,7 +558,7 @@
             // demo1A3a
             // 
             this.demo1A3a.Image = ((System.Drawing.Image)(resources.GetObject("demo1A3a.Image")));
-            this.demo1A3a.Location = new System.Drawing.Point(900, 226);
+            this.demo1A3a.Location = new System.Drawing.Point(818, 346);
             this.demo1A3a.Name = "demo1A3a";
             this.demo1A3a.Size = new System.Drawing.Size(85, 10);
             this.demo1A3a.TabIndex = 55;
@@ -535,7 +567,7 @@
             // demo1A2a
             // 
             this.demo1A2a.Image = ((System.Drawing.Image)(resources.GetObject("demo1A2a.Image")));
-            this.demo1A2a.Location = new System.Drawing.Point(910, 252);
+            this.demo1A2a.Location = new System.Drawing.Point(661, 87);
             this.demo1A2a.Name = "demo1A2a";
             this.demo1A2a.Size = new System.Drawing.Size(85, 10);
             this.demo1A2a.TabIndex = 57;
@@ -562,7 +594,7 @@
             // demo2A2a
             // 
             this.demo2A2a.Image = ((System.Drawing.Image)(resources.GetObject("demo2A2a.Image")));
-            this.demo2A2a.Location = new System.Drawing.Point(910, 110);
+            this.demo2A2a.Location = new System.Drawing.Point(865, 278);
             this.demo2A2a.Name = "demo2A2a";
             this.demo2A2a.Size = new System.Drawing.Size(55, 10);
             this.demo2A2a.TabIndex = 67;
@@ -571,7 +603,7 @@
             // demo2A2b
             // 
             this.demo2A2b.Image = ((System.Drawing.Image)(resources.GetObject("demo2A2b.Image")));
-            this.demo2A2b.Location = new System.Drawing.Point(943, 146);
+            this.demo2A2b.Location = new System.Drawing.Point(1012, 146);
             this.demo2A2b.Name = "demo2A2b";
             this.demo2A2b.Size = new System.Drawing.Size(10, 288);
             this.demo2A2b.TabIndex = 66;
@@ -580,7 +612,7 @@
             // demo2A1b
             // 
             this.demo2A1b.Image = ((System.Drawing.Image)(resources.GetObject("demo2A1b.Image")));
-            this.demo2A1b.Location = new System.Drawing.Point(971, 110);
+            this.demo2A1b.Location = new System.Drawing.Point(926, 121);
             this.demo2A1b.Name = "demo2A1b";
             this.demo2A1b.Size = new System.Drawing.Size(10, 380);
             this.demo2A1b.TabIndex = 64;
@@ -598,7 +630,7 @@
             // demo2A3b
             // 
             this.demo2A3b.Image = ((System.Drawing.Image)(resources.GetObject("demo2A3b.Image")));
-            this.demo2A3b.Location = new System.Drawing.Point(943, 120);
+            this.demo2A3b.Location = new System.Drawing.Point(865, 126);
             this.demo2A3b.Name = "demo2A3b";
             this.demo2A3b.Size = new System.Drawing.Size(10, 179);
             this.demo2A3b.TabIndex = 62;
@@ -634,65 +666,219 @@
             // demo2A5b
             // 
             this.demo2A5b.Image = ((System.Drawing.Image)(resources.GetObject("demo2A5b.Image")));
-            this.demo2A5b.Location = new System.Drawing.Point(971, 160);
+            this.demo2A5b.Location = new System.Drawing.Point(1042, 160);
             this.demo2A5b.Name = "demo2A5b";
             this.demo2A5b.Size = new System.Drawing.Size(10, 128);
             this.demo2A5b.TabIndex = 70;
             this.demo2A5b.TabStop = false;
             // 
-            // pictureBox5
+            // netstick2
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(105, 363);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(10, 50);
-            this.pictureBox5.TabIndex = 73;
-            this.pictureBox5.TabStop = false;
+            this.netstick2.Image = ((System.Drawing.Image)(resources.GetObject("netstick2.Image")));
+            this.netstick2.Location = new System.Drawing.Point(105, 363);
+            this.netstick2.Name = "netstick2";
+            this.netstick2.Size = new System.Drawing.Size(10, 50);
+            this.netstick2.TabIndex = 73;
+            this.netstick2.TabStop = false;
             // 
-            // pictureBox7
+            // ext_net_connecter2
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(12, 321);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(82, 10);
-            this.pictureBox7.TabIndex = 74;
-            this.pictureBox7.TabStop = false;
+            this.ext_net_connecter2.Image = ((System.Drawing.Image)(resources.GetObject("ext_net_connecter2.Image")));
+            this.ext_net_connecter2.Location = new System.Drawing.Point(12, 321);
+            this.ext_net_connecter2.Name = "ext_net_connecter2";
+            this.ext_net_connecter2.Size = new System.Drawing.Size(82, 10);
+            this.ext_net_connecter2.TabIndex = 74;
+            this.ext_net_connecter2.TabStop = false;
             // 
-            // pictureBox8
+            // ext_net_connecter1
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(28, 118);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 10);
-            this.pictureBox8.TabIndex = 75;
-            this.pictureBox8.TabStop = false;
+            this.ext_net_connecter1.Image = ((System.Drawing.Image)(resources.GetObject("ext_net_connecter1.Image")));
+            this.ext_net_connecter1.Location = new System.Drawing.Point(28, 118);
+            this.ext_net_connecter1.Name = "ext_net_connecter1";
+            this.ext_net_connecter1.Size = new System.Drawing.Size(100, 10);
+            this.ext_net_connecter1.TabIndex = 75;
+            this.ext_net_connecter1.TabStop = false;
             // 
             // BlindA1
             // 
-            this.BlindA1.Location = new System.Drawing.Point(260, 23);
+            this.BlindA1.Location = new System.Drawing.Point(260, 20);
             this.BlindA1.Name = "BlindA1";
             this.BlindA1.Size = new System.Drawing.Size(200, 100);
             this.BlindA1.TabIndex = 76;
             this.BlindA1.TabStop = false;
+            // 
+            // BlindD
+            // 
+            this.BlindD.Location = new System.Drawing.Point(36, 510);
+            this.BlindD.Name = "BlindD";
+            this.BlindD.Size = new System.Drawing.Size(153, 221);
+            this.BlindD.TabIndex = 77;
+            this.BlindD.TabStop = false;
+            // 
+            // router3
+            // 
+            this.router3.Image = ((System.Drawing.Image)(resources.GetObject("router3.Image")));
+            this.router3.Location = new System.Drawing.Point(59, 520);
+            this.router3.Name = "router3";
+            this.router3.Size = new System.Drawing.Size(120, 72);
+            this.router3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.router3.TabIndex = 78;
+            this.router3.TabStop = false;
+            // 
+            // ext_net_connecter3
+            // 
+            this.ext_net_connecter3.Image = ((System.Drawing.Image)(resources.GetObject("ext_net_connecter3.Image")));
+            this.ext_net_connecter3.Location = new System.Drawing.Point(33, 551);
+            this.ext_net_connecter3.Name = "ext_net_connecter3";
+            this.ext_net_connecter3.Size = new System.Drawing.Size(82, 10);
+            this.ext_net_connecter3.TabIndex = 79;
+            this.ext_net_connecter3.TabStop = false;
+            // 
+            // netstick3
+            // 
+            this.netstick3.Image = ((System.Drawing.Image)(resources.GetObject("netstick3.Image")));
+            this.netstick3.Location = new System.Drawing.Point(105, 580);
+            this.netstick3.Name = "netstick3";
+            this.netstick3.Size = new System.Drawing.Size(10, 50);
+            this.netstick3.TabIndex = 80;
+            this.netstick3.TabStop = false;
+            // 
+            // demo_net3
+            // 
+            this.demo_net3.Image = ((System.Drawing.Image)(resources.GetObject("demo_net3.Image")));
+            this.demo_net3.Location = new System.Drawing.Point(42, 611);
+            this.demo_net3.Name = "demo_net3";
+            this.demo_net3.Size = new System.Drawing.Size(144, 116);
+            this.demo_net3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.demo_net3.TabIndex = 81;
+            this.demo_net3.TabStop = false;
+            // 
+            // demo3A1a
+            // 
+            this.demo3A1a.Image = ((System.Drawing.Image)(resources.GetObject("demo3A1a.Image")));
+            this.demo3A1a.Location = new System.Drawing.Point(1012, 47);
+            this.demo3A1a.Name = "demo3A1a";
+            this.demo3A1a.Size = new System.Drawing.Size(53, 10);
+            this.demo3A1a.TabIndex = 91;
+            this.demo3A1a.TabStop = false;
+            // 
+            // demo3A2a
+            // 
+            this.demo3A2a.Image = ((System.Drawing.Image)(resources.GetObject("demo3A2a.Image")));
+            this.demo3A2a.Location = new System.Drawing.Point(865, 474);
+            this.demo3A2a.Name = "demo3A2a";
+            this.demo3A2a.Size = new System.Drawing.Size(55, 10);
+            this.demo3A2a.TabIndex = 89;
+            this.demo3A2a.TabStop = false;
+            this.demo3A2a.Click += new System.EventHandler(this.demo3A2a_Click);
+            // 
+            // demo3A3a
+            // 
+            this.demo3A3a.Image = ((System.Drawing.Image)(resources.GetObject("demo3A3a.Image")));
+            this.demo3A3a.Location = new System.Drawing.Point(865, 458);
+            this.demo3A3a.Name = "demo3A3a";
+            this.demo3A3a.Size = new System.Drawing.Size(55, 10);
+            this.demo3A3a.TabIndex = 86;
+            this.demo3A3a.TabStop = false;
+            // 
+            // demo3A1c
+            // 
+            this.demo3A1c.Image = ((System.Drawing.Image)(resources.GetObject("demo3A1c.Image")));
+            this.demo3A1c.Location = new System.Drawing.Point(838, 330);
+            this.demo3A1c.Name = "demo3A1c";
+            this.demo3A1c.Size = new System.Drawing.Size(120, 10);
+            this.demo3A1c.TabIndex = 90;
+            this.demo3A1c.TabStop = false;
+            // 
+            // demo3A5a
+            // 
+            this.demo3A5a.Image = ((System.Drawing.Image)(resources.GetObject("demo3A5a.Image")));
+            this.demo3A5a.Location = new System.Drawing.Point(848, 403);
+            this.demo3A5a.Name = "demo3A5a";
+            this.demo3A5a.Size = new System.Drawing.Size(55, 10);
+            this.demo3A5a.TabIndex = 93;
+            this.demo3A5a.TabStop = false;
+            // 
+            // demo3A3b
+            // 
+            this.demo3A3b.Image = ((System.Drawing.Image)(resources.GetObject("demo3A3b.Image")));
+            this.demo3A3b.Location = new System.Drawing.Point(996, 214);
+            this.demo3A3b.Name = "demo3A3b";
+            this.demo3A3b.Size = new System.Drawing.Size(10, 403);
+            this.demo3A3b.TabIndex = 85;
+            this.demo3A3b.TabStop = false;
+            // 
+            // demo3A2b
+            // 
+            this.demo3A2b.Image = ((System.Drawing.Image)(resources.GetObject("demo3A2b.Image")));
+            this.demo3A2b.Location = new System.Drawing.Point(959, 110);
+            this.demo3A2b.Name = "demo3A2b";
+            this.demo3A2b.Size = new System.Drawing.Size(10, 507);
+            this.demo3A2b.TabIndex = 88;
+            this.demo3A2b.TabStop = false;
+            // 
+            // demo3A1b
+            // 
+            this.demo3A1b.Image = ((System.Drawing.Image)(resources.GetObject("demo3A1b.Image")));
+            this.demo3A1b.Location = new System.Drawing.Point(987, 54);
+            this.demo3A1b.Name = "demo3A1b";
+            this.demo3A1b.Size = new System.Drawing.Size(10, 605);
+            this.demo3A1b.TabIndex = 87;
+            this.demo3A1b.TabStop = false;
+            // 
+            // demo3A4b
+            // 
+            this.demo3A4b.Image = ((System.Drawing.Image)(resources.GetObject("demo3A4b.Image")));
+            this.demo3A4b.Location = new System.Drawing.Point(818, 308);
+            this.demo3A4b.Name = "demo3A4b";
+            this.demo3A4b.Size = new System.Drawing.Size(10, 309);
+            this.demo3A4b.TabIndex = 83;
+            this.demo3A4b.TabStop = false;
+            this.demo3A4b.Click += new System.EventHandler(this.demo3A4b_Click);
+            // 
+            // demo3A5b
+            // 
+            this.demo3A5b.Image = ((System.Drawing.Image)(resources.GetObject("demo3A5b.Image")));
+            this.demo3A5b.Location = new System.Drawing.Point(900, 342);
+            this.demo3A5b.Name = "demo3A5b";
+            this.demo3A5b.Size = new System.Drawing.Size(10, 219);
+            this.demo3A5b.TabIndex = 92;
+            this.demo3A5b.TabStop = false;
+            // 
+            // demo3A4a
+            // 
+            this.demo3A4a.Image = ((System.Drawing.Image)(resources.GetObject("demo3A4a.Image")));
+            this.demo3A4a.Location = new System.Drawing.Point(775, 424);
+            this.demo3A4a.Name = "demo3A4a";
+            this.demo3A4a.Size = new System.Drawing.Size(55, 10);
+            this.demo3A4a.TabIndex = 84;
+            this.demo3A4a.TabStop = false;
             // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(491, 617);
-            this.Controls.Add(this.BlindA1);
+            this.ClientSize = new System.Drawing.Size(491, 827);
+            this.Controls.Add(this.BlindD);
             this.Controls.Add(this.BlindC);
+            this.Controls.Add(this.demo3A1c);
+            this.Controls.Add(this.demo3A1b);
+            this.Controls.Add(this.demo3A5b);
+            this.Controls.Add(this.router3);
+            this.Controls.Add(this.demo_net3);
+            this.Controls.Add(this.netstick3);
+            this.Controls.Add(this.BlindA1);
             this.Controls.Add(this.BlindB);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.router2);
+            this.Controls.Add(this.netstick2);
             this.Controls.Add(this.demo1A3b);
             this.Controls.Add(this.demo1A4b);
             this.Controls.Add(this.demo1A5b);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.router1);
             this.Controls.Add(this.netstick1);
             this.Controls.Add(this.NetworkConnecter);
-            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.demo_net1);
             this.Controls.Add(this.BlindA3);
             this.Controls.Add(this.BlindA5);
             this.Controls.Add(this.BlindA2);
@@ -700,7 +886,7 @@
             this.Controls.Add(this.instantiation);
             this.Controls.Add(this.routerCopy);
             this.Controls.Add(this.file_output);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ext_net);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -712,7 +898,7 @@
             this.Controls.Add(this.demo2A2a);
             this.Controls.Add(this.demo2A3a);
             this.Controls.Add(this.demo2A1c);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.demo_net2);
             this.Controls.Add(this.demo2A5a);
             this.Controls.Add(this.demo2A3b);
             this.Controls.Add(this.demo2A2b);
@@ -722,24 +908,33 @@
             this.Controls.Add(this.demo2A4a);
             this.Controls.Add(this.demo1A2a);
             this.Controls.Add(this.demo1A2b);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.ext_net_connecter1);
+            this.Controls.Add(this.ext_net_connecter2);
             this.Controls.Add(this.demo1A4a);
             this.Controls.Add(this.demo1A5a);
             this.Controls.Add(this.demo1A3a);
             this.Controls.Add(this.demo1A1c);
             this.Controls.Add(this.demo1A1a);
+            this.Controls.Add(this.ext_net_connecter3);
+            this.Controls.Add(this.demo3A1a);
+            this.Controls.Add(this.demo3A2b);
+            this.Controls.Add(this.demo3A2a);
+            this.Controls.Add(this.demo3A3b);
+            this.Controls.Add(this.demo3A3a);
+            this.Controls.Add(this.demo3A4b);
+            this.Controls.Add(this.demo3A4a);
+            this.Controls.Add(this.demo3A5a);
             this.Name = "MapForm";
             this.Text = "構成マップ";
-   //         this.Load += new System.EventHandler(this.MapForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Load += new System.EventHandler(this.MapForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.router1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindB)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.instancePicture１)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.router2)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -751,8 +946,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BlindA5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.instancePicture)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo_net1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo_net2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo1A1a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo1A1b)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo1A1c)).EndInit();
@@ -777,18 +972,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.demo2A4b)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5b)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.netstick2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlindD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.router3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.netstick3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo_net3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A1a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A3a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A1c)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A5a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A3b)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A2b)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A1b)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A4b)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A5b)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.demo3A4a)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox ext_net;
+        private System.Windows.Forms.PictureBox router1;
         private System.Windows.Forms.Button routerCopy;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button file_output;
@@ -796,7 +1007,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button instanceEdit1;
         private System.Windows.Forms.PictureBox instancePicture１;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox router2;
         private System.Windows.Forms.Button instantiation;
         private System.Windows.Forms.PictureBox BlindA3;
         private System.Windows.Forms.Panel panel4;
@@ -814,8 +1025,8 @@
         private System.Windows.Forms.PictureBox instancePicture;
         private System.Windows.Forms.Button instanceEdit;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox demo_net1;
+        private System.Windows.Forms.PictureBox demo_net2;
         private System.Windows.Forms.Button NetworkConnecter;
         private System.Windows.Forms.PictureBox demo1A1a;
         private System.Windows.Forms.PictureBox demo1A1b;
@@ -841,10 +1052,26 @@
         private System.Windows.Forms.PictureBox demo2A4b;
         private System.Windows.Forms.PictureBox demo2A5a;
         private System.Windows.Forms.PictureBox demo2A5b;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox netstick2;
+        private System.Windows.Forms.PictureBox ext_net_connecter2;
+        private System.Windows.Forms.PictureBox ext_net_connecter1;
         private System.Windows.Forms.PictureBox BlindA1;
+        private System.Windows.Forms.PictureBox BlindD;
+        private System.Windows.Forms.PictureBox router3;
+        private System.Windows.Forms.PictureBox ext_net_connecter3;
+        private System.Windows.Forms.PictureBox netstick3;
+        private System.Windows.Forms.PictureBox demo_net3;
+        private System.Windows.Forms.PictureBox demo3A1a;
+        private System.Windows.Forms.PictureBox demo3A2a;
+        private System.Windows.Forms.PictureBox demo3A3a;
+        private System.Windows.Forms.PictureBox demo3A1c;
+        private System.Windows.Forms.PictureBox demo3A5a;
+        private System.Windows.Forms.PictureBox demo3A3b;
+        private System.Windows.Forms.PictureBox demo3A2b;
+        private System.Windows.Forms.PictureBox demo3A1b;
+        private System.Windows.Forms.PictureBox demo3A4b;
+        private System.Windows.Forms.PictureBox demo3A5b;
+        private System.Windows.Forms.PictureBox demo3A4a;
     }
 }
 
