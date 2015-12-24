@@ -20,7 +20,6 @@ namespace 構成マップ見た目
         //public List<string> edit_data = new List<string> { };
 
         List<InstanceConfig> instanceConfigList;
-
         public MapForm()
         {
             InitializeComponent();
@@ -75,8 +74,6 @@ namespace 構成マップ見た目
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            //edit_data[0] = EditorForm.edit_data1[0];
-            //MessageBox.Show(EditorForm.edit_data1[0]);
             fileExport();
             MessageBox.Show("テンプレートファイルへの出力が完了しました。");
 
@@ -87,19 +84,115 @@ namespace 構成マップ見た目
             count++;
             if (count == 1)
             {
-                this.pictureBox9.Location = new System.Drawing.Point(210, 1000);
-            }
-            else if (count == 2)
-            {
-                this.pictureBox15.Location = new System.Drawing.Point(210, 1000);
+                this.BlindB.Location = new System.Drawing.Point(210, 1000);
+                this.routerCopy.Location = new System.Drawing.Point(900, 100);
             }
         }
-
+        private void Networkconnect()
+        {
+            this.demo1A1a.Location = new System.Drawing.Point(900, 70);
+            this.demo1A1b.Location = new System.Drawing.Point(900, 70);
+            this.demo1A1c.Location = new System.Drawing.Point(900, 220);
+            this.demo2A1a.Location = new System.Drawing.Point(900, 70);
+            this.demo2A1b.Location = new System.Drawing.Point(900, 70);
+            this.demo2A1c.Location = new System.Drawing.Point(900, 440);
+            this.demo1A2a.Location = new System.Drawing.Point(900, 160);
+            this.demo1A2b.Location = new System.Drawing.Point(900, 160);
+            this.demo2A2a.Location = new System.Drawing.Point(900, 160);
+            this.demo2A2b.Location = new System.Drawing.Point(900, 160);
+            this.demo1A3a.Location = new System.Drawing.Point(900, 270);
+            this.demo1A3b.Location = new System.Drawing.Point(900, 220);
+            this.demo2A3a.Location = new System.Drawing.Point(900, 270);
+            this.demo2A3b.Location = new System.Drawing.Point(900, 270);
+            this.demo1A4a.Location = new System.Drawing.Point(900, 360);
+            this.demo1A4b.Location = new System.Drawing.Point(900, 220);
+            this.demo2A4a.Location = new System.Drawing.Point(900, 360);
+            this.demo2A4b.Location = new System.Drawing.Point(900, 360);
+            this.demo1A5a.Location = new System.Drawing.Point(900, 455);
+            this.demo1A5b.Location = new System.Drawing.Point(900, 220);
+            this.demo2A5a.Location = new System.Drawing.Point(900, 443);
+            this.demo2A5b.Location = new System.Drawing.Point(900, 82);
+            if (count2 >= 1)
+            {
+                if (this.instanceConfigList[0].networkName == "demo-net1")
+                {
+                    this.demo1A1a.Location = new System.Drawing.Point(210, 70);
+                    this.demo1A1b.Location = new System.Drawing.Point(210, 70);
+                    this.demo1A1c.Location = new System.Drawing.Point(160, 220);
+                }
+                else if (this.instanceConfigList[0].networkName == "demo-net2")
+                {
+                    this.demo2A1a.Location = new System.Drawing.Point(240, 70);
+                    this.demo2A1b.Location = new System.Drawing.Point(240, 70);
+                    this.demo2A1c.Location = new System.Drawing.Point(160, 440);
+                }
+            }
+            if (count2 >= 2)
+            {
+                if (this.instanceConfigList[1].networkName == "demo-net1")
+                {
+                    this.demo1A2a.Location = new System.Drawing.Point(210, 160);
+                    this.demo1A2b.Location = new System.Drawing.Point(210, 160);
+                    this.demo1A1c.Location = new System.Drawing.Point(160, 220);
+                }
+                else if (this.instanceConfigList[1].networkName == "demo-net2")
+                {
+                    this.demo2A2a.Location = new System.Drawing.Point(240, 160);
+                    this.demo2A2b.Location = new System.Drawing.Point(240, 160);
+                    this.demo2A1c.Location = new System.Drawing.Point(160, 440);
+                }
+            }
+            if (count2 >= 3)
+            {
+                if (this.instanceConfigList[2].networkName == "demo-net1")
+                {
+                    this.demo1A3a.Location = new System.Drawing.Point(210, 270);
+                    this.demo1A3b.Location = new System.Drawing.Point(210, 220);
+                    this.demo1A1c.Location = new System.Drawing.Point(160, 220);
+                }
+                else if (this.instanceConfigList[2].networkName == "demo-net2")
+                {
+                    this.demo2A3a.Location = new System.Drawing.Point(240, 270);
+                    this.demo2A3b.Location = new System.Drawing.Point(240, 270);
+                    this.demo2A1c.Location= new System.Drawing.Point(160, 440);
+                }
+            }
+            if (count2 >= 4)
+            {
+                if (this.instanceConfigList[3].networkName == "demo-net1")
+                {
+                    this.demo1A4a.Location = new System.Drawing.Point(210, 360);
+                    this.demo1A4b.Location = new System.Drawing.Point(210, 220);
+                    this.demo1A1c.Location = new System.Drawing.Point(160, 220);
+                }
+                else if (this.instanceConfigList[3].networkName == "demo-net2")
+                {
+                    this.demo2A4a.Location = new System.Drawing.Point(240, 360);
+                    this.demo2A4b.Location = new System.Drawing.Point(240, 360);
+                    this.demo2A1c.Location = new System.Drawing.Point(160, 440);
+                }
+            }
+            if (count2 >= 5)
+            {
+                if (this.instanceConfigList[4].networkName == "demo-net1")
+                {
+                    this.demo1A5a.Location = new System.Drawing.Point(210, 455);
+                    this.demo1A5b.Location = new System.Drawing.Point(210, 220);
+                    this.demo1A1c.Location = new System.Drawing.Point(160, 220);
+                }
+                else if (this.instanceConfigList[4].networkName == "demo-net2")
+                {
+                    this.demo2A5a.Location = new System.Drawing.Point(240, 440);
+               //     this.demo2A5b.Location = new System.Drawing.Point(240, 82);
+                    this.demo2A1c.Location = new System.Drawing.Point(160, 440);
+                }
+            }
+        }
         //テンプレートファイル出力部分
         private void fileExport()
         {
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");
-            StreamWriter writer = new StreamWriter(@"C:\testFile\text.txt", false, sjisEnc);
+            StreamWriter writer = new StreamWriter(@"..\..\..\text.txt", false, sjisEnc);
 
             string head = "heat_template_version: 2013-05-23\r\n";
             string parameters = "parameters:\r\n  ext-net:\r\n   type: string\r\n   description: ext-netID\r\n   default: ext-net\r\n";
@@ -362,60 +455,38 @@ namespace 構成マップ見た目
 
         }
 
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             count2++;
             if (count2 == 1)
             {
-                this.pictureBox16.Location = new System.Drawing.Point(210, 1000);
+                this.BlindA1.Location = new System.Drawing.Point(210, 1000);
 
             }
             else if (count2 == 2)
             {
-                this.pictureBox17.Location = new System.Drawing.Point(210, 1000);
+                this.BlindA2.Location = new System.Drawing.Point(210, 1000);
             }
             else if (count2 == 3)
             {
-                this.pictureBox18.Location = new System.Drawing.Point(210, 1000);
+                this.BlindA3.Location = new System.Drawing.Point(210, 1000);
             }
             else if (count2 == 4)
             {
-                this.pictureBox25.Location = new System.Drawing.Point(210, 1000);
+                this.BlindA4.Location = new System.Drawing.Point(210, 1000);
             }
             else if (count2 == 5)
             {
-                this.pictureBox26.Location = new System.Drawing.Point(210, 1000);
-                //this.instancePicture.Location  = new System.Drawing.Point(69, 41);
-                //this.pictureBox27.Location = new System.Drawing.Point(130, 51);
+                this.BlindA5.Location = new System.Drawing.Point(210, 1000);
+                this.instantiation.Location = new System.Drawing.Point(900, 1000);
             }
 
         }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
+    
+        private void button4_Click(object sender, EventArgs e)
         {
+            Networkconnect();
 
         }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MapForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

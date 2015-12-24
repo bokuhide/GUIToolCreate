@@ -47,10 +47,6 @@ namespace 構成マップ見た目
             this.instanceConfig.networkName = networkComboBox.SelectedItem.ToString();
 
             this.instanceConfig.instanceName = textBox1.Text;
-            // MessageBox.Show(edit_data1[0]);
-            
-
-
             this.Close();
 
         }
