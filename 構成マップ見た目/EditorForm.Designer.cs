@@ -68,6 +68,13 @@ namespace 構成マップ見た目
                 "demo-net1",
                 "demo-net2"});
             }
+            else if (MapForm.count == 2)
+            {
+                this.networkComboBox.Items.AddRange(new object[] {
+                "demo-net1",
+                "demo-net2",
+                "demo-net3"});
+            }
             this.networkComboBox.Location = new System.Drawing.Point(173, 214);
             this.networkComboBox.Name = "comboBox3";
             this.networkComboBox.Size = new System.Drawing.Size(121, 20);

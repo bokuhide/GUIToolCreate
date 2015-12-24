@@ -200,6 +200,7 @@ namespace 構成マップ見た目
 
             string resourcesPrivatenet1 = " private1:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";
             string resourcesPrivatenet2 = " private2:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";
+            string resourcesPrivatenet3 = " private3:\r\n   type: OS::Neutron::Net\r\n   properties:\r\n    name: ";
 
             //ここに入力された内部ネットワークの名前を挿入
             //string instance1_net = "";
@@ -207,15 +208,19 @@ namespace 構成マップ見た目
 
             string net_name1 = "demo-net1";
             string net_name2 = "demo-net2";
+            string net_name3 = "demo-net3";
 
             string resourcesSubnet1 = " \r\n private1-sub:\r\n   type: OS::Neutron::Subnet\r\n   depends_on: private1\r\n   properties:\r\n    network_id: {get_resource: private1}\r\n    cidr: 192.168.2.0/24\r\n";
             string resourcesSubnet2 = " \r\n private2-sub:\r\n   type: OS::Neutron::Subnet\r\n   depends_on: private2\r\n   properties:\r\n    network_id: {get_resource: private2}\r\n    cidr: 192.168.3.0/24\r\n";
+            string resourcesSubnet3 = " \r\n private3-sub:\r\n   type: OS::Neutron::Subnet\r\n   depends_on: private3\r\n   properties:\r\n    network_id: {get_resource: private3}\r\n    cidr: 192.168.4.0/24\r\n";
 
             string resourcesRouter1 = " ext-router1:\r\n   type: OS::Neutron::Router\r\n   properties:\r\n    external_gateway_info:\r\n     network: {get_param: ext-net}\r\n";
             string resourcesRouter2 = " ext-router2:\r\n   type: OS::Neutron::Router\r\n   properties:\r\n    external_gateway_info:\r\n     network: {get_param: ext-net}\r\n";
+            string resourcesRouter3 = " ext-router3:\r\n   type: OS::Neutron::Router\r\n   properties:\r\n    external_gateway_info:\r\n     network: {get_param: ext-net}\r\n";
 
             string resourcesRouterInterface1 = " ext-router1-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router1, private1-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router1}\r\n    subnet_id: {get_resource: private1-sub}\r\n";
             string resourcesRouterInterface2 = " ext-router2-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router2, private2-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router2}\r\n    subnet_id: {get_resource: private2-sub}\r\n";
+            string resourcesRouterInterface3 = " ext-router3-interface:\r\n   type: OS::Neutron::RouterInterface\r\n   depends_on: [ext-router3, private3-sub]\r\n   properties:\r\n    router_id: {get_resource: ext-router3}\r\n    subnet_id: {get_resource: private3-sub}\r\n";
 
             string instance1Firsthalf = " instance1:\r\n   type: OS::Nova::Server\r\n   depends_on: ";
             string instance1depend_subnet = "";
@@ -290,6 +295,12 @@ namespace 構成マップ見た目
                 instance1depend_subnet = "private2-sub";
                 instance1connect_net = "private2";
             }
+            else if (this.instanceConfigList[0].networkName == "demo-net3")
+            {
+                instance1depend_subnet = "private3-sub";
+                instance1connect_net = "private3";
+            }
+
             instance1_name = this.instanceConfigList[0].instanceName;
             instance1_image = this.instanceConfigList[0].imageName;
             instance1flavor = this.instanceConfigList[0].flavorName;
@@ -337,6 +348,12 @@ namespace 構成マップ見た目
                     instance2depend_subnet = "private2-sub";
                     instance2connect_net = "private2";
                 }
+                else if (this.instanceConfigList[1].networkName == "demo-net3")
+                {
+                    instance2depend_subnet = "private3-sub";
+                    instance2connect_net = "private3";
+                }
+
                 instance2_name = this.instanceConfigList[1].instanceName;
                 instance2_image = this.instanceConfigList[1].imageName;
                 instance2flavor = this.instanceConfigList[1].flavorName;
@@ -367,6 +384,11 @@ namespace 構成マップ見た目
                 {
                     instance3depend_subnet = "private2-sub";
                     instance3connect_net = "private2";
+                }
+                else if (this.instanceConfigList[2].networkName == "demo-net3")
+                {
+                    instance3depend_subnet = "private3-sub";
+                    instance3connect_net = "private3";
                 }
                 instance3_name = this.instanceConfigList[2].instanceName;
                 instance3_image = this.instanceConfigList[2].imageName;
@@ -399,6 +421,11 @@ namespace 構成マップ見た目
                     instance4depend_subnet = "private2-sub";
                     instance4connect_net = "private2";
                 }
+                else if (this.instanceConfigList[3].networkName == "demo-net3")
+                {
+                    instance4depend_subnet = "private3-sub";
+                    instance4connect_net = "private3";
+                }
                 instance4_name = this.instanceConfigList[3].instanceName;
                 instance4_image = this.instanceConfigList[3].imageName;
                 instance4flavor = this.instanceConfigList[3].flavorName;
@@ -429,6 +456,11 @@ namespace 構成マップ見た目
                 {
                     instance5depend_subnet = "private2-sub";
                     instance5connect_net = "private2";
+                }
+                else if (this.instanceConfigList[4].networkName == "demo-net3")
+                {
+                    instance5depend_subnet = "private3-sub";
+                    instance5connect_net = "private3";
                 }
                 instance5_name = this.instanceConfigList[4].instanceName;
                 instance5_image = this.instanceConfigList[4].imageName;
