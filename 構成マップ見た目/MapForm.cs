@@ -239,7 +239,7 @@ namespace 構成マップ見た目
         private void fileExport()
         {
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");
-            StreamWriter writer = new StreamWriter(@"..\..\..\text.txt", false, sjisEnc);
+            StreamWriter writer = new StreamWriter(@"..\text.txt", false, sjisEnc);
 
             string head = "heat_template_version: 2013-05-23\r\n";
             string parameters = "parameters:\r\n  ext-net:\r\n   type: string\r\n   description: ext-netID\r\n   default: ext-net\r\n";
@@ -370,6 +370,16 @@ namespace 構成マップ見た目
                 writer.WriteLine("{0}", resourcesSubnet2);
                 writer.WriteLine("{0}", resourcesRouter2);
                 writer.WriteLine("{0}", resourcesRouterInterface2);
+            }
+
+            if (count >= 2)
+            {
+
+                writer.Write("{0}", resourcesPrivatenet3);
+                writer.WriteLine("{0}", net_name3);
+                writer.WriteLine("{0}", resourcesSubnet3);
+                writer.WriteLine("{0}", resourcesRouter3);
+                writer.WriteLine("{0}", resourcesRouterInterface3);
             }
             writer.Write("{0}", instance1Firsthalf);
             writer.Write("{0}", instance1depend_subnet);
