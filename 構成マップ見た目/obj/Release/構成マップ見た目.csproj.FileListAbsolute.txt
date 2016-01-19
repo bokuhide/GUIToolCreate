@@ -8,3 +8,4 @@ C:\Users\貴大\Documents\構成マップ見た目\構成マップ見た目\obj\
 C:\Users\貴大\Documents\構成マップ見た目\構成マップ見た目\obj\Release\構成マップ見た目.csproj.GenerateResource.Cache
 C:\Users\貴大\Documents\構成マップ見た目\構成マップ見た目\obj\Release\構成マップ見た目.exe
 C:\Users\貴大\Documents\構成マップ見た目\構成マップ見た目\obj\Release\構成マップ見た目.pdb
+C:\GUIToolLocalrepository\構成マップ見た目\bin\Release\構成マップ見た目.exe.config
