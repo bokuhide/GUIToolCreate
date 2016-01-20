@@ -1,0 +1,182 @@
+%% 論文
+
+%% プリアンブル %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass{kut-paper}			%% jis フォントを使用する場合
+\documentclass[mingoth]{kut-paper}		%% 通常フォントを使用する場合
+%\documentclass[twoside]{kut-paper}		%% 両面印刷の場合
+
+%\usepackage{graphicx}
+
+%% 表紙 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ScInfo                         %% 情報学群の場合に追加する．それ以外の場合はコメントアウト
+
+\Bachelor			%% 学士学位論文（卒業研究）の場合
+%\Project			%% プロジェクト研究報告書の場合
+%\Seminar			%% 特別研究セミナー課題研究報告書の場合
+%\Master			%% 修士学位論文（情報システム工学コース）の場合
+%\Doctorate			%% 博士学位論文（情報システム工学コース）の場合
+%\English			%% 英語の場合（特別研究セミナーの場合は選択不可）
+%\figurespagefalse		%% 図目次を出力しない場合
+%\tablespagefalse		%% 表目次を出力しない場合
+
+\years{平成28}
+\title{OpenStack環境でのオーケストレーション定義を容易にするGUIエディタの実現}
+\titlelength{19}		%% 表紙の表題の行長(全角文字数<20, default=19)
+\Etitle{}
+\idnumber{1160304}
+\author{川口　貴大}
+\Eauthor{}
+\advisor{横山　和俊}
+\date{2016/02/15}
+\abstract{
+	近年，ITリソースの迅速な確保，コスト削減等の目的からシステムの基盤としてIaaSの需要が高まっている．IaaSを用いたものに限らず，ITサービスにおけるシステム設計では冗長化や負荷分散，処理の効率化といった理由により，複数マシンの構成となる場合が多く見られる．しかし，システムの流用や再利用が求められる場面では、大規模なシステムになるにつれ、マシン台数も増加し設定に掛かる工程が増大してしまう。そのため、システム再現における作業の効率化が求められている。
+	
+	\texttt OpenStackは最も開発が進んでいるIaaS基盤ソフトウェアの一つであり、コミュニティには多くの有名企業が参加している。OpenStackではHeatと呼ばれるオーケストレーション（自動構築）機能を提供するソフトウェアにより、システムの再現を効率化している。HeatではITリソースの構成情報を記述した設計図(テンプレートファイル)を読み込ませることで、その構成情報を基に自動的にシステムの構築を行う。そのため、テンプレートファイルの作成はシステムを構築する上で重要な役割を担っている。しかし、テンプレートファイルは書式が複雑であり、記述を行う際にはHeat独自の知識を要する。また、テキストファイルであるため、記述量の増加によるミスや、構成情報がテキストからイメージし難いという問題も抱えている。
+	
+	\texttt 本研究ではGUIを用いることにより、従来のテキスト入力における問題点を解決するテンプレートファイル作成手法を研究し、新規テンプレートファイル作成ツールの開発を
+	
+}
+\keyword{OpenStack，IaaS，Heat，オーケストレーション
+}
+\Eabstract{English
+}				%% プロジェクト研究報告書の場合は不要
+\Ekeyword{English
+}				%% プロジェクト研究報告書の場合は不要
+
+%% 本文 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\chapter{はじめに}
+%\input{chpater1.tex}
+	\section{IaaSの動向}
+	サーバー仮想化や通信ネットワークの技術進歩に伴い，クラウドコンピューティングが普及している．一般ユーザー向けに提供されるサービスや，企業内で利用される専用アプリケーションなど，多くのサービスがクラウドを用いて提供されており，クラウドコンピューティングにおいてIaaSの需要が高まっている．総務省が公開している「平成27年度版　情報通信白書」第２部によると，図１に示す通り市場規模におけるIaaSの割合が．
+	\section{OpenStackの概要}
+	OpenStackは，機能別にコンポーネントが分かれており，各コンポーネントが相互に連携して動作する．OpenStackの主要コンポーネントを表１に示す．
+	\begin{table}[ht]
+		\begin{center}
+			\caption{OpenStackの主要コンポーネント}
+			\begin{tabular}{|c|c|}\hline
+				コンポーネント & 機能\\ \hline \hline
+	     		Glance & 仮想マシンで使用されるゲストOSの管理\\ \hline
+				Cinder & ブロックストレージにてゲストOS等を永続管理\\ \hline
+				Neutron & 仮想ネットワークの管理\\ \hline
+				Horizon & OpenStackの操作管理を行うWebUIの提供\\ \hline
+				Swift & オブジェクトストレージの提供\\ \hline
+				Heat & 仮想環境構築のためのオーケストレーション機能の提供\\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	\section{Heatの概要}
+	Heatとは，本来OpenStack利用者が手動で，各コンポーネントに指示を出し行っている仮想環境構築の手順を自動化する機能を提供している．自動化の手順としては，各コンポーネントを実行するために必要な項目を「Heatテンプレートファイル（以降テンプレートファイルと呼ぶ）」に記述，テンプレートファイルを読み込むことで各コンポーネントで実行される内容を自動で実行し仮想環境を構築を行うというものである．尚，テンプレートファイルには独自の書式が存在する．
+	\section{現状の問題点}
+	OpenStackの各コンポーネントを自動化することができるHeatだが，現状問題が存在する．以下が問題点である．
+	\begin{itemize}
+		\item Heatテンプレートファイルの複雑な書式
+		\begin{itemize}
+			\item 入力内容の不明確さ
+			\item インデントの深さによる入力項目区別
+		\end{itemize}
+		\item テキスト記述量
+		\begin{itemize}
+			\item 新規項目追加毎に関連項目全てを追加入力
+		\end{itemize}
+		\item テンプレートファイルから構成情報を把握することの難しさ
+		\begin{itemize}
+			\item 複雑な書式，膨大な量のテキスト記述量から一見して構成を把握することが困難
+		\end{itemize}
+	\end{itemize}
+	\section{問題点の解決方法}
+	提示した問題点を解決するために，以下の解決案を提案する．
+	\begin{itemize}
+		\item Heat専門知識の排除
+		\begin{itemize}
+			\item 入力者側が細かな書式を気にしないで済むようなもの
+		\end{itemize}
+		\item 入力内容の明確化
+		\begin{itemize}
+			\item 何を入力すればよいのか項目名を追加
+		\end{itemize}
+		\item テキスト記述量の削減
+		\begin{itemize}
+			\item インスタンス名記述項目以外の項目で手動入力を撤廃，プルダウンメニューによる選択肢を提供
+		\end{itemize}
+		\item 構成情報の可視化
+		\begin{itemize}
+			\item 現在構築中の構成情報についてアイコンを用いて可視化
+		\end{itemize}
+	\end{itemize}
+	
+	
+\chapter{オーケストレーション定義エディタの提案}
+%\input{chpater2.tex}
+	\section{オーケストレーション定義エディタの概要}
+	
+	\section{オーケストレーション定義エディタの要件}
+	
+	\section{Heatで扱うリソース}
+	
+	\section{リソースの依存関係}
+	
+	\section{テンプレートファイルへの出力補助方法}
+	
+	\section{入力されたデータの扱い}
+	
+	
+\chapter{オーケストレーション定義エディタの実装}
+	\section{動作環境}
+	
+	\section{画面構成}
+	
+		\subsection{構成確認画面}
+		
+		\subsection{詳細入力画面}
+	
+	\section{テンプレートファイル出力の流れ}
+		\subsection{インスタンスに関する記述について}
+		
+		\subsection{ネットワークに関する記述について}
+		
+\chapter{評価}
+	\section{評価の目的}
+	
+	\section{評価内容}
+	
+	\section{評価環境}
+	
+	\section{結果}
+	
+	\section{考察}
+	
+\chapter{おわりに}
+	\section{研究のまとめ}
+	\section{今後の課題}
+	
+
+%% 謝辞 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{acknowledgement}
+%\input{acknowledgement.tex}
+\end{acknowledgement}
+
+%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+%\input{bibliography.tex}
+\end{thebibliography}
+
+%% 付録 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\chapter{}
+%\input{appendex1.tex}
+
+\chapter{}
+%\input{appendex2.tex}
+
+\end{document}

@@ -1,0 +1,603 @@
+%% 論文クラスファイルの使用方法
+
+%% プリアンブル %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass{kut-paper} 			%% jis フォントを使用する場合
+\documentclass[mingoth]{kut-paper}		%% 通常フォントを使用する場合
+%\documentclass[twoside]{kut-paper}		%% 両面印刷の場合
+
+%\usepackage{graphicx}
+
+%% 表紙 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ScInfo                         %% 情報学群の場合に追加する．それ以外の場合はコメントアウト
+
+\Bachelor			%% 学士学位論文（卒業研究）の場合
+%\Project			%% プロジェクト研究報告書の場合
+%\Seminar			%% 特別研究セミナー課題研究報告書の場合
+%\Master			%% 修士学位論文（情報システム工学コース）の場合
+%\Doctorate			%% 博士学位論文（情報システム工学コース）の場合
+%\English			%% 英語論文の場合
+%\figurespagefalse		%% 図目次を出力しない場合
+%\tablespagefalse		%% 表目次を出力しない場合
+
+\years{平成28}
+\title{
+高知工科大学\\
+情報学群\\
+OpenStack環境でのオーケストレーション定義を容易にするGUIエディタの実現
+}
+\titlelength{19}                %% 表紙の表題の行長(全角文字数<20, default=19)
+\Etitle{
+A Guide to use ``\texttt{kut-paper}'' Class File
+}
+\idnumber{0123456}
+\author{川口　貴大}
+\Eauthor{Manabu HASHIMOTO，Tomiyuki INOUE，Takuji NAKAHIRA \\ and  Masahiro FUKUMOTO}
+\advisor{情報学群 各教員}
+\date{2013年1月30日}
+\abstract{
+本稿では高知工科大学情報システム工学科論文クラスファイル
+\texttt{kut-paper}の使用方法を説明します．本クラスファイルを使用すること
+により，情報システム工学科論文の体裁（表紙，目次，各ページの余白等）で自
+動的に組版することが可能になります．
+
+\texttt{kut-paper}はASCII版日本語\LaTeX（\pLaTeX2$\epsilon$）対応版クラ
+スファイルです．
+
+本クラスファイルは\pLaTeX2$\epsilon$新ドキュメントクラス
+\texttt{jsbook.cls}ファイル\cite{bib:cls}を情報システム工学科論文用に修
+正したものです．本クラスファイルの作成にあたっては，東北大学工学部土木工
+学科卒業論文スタイルファイル\cite{bib:sty}を参考にさせて頂きました．
+}
+\keyword{
+論文体裁，\pLaTeX2$\epsilon$，クラスファイル
+}
+\Eabstract{
+English abstract $\sim$
+}
+\Ekeyword{
+Paper style, \pLaTeX2$\epsilon$, Class file
+}
+
+%% 本文 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\chapter{プリアンブル}
+
+ \section{クラスファイルの指定}
+ 最初に \verb|\documentclass{}| でクラスファイル\texttt{kut-paper}を指
+ 定します．
+\begin{verbatim}
+\documentclass{kut-paper}
+\end{verbatim}
+ 
+ \texttt{kut-paper}は標準でjisフォントメトリック\footnote{従来のフォント
+ メトリックの欠点であった``（）．（）''，``ちょっと''などの句読点，拗促
+ 音文字の組み方を``日本語の行組版方法（JIS X 4051）''に修正するフォント
+ メトリック\cite{bib:latex2e}}を使用します．環境においてjisフォントメト
+ リックを使用できない場合は，オプション \verb|mingoth| で従来のフォント
+ メトリックを使用するように指定します．
+\begin{verbatim}
+\documentclass[mingoth]{kut-paper}
+\end{verbatim}
+
+ また両面印刷用に出力したい場合は，\verb|twoside| を指定します．デフォル
+ トでは片面印刷用（\verb|oneside|）で出力されます．
+\begin{verbatim}
+\documentclass[twoside]{kut-paper}
+\end{verbatim}
+
+ \section{スタイルファイルの読み込み}
+ 図を入れるためのスタイルファイル\texttt{graphics}，\texttt{graphicx}や
+ その他のスタイルファイルは必要に応じて読み込んで下さい．
+
+\begin{verbatim}
+\usepackage{graphicx}
+\end{verbatim}
+
+ \section{表紙，要旨，目次の作成}
+ 以下の設定をプリアンブルで行なった後，\verb|\begin{document}| の後
+ で \verb|\maketitle| を記述すれば表紙，要旨，目次を自動的に作成します．
+ \begin{verbatim}
+\begin{document}
+\maketitle
+\end{verbatim}
+ 
+  \subsection{学位論文の指定}
+  博士学位論文か修士学位論文，学士学位論文，プロジェクト研究報告書を指定します．
+\begin{verbatim}
+\Doctorate
+\end{verbatim}
+  または，
+\begin{verbatim}
+\Master
+\end{verbatim}
+  または，
+\begin{verbatim}
+\Bachelor
+\end{verbatim}
+  または，
+\begin{verbatim}
+\Project
+\end{verbatim}
+  ここでの指定で``所属''が自動で設定されます．省略した場合は学士学位論文
+  を指定したことになります．
+
+  情報学群の学生（平成21年度以降）の場合には，\verb|\Bachelor| または \verb|\Project| に加えて
+\begin{verbatim}
+\ScInfo
+\end{verbatim}
+  を指定して下さい．これにより，``所属''が適切に設定されます．
+
+  \subsection{言語の指定}
+  論文を英語で書く場合はその指定をします．
+\begin{verbatim}
+\English
+\end{verbatim}
+
+  英語論文の指定を行なった場合，表紙，目次，章名などが英語化され，日本語
+  アブストラクトの項は出力されなくなります．
+
+  \subsection{年度}
+  \verb|\years| で指定します．元号も入れて下さい（英語論文の場合はいりま
+  せん）．
+\begin{verbatim}
+\years{平成14}
+\end{verbatim}
+
+  \subsection{論文タイトル}
+  \verb|\title{}| で指定します．
+%%タイトルが長く一行に収まらない場合は，途中に \verb|\\| を入れて改行
+%%して下さい．
+  表紙の表題の一行あたりの文字数は19文字になっています．
+  一行あたりの文字数を調整する場合は，\verb|\titlelength{19}| の数字
+  （19以下）を変更してください．
+  このタイトルは要旨のタイトルにもなります．
+\begin{verbatim}
+\title{何々\\何々}
+\end{verbatim}
+
+  \verb|\Etitle{}| で英文タイトルを指定します．このタイトルは英文アブス
+  トラクトのタイトルにもなります．
+\begin{verbatim}
+\Etitle{Hogehoge}
+\end{verbatim}
+
+  \subsection{著者名}
+  \verb|\author{}| で指定します．\verb|~| などを使用してバランスをとって
+  下さい．要旨にも出力されます．
+\begin{verbatim}
+\author{ほげほげ ~ほげ太}
+\end{verbatim}
+
+  \verb|\Eauthor{}| で英文著者名を指定します．これは英文アブストラクトに
+  出力されます．
+\begin{verbatim}
+\Eauthor{Hogeta HOGEHOGE}
+\end{verbatim}
+
+  \subsection{学籍番号}
+  \verb|\idnumber{}| で指定します．
+\begin{verbatim}
+\idnumber{0123456}
+\end{verbatim}
+
+  \subsection{指導教員}
+  \verb|\advisor{}| で指定します．
+\begin{verbatim}
+\advisor{ほにゃらら}
+\end{verbatim}
+
+  \subsection{日付}
+  \verb|\date{}| で指定します．\verb|\today| は使わず，直接日付を西暦で
+  記述して下さい．
+\begin{verbatim}
+\date{2003年2月5日}
+\end{verbatim}
+
+  \subsection{要旨}
+  \verb|\abstract{}| の中に記述します．
+\begin{verbatim}
+\abstract{
+何々
+}
+\end{verbatim}
+
+  \verb|\Eabstract{}| の中に英文アブストラクトを記述します．
+\begin{verbatim}
+\Eabstract{
+Hogehoge
+}
+\end{verbatim}
+
+  \subsection{キーワード}
+  要旨に出力されるキーワードは \verb|\keyword{}| で記述します．
+\begin{verbatim}
+\keyword{
+これ，あれ
+}
+\end{verbatim}
+
+  \verb|\Ekeyword{}| には英文アブストラクトで出力されるキーワードを記述
+  します．
+\begin{verbatim}
+\Ekeyword{
+Foo1, Foo2
+}
+\end{verbatim}
+  
+  \subsection{図目次，表目次}
+  図目次，表目次を作成しない場合は，それぞれ \verb|figurespagefalse|，
+  \verb|tablespagefalse| を宣言して下さい．
+\begin{verbatim}
+\figurespagefalse
+\tablespagefalse
+\end{verbatim}
+  宣言が無い場合は両方の目次とも出力されます．
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{本文}
+本文については通常の\pLaTeX2$\epsilon$の使い方で書けます．ただし，体裁を
+いじるコマンドはあまり使わないようにして下さい．
+
+ここで表\ref{tab:ex}と図\ref{fig:ex}を書いておきます．
+
+\begin{figure}[h]
+ \begin{center}
+  \vspace{10zh}
+%  \includegraphics[width=.8/linewidth,clip]{figure.eps}
+  \caption{図の例}
+  \label{fig:ex}
+ \end{center}
+\end{figure}
+
+\begin{table}[hbtp]
+ \begin{center}
+  \caption{表の例}
+  \label{tab:ex}
+  \vspace{.5zh}
+  \begin{tabular}{c|c|c} \Hline
+   1	  & 2 & 3 \\ \hline
+   \lw{4} & 5 & 6 \\ \cline{2-3}
+   		  & 8 & 9 \\ \Hline
+  \end{tabular}
+ \end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{追加マクロ}
+\texttt{kut-paper}クラスファイルではいくつかマクロを追加しています．ここ
+ではその使用方法を説明します．
+
+ \section{\texttt{up}}
+ 文字の右肩にマークなどを付けることができます．
+ このようになります\up{$\ast$}．
+\begin{verbatim}
+このようになります\up{$\ast$}．
+\end{verbatim}
+
+ \section{\texttt{Hline}}
+ 表で太い罫線を引く命令です．表\ref{tab:ex}を参照して下さい．
+ \verb|\hline| の代わりに使用します．
+ 
+ \section{\texttt{lw}}
+ 表を作る時に段落間に文字を書くことができます．表\ref{tab:ex}を参照して
+ 下さい．
+\begin{verbatim}
+\begin{tabular}{c|c|c}\Hline
+ 1      & 2 & 3 \\ \hline
+ \lw{4} & 5 & 6 \\ \cline{2-3}
+        & 8 & 9 \\ \Hline
+\end{tabular}
+\end{verbatim}
+
+ \section{\texttt{MARU}}
+ 丸で囲まれた文字（\MARU{1}，\MARU{2}，\MARU{a}）を出力できます．
+\begin{verbatim}
+（\MARU{1}，\MARU{2}，\MARU{a}）
+\end{verbatim}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{環境依存の設定}
+
+ \section{jisフォントメトリックの使用}
+ jisフォントメトリック使用時（デフォルト値），環境によっては``\LaTeX{}の
+ コンパイルができない''，``xdviで表示できない''という場合があります．そ
+ の場合は \verb|documentclass| のオプション \verb|[mingoth]| を指定し，
+ 通常のフォントメトリックを使用するようにして下さい．
+ 
+ \section{出力位置の調整}
+ 環境によっては出力位置がずれることがあります．その場合，クラスファイル
+ 本体1695 $\sim$ 1696行の
+\begin{verbatim}
+\setlength{\hoffset}{0mm}
+\setlength{\voffset}{0mm}
+\end{verbatim}
+ の各値を変更してから使用して下さい．\verb|\hoffset| は水平方向の修正値，
+ \verb|\voffset| は垂直方向の修正値です．ただし \verb|\voffset| に
+ $-3.8$mm以下の値を設定することはできません．両値ともデフォルトは0mmに設
+ 定されています．
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{結論}
+クラスファイル作成は地味な作業だ．
+
+%% 謝辞 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{acknowledgement}
+ \verb|acknowledgement| 環境中に記述した文は，謝辞のタイトルがついた項に
+ 出力されます．
+\begin{verbatim}
+\begin{acknowledgement}
+ほにゃらら教授 …
+\end{acknowledgement}
+\end{verbatim}
+
+ クラスファイルのデバッグを手伝ってくれた素敵に愉快な人々に感謝．
+\end{acknowledgement}
+
+%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+ \bibitem{bib:label} \verb|thebibliography| 環境に参考文献を記述します．
+ 		 ここの \verb|\bibitem| で指定したラベルは
+		 本文中の \verb|\cite| コマンドで参照できます．
+\begin{verbatim}
+\begin{thebibliography}{99}
+ \bibitem{bib:label} 著者，書名等
+\end{thebibliography}
+\end{verbatim}
+                 
+ \bibitem{bib:cls} \verb|http://www.matsusaka-u.ac.jp/~okumura/texfaq/|
+ \bibitem{bib:sty} \verb|http://www.civil.tohoku.ac.jp/~bear/|
+ \bibitem{bib:latex2e} 奥村晴彦，``\LaTeX2$\epsilon$美文書作成入門''，
+		 技術評論社，1999．
+ \bibitem{bib:jnic} \verb|http://ms326.ms.u-tokyo.ac.jp/otobe/|
+\end{thebibliography}
+
+%% 付録 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\chapter{付録環境}
+\verb|\appendix| コマンドで``付録''を宣言した後では付録の本文を記述しま
+す．\verb|\chapter| で付録A，付録Bなどのタイトルが出力されます．
+\begin{verbatim}
+\appendix
+\chapter{何々}
+何々
+\chapter{なになに}
+なになに
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{ChangeLog}
+
+\begin{description}
+ \tiny
+ \item[version 3.3.7 --のちのつき-- の変更点（2013/ 1/30）]~
+ \begin{description}
+  \item[$\bullet$ 情報学群生に対応．]~
+			 情報学群生向けのコマンド \texttt{ScInfo} を追加しました．
+                         \texttt{Bachelor} もしくは \texttt{Project} に対してのみ影響します．
+ \end{description}
+
+ \item[version 3.3.6 --のちのつき-- の変更点（2006/12/28）]~
+ \begin{description}
+  \item[$\bullet$ プロジェクト研究に対応．]~
+			 プロジェクト研究用のコマンド \texttt{Projcet} を追加しました．
+ \end{description}
+
+ \item[version 3.3.5 --のちのつき-- の変更点（2004/ 1/ 5）]~
+ \begin{description}
+  \item[$\bullet$ 特別研究セミナーに対応]~
+			 特別研究セミナー用のコマンド \texttt{Seminar} を追加しました．
+ \end{description}
+
+ \item[version 3.3.4 --のちのつき-- の変更点（2002/12/20）]~
+ \begin{description}
+  \item[$\bullet$ コース名の統一]~
+			 平成14年度以降の新コース名（情報システム工学コース）に統一しました．
+ \end{description}
+ \begin{description}
+  \item[$\bullet$ \texttt{titlelength}コマンドの追加]~
+                         表紙の表題の一行あたり文字数を調整できるように追加しました．
+ \end{description}
+			
+ \item[version 3.3.3 --のちのつき-- の変更点（2001/12/20）]~
+ \begin{description}
+  \item[$\bullet$ 博士学位論文の追加]~
+			 博士学位論文も出力できるように追加しました．
+  \item[$\bullet$ 新コース名への対応]~
+			 平成14年度以降の新コース名（情報システム工学コース）を追加しました．
+ \end{description}
+			
+ \item[version 3.3.2 --のちのつき-- の変更点（2001/3/2）]~
+ \begin{description}
+  \item[$\bullet$ \texttt{abstract}，\texttt{Eabstract}のバグ修正]
+			 要旨およびAbstractがページいっぱいになった時，次ページに空
+			 白ページが出力されるバグを修正しました．
+  \item[$\bullet$ \texttt{English} コマンドの変更]~
+			 英語論文では，タイトルや著者名に \texttt{Etitle}，
+			 \texttt{Eauthor}，\texttt{Eabstract}，\texttt{Ekeyword} を
+			 使用するようになりました．
+  \item[$\bullet$ ベースクラスファイルの変更]
+			 ベースとなるクラスファイルを\pLaTeX2$\epsilon$新ドキュメン
+			 トクラス\texttt{jsbook.cls}（2000/2/26版）ファイルに変更し
+			 ました．
+ \end{description}
+			
+ \item[version 3.3.1 --のちのつき-- の変更点（2001/1/19）]~
+ \begin{description}
+  \item[$\bullet$ ベースクラスファイルの変更]
+			 ベースとなるクラスファイルを\pLaTeX2$\epsilon$新ドキュメン
+			 トクラス\texttt{jsbook.cls}（2000/12/26版）ファイルに変更
+			 しました．
+  \item[$\bullet$ \texttt{Etitle}コマンドの修正]
+			 英語論文の場合，\texttt{Etitle}コマンドを無効にしました．		
+  \item[$\bullet$ 英文のインデント幅の修正]
+			 英文のインデントを大きくとるように修正しました．
+  \item[$\bullet$ マクロ\texttt{MARU}の追加]
+  \item[$\bullet$ ページ余白設定方法の変更]
+ \end{description}
+
+ \item[version 3.3 --のちのつき-- の変更点（2000/11/30）]~
+ \begin{description}
+  \item[$\bullet$ 表紙の体裁の変更]
+			 学士学位論文，修士学位論文と出力するように変更しました．ま
+			 た所属の出力位置を最下段にし，コース名も出力します．
+  \item[$\bullet$ \texttt{Master}コマンドの廃止]
+			 所属を出力するため\texttt{Master}コマンドを廃止し，
+			 \texttt{MasterSys}と\texttt{MasterNet}を追加しました．
+  \item[$\bullet$ \texttt{keyword}，\texttt{Ekeyword}コマンドの追加]
+			 要旨にキーワードを記述するため，\texttt{keyword}と
+			 \texttt{Ekeyword}コマンドを追加しました．
+ \end{description}
+
+ \item[version 3.2 --のちのつき-- の変更点（2000/11/29）]~
+ \begin{description}
+  \item[$\bullet$ ベースクラスファイルの変更]
+			 ベースとなるクラスファイルを\pLaTeX2$\epsilon$新ドキュメン
+			 トクラス\texttt{jsbook.cls}（2000/11/28版）ファイルに変更
+			 しました．
+  \item[$\bullet$ \texttt{year}コマンドの変更]
+			 \texttt{year}のコマンド名がデフォルトのコマンド名とだぶって
+			 いたため，\texttt{years}に変更しました．
+ \end{description}
+			
+ \item[version 3.1 --のちのつき-- の変更点（2000/11/13）]~
+ \begin{description}
+   \item[$\bullet$ 英文の修正]
+			  英語論文の場合に出力される英文（所属など）の修正を行ないま
+			  した．
+  \item[$\bullet$ 出力位置の調整]
+			  環境によって出力位置を変更できるようにしました（変更という
+			  より修正すべき箇所を分かりやすくしただけです）．
+  \item[$\bullet$ 章タイトルなどのフォントの変更]
+			  version 1$\sim$2で使用していたサンセリフ体が不評だったので，
+			  ローマン体ボールドに変更しました．
+  \item[$\bullet$ 表紙の年度と論文種別出力形式の変更]
+			  二行で出力するように変更しました．
+ \end{description}
+			
+ \item[version 3.0 --のちのつき-- の変更点（2000/11/11）]~
+ \begin{description}
+   \item[$\bullet$ 英語論文の完全対応]
+			  version 2.xでは未完成であった英語論文目次を体裁を変更する
+			  ことで不具合の対処をしました．
+ \end{description}
+			
+ \item[version 2.1 --ゆみはり-- の変更点（2000/11/8）]~
+ \begin{description}
+  \item[$\bullet$ 両面印刷のバグの修正]
+			 \texttt{twoside}オプション時に要旨などが偶数，奇数ページに
+			 関係なく出力されていたバグを修正しました．
+ \end{description}
+			
+ \item[version 2.0 --ゆみはり-- の変更点（2000/11/7）]~
+ \begin{description}
+  \item[$\bullet$ \texttt{maketitle}コマンド群の追加]
+			 \texttt{year}，\texttt{Etitle}，\texttt{idnumber}，
+			 \texttt{Eauthor}，\texttt{advisor}，\texttt{Eabstract}の6つ
+			 の新しいコマンドを追加しました．
+  \item[$\bullet$ 修士論文，卒業論文コマンド名の変更]
+			 version 1.xで使われていた，修士論文，卒業論文をそれぞれ
+			 \texttt{Master}，\texttt{Bachelor}に改名しました．
+  \item[$\bullet$ 英語論文への対応]
+			 \texttt{English}コマンドを追加し英語論文に対応しました．し
+			 かし目次などに不具合がありますので未完成品です．
+ \end{description}
+			
+ \item[version 1.1 --みかづき-- の変更点（2000/11/6）]~
+ \begin{description}
+  \item[$\bullet$ 修士論文コマンドの修正]
+			 コマンドが事実上機能していなかったため修正しました．
+  \item[$\bullet$ ページ余白の修正]
+			 ページ余白の設定を全面的に修正しました．ヘッダとフッタが以
+			 前は本文領域に入っていましたが，余白部分に出力されるように
+			 なっています．
+  \item[$\bullet$ 和文，欧文間の4分空きの修正]
+			 \texttt{text??}系のコマンド使用時に，和文，欧文間の4分空き
+			 が消去される問題を修正しました\cite{bib:jnic}．
+  \item[$\bullet$ \texttt{section}コマンドなどの修正]
+			 ページの先頭に節や項の頭が配置された時に余分な余白が入らな
+			 いようにしました．
+  \item[$\bullet$ 付録環境の修正]
+			 \texttt{appendix}コマンドの使用方法を元来の
+			 \pLaTeX2$\epsilon$における使用方法と同じにし，
+			 \texttt{chapter}を使えるように修正しました．
+ \end{description}
+
+ \vspace{1zh}
+ \item[歴史]~
+ \begin{description}
+  \item[2000/11/ 1] 修士，卒業論文の体裁を考えよ指令が，橋本，井上，中平
+			 に下る．7日の昼に結果報告するというスケジュール．
+  \item[2000/11/ 2] 早朝からの激しい雨にもかかわらず，AM9:00，清水研究室
+			 に集合．おおまかな体裁を決定する．
+  \item[2000/11/ 2] 午後，井上さんが決定事項に基づいてMS WORDで書いた例
+			 文を持ってTA中の橋本を強襲する．これが意外に見栄えが良くな
+			 く，AWSで労働中の妻鳥さんを交えて議論する．
+  \item[2000/11/ 2] 夜中，午後の件を踏まえた論文クラスファイル
+			 \texttt{kut-paper}のversion 1.0が完成．井上さんと中平君に
+			 \emph{デバック作業}を押しつける．
+  \item[2000/11/ 3] version 1.0に次から次へとバグが発見される．ブルーに
+			 なりながら直しているうちに朝を迎える．
+  \item[2000/11/ 6] version 1.1完成．
+  \item[2000/11/ 7] 昼食時，情報システム工学科の先生方に体裁案を報告する．
+			 井上さんが一人でがんばってくれました．さすが．
+  \item[2000/11/ 7] PM2:00，昼の報告で出された改善案を検討するため再び清
+			 水研究室に集結．途中で福本先生，妻鳥さん現る．
+  \item[2000/11/ 7] 本日の決定案をもとに新バージョンversion 2.0を作成す
+			 る．
+  \item[2000/11/ 7] version 2.0完成．速攻で妻鳥さん，井上さん，中平君に
+			 \emph{デバック作業}を押しつける．
+  \item[2000/11/ 8] version 2.1完成．
+  \item[2000/11/10] 英語論文完全対応版，version 3.0が完成．またまた
+			 \emph{デバッグ作業}に突入．
+  \item[2000/11/11] version 3.0に対し様々な修正案が``チームでばっぐ''か
+			 ら報告される．素直に採用することに．
+  \item[2000/11/13] version 3.1完成．
+  \item[2000/11/29] version 3.2完成．クラスファイル配布用のWebページを作
+			 成する．
+  \item[2000/11/29] 表紙と要旨の体裁に修正の要望があったので，対応版のク
+			 ラスファイルを作成することに．あー．
+  \item[2000/11/30] version 3.3完成．
+  \item[2000/12/ 1] version 3.3をWebページにおいて配布開始．
+  \item[2001/ 1/18] 英文のインデントが小さすぎることにやっと気付く．配布
+			 が始まっているので少しだけの修正のつもり．
+  \item[2001/ 1/19] version 3.3.1完成．結構修正してしまったが互換性はあ
+			 るはず．
+  \item[2001/ 1/24] 配布 Web ページに\emph{こっそり}version 3.3.1を置い
+			 ておく．
+  \item[2001/ 2/ 5] 学士学位論文提出締切日．\emph{締切2時間前}にバグ発見
+			 の報告．速攻で直す．
+  \item[2001/ 3/ 2] 英語論文の場合の設定が気持ち悪いのでちょっと変更．以
+			 前のバグ修正とあわせて，version 3.3.2が完成．
+  \item[2001/12/20] 大学院コース名変更に対応．version 3.3.3．
+  \item[2002/12/21] 表紙の標題文字数設定を追加．version 3.3.4．
+  \item[2004/ 1/ 5] 特別研究セミナーに対応．version 3.3.5．
+  \item[2006/12/28] プロジェクト研究に対応．version 3.3.6．
+  \item[2013/ 1/30] 情報学群生に対応．version 3.3.7．
+ \end{description}
+ 
+ \vspace{1zh}
+ \item[バージョン名表記]~\\
+  \begin{tabular}{*{5}{cp{8zw}}}
+   1.&みかづき	&5.&もちづき& 9.&ねまち		   &13.&ありあけのつき&17.&みそかのつき	\\
+   2.&ゆみはり	&6.&いざよい&10.&ふけまち	   &14.&ゆうづき	  &18.&ひるのつき	\\
+   3.&のちのつき&7.&たちまち&11.&にじゅうさんや&15.&ふたよのつき  &19.&げんげつ		\\
+   4.&こもちづき&8.&いまち	&12.&にじゅうろくや&16.&あまよのつき					\\
+  \end{tabular}
+\end{description}
+
+\end{document}
