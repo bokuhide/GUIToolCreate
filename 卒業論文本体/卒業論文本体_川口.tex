@@ -229,8 +229,61 @@
 	\end{table}
 	\section{評価環境}
 	本評価実験は,オーケストレーション定義エディタの動作環境を満たしている「Microsoft .NET Framework 4.6」環境で評価を行った.
-	\section{結果}
 	
+	\texttt また,本評価実験で構築する仮想環境システム構成を以下に示す.
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\arabic{enumi}}
+		\item instance数１つ,Router数１つ
+		\item instance数３つ,Router数１つ
+		\item instance数５つ,Router数１つ
+		\item instance数５つ,Router数２つ
+		\item instance数５つ,Router数３つ
+	\end{enumerate}
+	
+	1,２,3のシステム構成は単純にインスタンスの数のみを増加させ４,５のシステム構成は基本的な構成に関しては３と同じだが,作成するルーターの数（内部のネットワーク,サブネットの数）を増加させている.これは,インスタンスに関する記述のみを増加させた場合とルーターに関する記述を増加させた場合,記述増加量の差があるため双方の記述所要時間とエラー発生回数の増加幅やデータの動きに差が生まれると予測したためである.
+	\section{結果}
+	評価実験の結果,従来方式については図\ref{table:6},オーケストレーション定義エディタについては図\ref{table:7}を示す.
+	\begin{table}[H]
+		\begin{center}
+			\caption{各評価要素の実験結果-従来方式}
+			\label{table:6}
+			\begin{tabular}{|p{3cm}|p{2cm}|p{2cm}|}\hline
+				評価要素 & 最小値 & 最大値\\ \hline \hline
+				学習時間 & 413(秒)　& 540(秒)\\ \hline
+				作成所要時間 (1) & 685(秒) & 1328(秒)\\ \hline
+				作成所要時間 (2) & 531(秒) & 1560(秒)\\ \hline
+				作成所要時間 (3) & 597(秒) & 931(秒)\\ \hline
+				作成所要時間 (4) & 525(秒) & 1258(秒)\\ \hline
+				作成所要時間 (5) & 485(秒) & 1532(秒)\\ \hline
+				エラー発生回数 (1) & 1(回) &  7(回)\\ \hline
+				エラー発生回数 (2) & 1(回) &  3(回)\\ \hline
+				エラー発生回数 (3) & 0(回) &  5(回)\\ \hline
+				エラー発生回数 (4) & 0(回) &  7(回)\\ \hline
+				エラー発生回数 (5) & 0(回) &  4(回)\\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{各評価要素の実験結果-オーケストレーション定義エディタ}
+			\label{table:7}
+			\begin{tabular}{|p{3cm}|p{2cm}|p{2cm}|}\hline
+				評価要素 & 最小値 & 最大値\\ \hline \hline
+				学習時間 & 72(秒)　& 180(秒)\\ \hline
+				作成所要時間 (1) & 27(秒) & 71(秒)\\ \hline
+				作成所要時間 (2) & 87(秒) & 166(秒)\\ \hline
+				作成所要時間 (3) & 105(秒) & 190(秒)\\ \hline
+				作成所要時間 (4) & 113(秒) & 228(秒)\\ \hline
+				作成所要時間 (5) & 142(秒) & 229(秒)\\ \hline
+				エラー発生回数 (1) & 0(回) &  0(回)\\ \hline
+				エラー発生回数 (2) & 0(回) &  0(回)\\ \hline
+				エラー発生回数 (3) & 0(回) &  0(回)\\ \hline
+				エラー発生回数 (4) & 0(回) &  0(回)\\ \hline
+				エラー発生回数 (5) & 0(回) &  0(回)\\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
 	\section{考察}
 	
 \chapter{おわりに}
