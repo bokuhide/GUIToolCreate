@@ -36,7 +36,7 @@ resources:
    type: OS::Nova::Server
    depends_on: private1-sub
    properties:
-    name: "aaa"
+    name: "test"
     image: centos-test
     flavor: m1.small
     networks:
