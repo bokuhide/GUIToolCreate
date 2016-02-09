@@ -19,8 +19,8 @@
 \contentsline {section}{\numberline {4.3}評価環境}{16}
 \contentsline {section}{\numberline {4.4}結果}{17}
 \contentsline {section}{\numberline {4.5}考察}{18}
-\contentsline {chapter}{\numberline {第5章}おわりに}{23}
-\contentsline {section}{\numberline {5.1}研究のまとめ}{23}
-\contentsline {section}{\numberline {5.2}今後の課題}{24}
-\contentsline {chapter}{\numberline {謝辞}}{25}
-\contentsline {chapter}{\numberline {参考文献}}{26}
+\contentsline {chapter}{\numberline {第5章}おわりに}{25}
+\contentsline {section}{\numberline {5.1}研究のまとめ}{25}
+\contentsline {section}{\numberline {5.2}今後の課題}{26}
+\contentsline {chapter}{\numberline {謝辞}}{27}
+\contentsline {chapter}{\numberline {参考文献}}{28}
