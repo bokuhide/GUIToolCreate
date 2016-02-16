@@ -85,6 +85,10 @@ namespace 構成マップ見た目
             if (count == 1)
             {
                 this.BlindB.Location = new System.Drawing.Point(210, 1000);
+            }
+            else if (count == 2)
+            {
+                this.BlindD.Location = new System.Drawing.Point(210, 1000);
                 this.routerCopy.Location = new System.Drawing.Point(900, 100);
             }
         }
@@ -518,6 +522,11 @@ namespace 構成マップ見た目
         private void button4_Click(object sender, EventArgs e)
         {
             Networkconnect();
+
+        }
+
+        private void BlindC_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ext_net = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BlindA3 = new System.Windows.Forms.PictureBox();
             this.routerCopy = new System.Windows.Forms.Button();
@@ -84,10 +84,15 @@
             this.demo2A5a = new System.Windows.Forms.PictureBox();
             this.demo2A5b = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.ext_net_connecter2 = new System.Windows.Forms.PictureBox();
+            this.ext_net_connecter1 = new System.Windows.Forms.PictureBox();
             this.BlindA1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.ext_net_connecter3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.BlindD = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -133,20 +138,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5b)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlindD)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ext_net
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 597);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ext_net.Image = ((System.Drawing.Image)(resources.GetObject("ext_net.Image")));
+            this.ext_net.Location = new System.Drawing.Point(12, 12);
+            this.ext_net.Name = "ext_net";
+            this.ext_net.Size = new System.Drawing.Size(24, 774);
+            this.ext_net.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ext_net.TabIndex = 0;
+            this.ext_net.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -200,7 +210,7 @@
             // 
             // BlindB
             // 
-            this.BlindB.Location = new System.Drawing.Point(33, 282);
+            this.BlindB.Location = new System.Drawing.Point(33, 294);
             this.BlindB.Name = "BlindB";
             this.BlindB.Size = new System.Drawing.Size(153, 221);
             this.BlindB.TabIndex = 11;
@@ -454,11 +464,12 @@
             // 
             // BlindC
             // 
-            this.BlindC.Location = new System.Drawing.Point(652, 23);
+            this.BlindC.Location = new System.Drawing.Point(619, 31);
             this.BlindC.Name = "BlindC";
             this.BlindC.Size = new System.Drawing.Size(476, 548);
             this.BlindC.TabIndex = 44;
             this.BlindC.TabStop = false;
+            this.BlindC.Click += new System.EventHandler(this.BlindC_Click);
             // 
             // netstick1
             // 
@@ -649,23 +660,23 @@
             this.pictureBox5.TabIndex = 73;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox7
+            // ext_net_connecter2
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(12, 321);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(82, 10);
-            this.pictureBox7.TabIndex = 74;
-            this.pictureBox7.TabStop = false;
+            this.ext_net_connecter2.Image = ((System.Drawing.Image)(resources.GetObject("ext_net_connecter2.Image")));
+            this.ext_net_connecter2.Location = new System.Drawing.Point(12, 321);
+            this.ext_net_connecter2.Name = "ext_net_connecter2";
+            this.ext_net_connecter2.Size = new System.Drawing.Size(82, 10);
+            this.ext_net_connecter2.TabIndex = 74;
+            this.ext_net_connecter2.TabStop = false;
             // 
-            // pictureBox8
+            // ext_net_connecter1
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(28, 118);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 10);
-            this.pictureBox8.TabIndex = 75;
-            this.pictureBox8.TabStop = false;
+            this.ext_net_connecter1.Image = ((System.Drawing.Image)(resources.GetObject("ext_net_connecter1.Image")));
+            this.ext_net_connecter1.Location = new System.Drawing.Point(28, 118);
+            this.ext_net_connecter1.Name = "ext_net_connecter1";
+            this.ext_net_connecter1.Size = new System.Drawing.Size(100, 10);
+            this.ext_net_connecter1.TabIndex = 75;
+            this.ext_net_connecter1.TabStop = false;
             // 
             // BlindA1
             // 
@@ -675,15 +686,63 @@
             this.BlindA1.TabIndex = 76;
             this.BlindA1.TabStop = false;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(59, 543);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(120, 72);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 77;
+            this.pictureBox9.TabStop = false;
+            // 
+            // ext_net_connecter3
+            // 
+            this.ext_net_connecter3.Image = ((System.Drawing.Image)(resources.GetObject("ext_net_connecter3.Image")));
+            this.ext_net_connecter3.Location = new System.Drawing.Point(33, 573);
+            this.ext_net_connecter3.Name = "ext_net_connecter3";
+            this.ext_net_connecter3.Size = new System.Drawing.Size(82, 10);
+            this.ext_net_connecter3.TabIndex = 78;
+            this.ext_net_connecter3.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(105, 610);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(10, 50);
+            this.pictureBox11.TabIndex = 79;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(42, 648);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(144, 116);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 80;
+            this.pictureBox12.TabStop = false;
+            // 
+            // BlindD
+            // 
+            this.BlindD.Location = new System.Drawing.Point(33, 543);
+            this.BlindD.Name = "BlindD";
+            this.BlindD.Size = new System.Drawing.Size(153, 221);
+            this.BlindD.TabIndex = 81;
+            this.BlindD.TabStop = false;
+            // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(491, 617);
+            this.ClientSize = new System.Drawing.Size(1408, 831);
+            this.Controls.Add(this.BlindB);
+            this.Controls.Add(this.BlindD);
+            this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.BlindA1);
             this.Controls.Add(this.BlindC);
-            this.Controls.Add(this.BlindB);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.demo1A3b);
@@ -700,7 +759,7 @@
             this.Controls.Add(this.instantiation);
             this.Controls.Add(this.routerCopy);
             this.Controls.Add(this.file_output);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ext_net);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -722,17 +781,19 @@
             this.Controls.Add(this.demo2A4a);
             this.Controls.Add(this.demo1A2a);
             this.Controls.Add(this.demo1A2b);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.ext_net_connecter1);
+            this.Controls.Add(this.ext_net_connecter2);
             this.Controls.Add(this.demo1A4a);
             this.Controls.Add(this.demo1A5a);
             this.Controls.Add(this.demo1A3a);
             this.Controls.Add(this.demo1A1c);
             this.Controls.Add(this.demo1A1a);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.ext_net_connecter3);
+            this.Controls.Add(this.pictureBox11);
             this.Name = "MapForm";
             this.Text = "構成マップ";
-   //         this.Load += new System.EventHandler(this.MapForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -778,16 +839,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demo2A5b)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlindA1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ext_net_connecter3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlindD)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ext_net;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button routerCopy;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -842,9 +908,14 @@
         private System.Windows.Forms.PictureBox demo2A5a;
         private System.Windows.Forms.PictureBox demo2A5b;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox ext_net_connecter2;
+        private System.Windows.Forms.PictureBox ext_net_connecter1;
         private System.Windows.Forms.PictureBox BlindA1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox ext_net_connecter3;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox BlindD;
     }
 }
 

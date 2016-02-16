@@ -32,13 +32,48 @@ resources:
     router_id: {get_resource: ext-router1}
     subnet_id: {get_resource: private1-sub}
 
+ private2:
+   type: OS::Neutron::Net
+   properties:
+    name: demo-net2
+ 
+ private2-sub:
+   type: OS::Neutron::Subnet
+   depends_on: private2
+   properties:
+    network_id: {get_resource: private2}
+    cidr: 192.168.3.0/24
+
+ ext-router2:
+   type: OS::Neutron::Router
+   properties:
+    external_gateway_info:
+     network: {get_param: ext-net}
+
+ ext-router2-interface:
+   type: OS::Neutron::RouterInterface
+   depends_on: [ext-router2, private2-sub]
+   properties:
+    router_id: {get_resource: ext-router2}
+    subnet_id: {get_resource: private2-sub}
+
  instance1:
    type: OS::Nova::Server
    depends_on: private1-sub
    properties:
-    name: "centos-instance"
-    image: centos-test
+    name: ""
+    image: windows-test
     flavor: m1.small
     networks:
      - network: {get_resource: private1}
+
+ instance2:
+   type: OS::Nova::Server
+   depends_on: 
+   properties:
+    name: ""
+    image: 
+    flavor: 
+    networks:
+     - network: {get_resource: }
 
