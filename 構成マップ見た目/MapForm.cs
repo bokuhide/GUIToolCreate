@@ -94,28 +94,42 @@ namespace 構成マップ見た目
         }
         private void Networkconnect()
         {
-            this.demo1A1a.Location = new System.Drawing.Point(900, 70);
-            this.demo1A1b.Location = new System.Drawing.Point(900, 70);
-            this.demo1A1c.Location = new System.Drawing.Point(900, 220);
-            this.demo2A1a.Location = new System.Drawing.Point(900, 70);
-            this.demo2A1b.Location = new System.Drawing.Point(900, 70);
-            this.demo2A1c.Location = new System.Drawing.Point(900, 440);
-            this.demo1A2a.Location = new System.Drawing.Point(900, 160);
-            this.demo1A2b.Location = new System.Drawing.Point(900, 160);
-            this.demo2A2a.Location = new System.Drawing.Point(900, 160);
-            this.demo2A2b.Location = new System.Drawing.Point(900, 160);
-            this.demo1A3a.Location = new System.Drawing.Point(900, 270);
-            this.demo1A3b.Location = new System.Drawing.Point(900, 220);
-            this.demo2A3a.Location = new System.Drawing.Point(900, 270);
-            this.demo2A3b.Location = new System.Drawing.Point(900, 270);
-            this.demo1A4a.Location = new System.Drawing.Point(900, 360);
-            this.demo1A4b.Location = new System.Drawing.Point(900, 220);
-            this.demo2A4a.Location = new System.Drawing.Point(900, 360);
-            this.demo2A4b.Location = new System.Drawing.Point(900, 360);
-            this.demo1A5a.Location = new System.Drawing.Point(900, 455);
-            this.demo1A5b.Location = new System.Drawing.Point(900, 220);
-            this.demo2A5a.Location = new System.Drawing.Point(900, 443);
-            this.demo2A5b.Location = new System.Drawing.Point(900, 82);
+            this.demo1A1a.Location = new System.Drawing.Point(900, 100);
+            this.demo1A1b.Location = new System.Drawing.Point(900, 100);
+            this.demo1A1c.Location = new System.Drawing.Point(900, 100);
+            this.demo1A2a.Location = new System.Drawing.Point(900, 100);
+            this.demo1A2b.Location = new System.Drawing.Point(900, 100);
+            this.demo1A3a.Location = new System.Drawing.Point(900, 100);
+            this.demo1A3b.Location = new System.Drawing.Point(900, 100);
+            this.demo1A4a.Location = new System.Drawing.Point(900, 100);
+            this.demo1A4b.Location = new System.Drawing.Point(900, 100);
+            this.demo1A5a.Location = new System.Drawing.Point(900, 100);
+            this.demo1A5b.Location = new System.Drawing.Point(900, 100);
+
+
+            this.demo2A1a.Location = new System.Drawing.Point(900, 100);
+            this.demo2A1b.Location = new System.Drawing.Point(900, 100);
+            this.demo2A1c.Location = new System.Drawing.Point(900, 100);
+            this.demo2A2a.Location = new System.Drawing.Point(900, 100);
+            this.demo2A2b.Location = new System.Drawing.Point(900, 100);
+            this.demo2A3a.Location = new System.Drawing.Point(900, 100);
+            this.demo2A3b.Location = new System.Drawing.Point(900, 100);
+            this.demo2A4a.Location = new System.Drawing.Point(900, 100);
+            this.demo2A4b.Location = new System.Drawing.Point(900, 100);
+            this.demo2A5a.Location = new System.Drawing.Point(900, 100);
+            this.demo2A5b.Location = new System.Drawing.Point(900, 100);
+
+            this.demo3A1a.Location = new System.Drawing.Point(900, 100);
+            this.demo3A1b.Location = new System.Drawing.Point(900, 100);
+            this.demo3A1c.Location = new System.Drawing.Point(900, 100);
+            this.demo3A2a.Location = new System.Drawing.Point(900, 100);
+            this.demo3A2b.Location = new System.Drawing.Point(900, 100);
+            this.demo3A3a.Location = new System.Drawing.Point(900, 100);
+            this.demo3A3b.Location = new System.Drawing.Point(900, 100);
+            this.demo3A4a.Location = new System.Drawing.Point(900, 100);
+            this.demo3A4b.Location = new System.Drawing.Point(900, 100);
+            this.demo3A5a.Location = new System.Drawing.Point(900, 100);
+            this.demo3A5b.Location = new System.Drawing.Point(900, 100);
             if (count2 >= 1)
             {
                 if (this.instanceConfigList[0].networkName == "demo-net1")
@@ -129,6 +143,12 @@ namespace 構成マップ見た目
                     this.demo2A1a.Location = new System.Drawing.Point(240, 70);
                     this.demo2A1b.Location = new System.Drawing.Point(240, 70);
                     this.demo2A1c.Location = new System.Drawing.Point(160, 440);
+                }
+                else if (this.instanceConfigList[0].networkName == "demo-net3")
+                {
+                    this.demo3A1a.Location = new System.Drawing.Point(270, 70);
+                    this.demo3A1b.Location = new System.Drawing.Point(270, 70);
+                    this.demo3A1c.Location = new System.Drawing.Point(160, 665);
                 }
             }
             if (count2 >= 2)
@@ -145,6 +165,12 @@ namespace 構成マップ見た目
                     this.demo2A2b.Location = new System.Drawing.Point(240, 160);
                     this.demo2A1c.Location = new System.Drawing.Point(160, 440);
                 }
+                else if (this.instanceConfigList[1].networkName == "demo-net3")
+                {
+                    this.demo3A2a.Location = new System.Drawing.Point(270, 160);
+                    this.demo3A2b.Location = new System.Drawing.Point(270, 160);
+                    this.demo3A1c.Location = new System.Drawing.Point(160, 665);
+                }
             }
             if (count2 >= 3)
             {
@@ -159,6 +185,12 @@ namespace 構成マップ見た目
                     this.demo2A3a.Location = new System.Drawing.Point(240, 270);
                     this.demo2A3b.Location = new System.Drawing.Point(240, 270);
                     this.demo2A1c.Location= new System.Drawing.Point(160, 440);
+                }
+                else if (this.instanceConfigList[2].networkName == "demo-net3")
+                {
+                    this.demo3A3a.Location = new System.Drawing.Point(270, 270);
+                    this.demo3A3b.Location = new System.Drawing.Point(270, 270);
+                    this.demo3A1c.Location = new System.Drawing.Point(160, 665);
                 }
             }
             if (count2 >= 4)
@@ -175,6 +207,12 @@ namespace 構成マップ見た目
                     this.demo2A4b.Location = new System.Drawing.Point(240, 360);
                     this.demo2A1c.Location = new System.Drawing.Point(160, 440);
                 }
+                else if (this.instanceConfigList[3].networkName == "demo-net3")
+                {
+                    this.demo3A4a.Location = new System.Drawing.Point(270, 360);
+                    this.demo3A4b.Location = new System.Drawing.Point(270, 360);
+                    this.demo3A1c.Location = new System.Drawing.Point(160, 665);
+                }
             }
             if (count2 >= 5)
             {
@@ -187,8 +225,13 @@ namespace 構成マップ見た目
                 else if (this.instanceConfigList[4].networkName == "demo-net2")
                 {
                     this.demo2A5a.Location = new System.Drawing.Point(240, 440);
-               //     this.demo2A5b.Location = new System.Drawing.Point(240, 82);
                     this.demo2A1c.Location = new System.Drawing.Point(160, 440);
+                }
+                else if (this.instanceConfigList[4].networkName == "demo-net3")
+                {
+                    this.demo3A5a.Location = new System.Drawing.Point(270, 455);
+                    this.demo3A5b.Location = new System.Drawing.Point(270, 455);
+                    this.demo3A1c.Location = new System.Drawing.Point(160, 665);
                 }
             }
         }
@@ -196,7 +239,7 @@ namespace 構成マップ見た目
         private void fileExport()
         {
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");
-            StreamWriter writer = new StreamWriter(@"..\..\..\text.txt", false, sjisEnc);
+            StreamWriter writer = new StreamWriter(@"..\text.txt", false, sjisEnc);
 
             string head = "heat_template_version: 2013-05-23\r\n";
             string parameters = "parameters:\r\n  ext-net:\r\n   type: string\r\n   description: ext-netID\r\n   default: ext-net\r\n";
@@ -327,6 +370,16 @@ namespace 構成マップ見た目
                 writer.WriteLine("{0}", resourcesSubnet2);
                 writer.WriteLine("{0}", resourcesRouter2);
                 writer.WriteLine("{0}", resourcesRouterInterface2);
+            }
+
+            if (count >= 2)
+            {
+
+                writer.Write("{0}", resourcesPrivatenet3);
+                writer.WriteLine("{0}", net_name3);
+                writer.WriteLine("{0}", resourcesSubnet3);
+                writer.WriteLine("{0}", resourcesRouter3);
+                writer.WriteLine("{0}", resourcesRouterInterface3);
             }
             writer.Write("{0}", instance1Firsthalf);
             writer.Write("{0}", instance1depend_subnet);
@@ -525,7 +578,21 @@ namespace 構成マップ見た目
 
         }
 
+<<<<<<< HEAD
         private void BlindC_Click(object sender, EventArgs e)
+=======
+        private void MapForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void demo3A2a_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void demo3A4b_Click(object sender, EventArgs e)
+>>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
         {
 
         }

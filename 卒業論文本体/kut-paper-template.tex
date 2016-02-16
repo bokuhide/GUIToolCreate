@@ -1,0 +1,151 @@
+%% 論文
+
+%% プリアンブル %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass{kut-paper}			%% jis フォントを使用する場合
+\documentclass[mingoth]{kut-paper}		%% 通常フォントを使用する場合
+%\documentclass[twoside]{kut-paper}		%% 両面印刷の場合
+
+\usepackage[dviout]{graphicx}
+
+%% 表紙 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ScInfo                         %% 情報学群の場合に追加する．それ以外の場合はコメントアウト
+
+\Bachelor			%% 学士学位論文（卒業研究）の場合
+%\Project			%% プロジェクト研究報告書の場合
+%\Seminar			%% 特別研究セミナー課題研究報告書の場合
+%\Master			%% 修士学位論文（情報システム工学コース）の場合
+%\Doctorate			%% 博士学位論文（情報システム工学コース）の場合
+%\English			%% 英語の場合（特別研究セミナーの場合は選択不可）
+%\figurespagefalse		%% 図目次を出力しない場合
+%\tablespagefalse		%% 表目次を出力しない場合
+
+\years{平成28}
+\title{OpenStack環境でのオーケストレーション定義を容易にするGUIエディタの実現}
+\titlelength{19}		%% 表紙の表題の行長(全角文字数<20, default=19)
+\Etitle{}
+\idnumber{1160304}
+\author{川口　貴大}
+\Eauthor{}
+\advisor{横山　和俊}
+\date{2016/02/15}
+\abstract{
+	近年，ITリソースの迅速な確保，コスト削減等の目的からシステムの基盤としてIaaSの需要が高まっている．IaaSを用いたものに限らず，ITサービスにおけるシステム設計では冗長化や負荷分散，処理の効率化といった理由により，複数マシンの構成となる場合が多く見られる．しかし，システムの流用や再利用が求められる場面では、大規模なシステムになるにつれ、マシン台数も増加し設定に掛かる工程が増大してしまう。そのため、システム再現における作業の効率化が求められている。
+	
+	\texttt OpenStackは最も開発が進んでいるIaaS基盤ソフトウェアの一つであり、コミュニティには多くの有名企業が参加している。OpenStackではHeatと呼ばれるオーケストレーション（自動構築）機能を提供するソフトウェアにより、システムの再現を効率化している。HeatではITリソースの構成情報を記述した設計図(テンプレートファイル)を読み込ませることで、その構成情報を基に自動的にシステムの構築を行う。そのため、テンプレートファイルの作成はシステムを構築する上で重要な役割を担っている。しかし、テンプレートファイルは書式が複雑であり、記述を行う際にはHeat独自の知識を要する。また、テキストファイルであるため、記述量の増加によるミスや、構成情報がテキストからイメージし難いという問題も抱えている。
+	
+	\texttt 本研究ではGUIを用いることにより、従来のテキスト入力における問題点を解決するテンプレートファイル作成手法を研究し、新規テンプレートファイル作成ツールの開発を
+	
+}
+\keyword{OpenStack，IaaS，Heat，オーケストレーション
+}
+\Eabstract{English
+}				%% プロジェクト研究報告書の場合は不要
+\Ekeyword{English
+}				%% プロジェクト研究報告書の場合は不要
+
+%% 本文 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\chapter{はじめに}
+%\input{chpater1.tex}
+	\section{IaaSの動向}
+	サーバー仮想化や通信ネットワークの技術進歩に伴い，クラウドコンピューティングが普及している．一般ユーザー向けに提供されるサービスや，企業内で利用される専用アプリケーションなど，多くのサービスがクラウドを用いて提供されており，クラウドコンピューティングにおいてIaaSの需要が高まっている．総務省が公開している「平成27年度版　情報通信白書」第２部によると，図１に示す通り市場規模におけるIaaSの割合が，
+	\section{OpenStackの概要}
+	OpenStackは，機能別にコンポーネントが分かれており，各コンポーネントが相互に連携して動作する．OpenStackの主要コンポーネントを表１に示す．
+	
+	\begin{table}[htb]
+		\begin{center}
+			\caption{OpenStackの主要コンポーネント}
+			\begin{tabular}{|l|l|} \hline
+				コンポーネント & 機能 \\ \hline \hline
+				Keystone & 統合認証サービスの提供 \hline
+				Nova & 仮想マシンの生成，起動と停止の管理 \hline
+				Glance & 仮想マシンで使用されるゲストOSの管理 \hline
+				Cinder & ブロックストレージにてゲストOS等を永続管理 \hline
+				Neutron & 仮想ネットワークの管理 \hline
+				Horizon & OpenStackの操作管理を行うWebUIの提供 \hline
+				Swift & オブジェクトストレージの提供 \hline
+				Heat & 仮想環境構築に関するオーケストレーション機能の提供
+			\end{tabular}
+		\end{center}
+	\end{table}
+	\section{Heatの概要}
+	
+	\section{現状の問題点}
+	
+	\section{問題点の解決方法}
+	
+	
+\chapter{オーケストレーション定義エディタの提案}
+%\input{chpater2.tex}
+	\section{オーケストレーション定義エディタの概要}
+	
+	\section{オーケストレーション定義エディタの要件}
+	
+	\section{Heatで扱うリソース}
+	
+	\section{リソースの依存関係}
+	
+	\section{テンプレートファイルへの出力補助方法}
+	
+	\section{入力されたデータの扱い}
+	
+	
+\chapter{オーケストレーション定義エディタの実装}
+	\section{動作環境}
+	
+	\section{画面構成}
+	
+		\subsection{構成確認画面}
+		
+		\subsection{詳細入力画面}
+	
+	\section{テンプレートファイル出力の流れ}
+		\subsection{インスタンスに関する記述について}
+		
+		\subsection{ネットワークに関する記述について}
+		
+\chapter{評価}
+	\section{評価の目的}
+	
+	\section{評価内容}
+	
+	\section{評価環境}
+	
+	\section{結果}
+	
+	\section{考察}
+	
+\chapter{おわりに}
+	\section{研究のまとめ}
+	\section{今後の課題}
+	
+
+%% 謝辞 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{acknowledgement}
+%\input{acknowledgement.tex}
+\end{acknowledgement}
+
+%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+%\input{bibliography.tex}
+\end{thebibliography}
+
+%% 付録 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\chapter{}
+%\input{appendex1.tex}
+
+\chapter{}
+%\input{appendex2.tex}
+
+\end{document}

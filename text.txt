@@ -61,8 +61,13 @@ resources:
    type: OS::Nova::Server
    depends_on: private1-sub
    properties:
+<<<<<<< HEAD
     name: ""
     image: windows-test
+=======
+    name: "a"
+    image: centos-test
+>>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
     flavor: m1.small
     networks:
      - network: {get_resource: private1}

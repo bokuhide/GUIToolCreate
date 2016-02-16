@@ -56,7 +56,7 @@ resources:
    properties:
     router_id: {get_resource: ext-router2}
     subnet_id: {get_resource: private2-sub}
-
+    
  instance1:
    type: OS::Nova::Server
    depends_on: private2-sub
