@@ -706,11 +706,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-<<<<<<< HEAD
-  <data name="pictureBox9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
   <data name="router3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGUAAAA9CAYAAAC0oadVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAAd0SU1FB98LFwcqN0c7Jc8AAAUmSURBVHhe7VwxT+NMEM1P+XQ/AXqoAbdIpDqB
@@ -746,11 +742,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-<<<<<<< HEAD
-  <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
   <data name="netstick3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACcAAAEkCAYAAACsQCgvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAkFJREFUeF7NyDEBADAMwKD6lzF1ddEZiAAOHmbeHitTkanIVGQqMhWZikxFpiJT
@@ -766,11 +758,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-<<<<<<< HEAD
-  <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
   <data name="demo_net3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVMAAAFMCAYAAAB2y186AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wgAADsIBFShKgAAAD8VJREFUeF7t2z1y5Lgdh2GfywfyeXwGH8GBD7BHcOpoMyeu2sBVGzgYCyP1Tg/5
@@ -843,8 +831,6 @@
         1AOpVsZUlxYN2hmkqzOmklQhYypJFTKmknS4b9/+D7DCjpAaz5w9AAAAAElFTkSuQmCC
 </value>
   </data>
-<<<<<<< HEAD
-=======
   <data name="demo3A1a.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVMAAAAdCAYAAAAXbo/cAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1023,5 +1009,4 @@
         TAA2mQBsMgHYZAKwyQRg8N4PspJgz/kBamUAAAAASUVORK5CYII=
 </value>
   </data>
->>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
 </root>

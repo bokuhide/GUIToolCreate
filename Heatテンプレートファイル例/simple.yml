@@ -1,0 +1,18 @@
+heat_template_version: 2014-10-16
+
+description: Simple template to deploy a single compute instance
+
+parameters:
+  instance_type:
+    type: string
+    label: Instance Type
+    description: Type of instance (flavor) to be used
+    constraints:
+      - allowed_values: [ m1.medium, m1.large, m1.xlarge ]
+        description: Value must be one of m1.medium, m1.large or m1.xlarge.
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      image: cirros-0.3.3-x86_64

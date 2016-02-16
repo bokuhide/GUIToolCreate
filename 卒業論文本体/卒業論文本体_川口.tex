@@ -43,11 +43,11 @@
 \keyword{OpenStack，IaaS，Heat，オーケストレーション
 }
 \Eabstract{
-	Recentry,there has been a growing demand for IaaS. The reason is rapid securing of T resources , cost reduction. As well as the one for which IaaS was used，By the construction of the system design in IT service, more than one machine often used. The reason is redundant, load sharing and Efficiency of processing. But, the situation from which diversion of a system and reuse are asked, it increases in a building process. The factor is number of machines increase by magnification of a system.　Therefore operational efficiency in system reproduction is desired.
+	Recentry，there has been a growing demand for IaaS．The reason is rapid securing of T resources， cost reduction．As well as the one for which IaaS was used，By the construction of the system design in IT service， more than one machine often used．The reason is redundant， load sharing and Efficiency of processing．But， the situation from which diversion of a system and reuse are asked， it increases in a building process．The factor is number of machines increase by magnification of a system．Therefore operational efficiency in system reproduction is desired．
 	
-	OpenStack is one of the IaaS foundation software development is advancing most, and many famous enterprises participate in a community.　OpenStack is to automate system building by the component called Heat, and reproduction of a system is made efficient.　Heat is to make them read the plan in which composition information on an IT resource was written, and a system is started automatically based on the composition information.　Therefore when building a system, the making of a template file is charged with the important role.　But a form is complicated and when describing, a template file needs original knowledge.　The problem that enormous description amount and composition information are difficult to imagine from a text is also held because it's a text file.
+	OpenStack is one of the IaaS foundation software development is advancing most， and many famous enterprises participate in a community．OpenStack is to automate system building by the component called Heat， and reproduction of a system is made efficient．　Heat is to make them read the plan in which composition information on an IT resource was written， and a system is started automatically based on the composition information．Therefore when building a system， the making of a template file is charged with the important role．But a form is complicated and when describing， a template file needs original knowledge．The problem that enormous description amount and composition information are difficult to imagine from a text is also held because it's a text file．
 	
-	The new template file generation tool which settles a problem in conventional input in text-entry mode was developed by giving an orchestration definition using a GUI by this research, and a short time and the thing you can do system definition of easily were indicated compared with a conventional way.
+	The new template file generation tool which settles a problem in conventional input in text-entry mode was developed by giving an orchestration definition using a GUI by this research， and a short time and the thing you can do system definition of easily were indicated compared with a conventional way．
 	
 	
 }				%% プロジェクト研究報告書の場合は不要
@@ -66,7 +66,7 @@
 	サーバー仮想化や通信ネットワークの技術進歩に伴い，クラウドコンピューティングが普及している．一般ユーザー向けに提供されるサービスや，企業内で利用される専用アプリケーションなど，多くのサービスがクラウドを用いて提供されており，クラウドコンピューティングにおいてIaaSの需要が高まっている．総務省が公開している「平成27年度版　情報通信白書」第５章第２節によると，図\ref{graf:1}に示す通り市場規模におけるIaaSの規模が，2018年時予測の段階で2012年時規模の約４倍にまで増加する．\cite{bib:1}そのため，今後更にIaaSの需要が高まると考えられる．
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.8]{Document/2016IaaSDataGrafPhoto.eps}
+			\includegraphics[scale=0.4]{Document/IaaSGrafNew.eps}
 			\caption{クラウドサービスの世界市場規模の推移及び予測}
 			\label{graf:1}
 		\end{center}
@@ -93,7 +93,7 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
-	Heatとは，本来OpenStack利用者が手動で，各コンポーネントに指示を出し行っている仮想環境構築の手順を自動化する機能を提供している．自動化の手順としては，各コンポーネントを実行するために必要な項目を「Heatテンプレートファイル（以降テンプレートファイルと呼ぶ）」に記述後，テンプレートファイルを読み込むことで各コンポーネントで実行される内容を定義した後，自動で実行し仮想環境を構築を行うというものである．尚，テンプレートファイルには独自の書式が存在する．
+	Heatとは，本来OpenStack利用者が手動で，各コンポーネントに指示を出し行っている仮想環境構築の手順を自動化する機能を提供している．自動化の手順としては，各コンポーネントを実行するために必要な項目を「Heatテンプレートファイル（以降テンプレートファイルと呼ぶ）」に記述後，テンプレートファイルを読み込むことで各コンポーネントで実行される内容を定義した後，自動で実行し仮想環境を構築を行うというものである．尚，テンプレートファイルには独自の書式が存在する．\cite{bib:4}
 	
 	OpenStackの各コンポーネントを自動化することができるHeatだが，現状問題が存在する．図\ref{table:2}に問題点を示す.
 	
@@ -104,7 +104,7 @@
 			\begin{tabular}{|p{5cm}|p{7cm}|}\hline
 				問題点 & 詳細\\ \hline \hline
 				テンプレートファイルから構成情報を把握しづらい & 構成情報を全てテキストで記述しているため,一見して構築途中または構築完了後の構成をテンプレートファイルからは把握しづらい.\\ \hline
-				Heatテンプレートファイルの書式が複雑 & 入力内容を把握しづらい.また,文中のインデントの深さで入力内容を区別するという特殊な書式もある.\\ \hline
+				テンプレートファイルの書式が複雑 & 入力内容を把握しづらい.どのコンポーネントへ命令を出すか，また各コンポーネント内で分岐している命令文の選択も複雑な書式といえる．また,文中のインデントの深さで入力内容を区別するという特殊な書式もある.\\ \hline
 				膨大なテキスト記述量 & 手動入力で仮想環境のシステム構成について記述するため,記述に膨大な時間がかかる.\\ \hline
 			\end{tabular}
 		\end{center}
@@ -146,7 +146,7 @@
 \chapter{オーケストレーション定義エディタの提案}
 %\input{chpater2.tex}
 	\section{オーケストレーション定義エディタの概要}
-		オーケストレーション定義エディタとは，従来手動で行っていたHeatテンプレートファイル作成をGUIベースで作成補助をすることによりテンプレートファイル作成にかかる時間を削減し，容易にHeatを用いた仮想環境構築を可能にするエディタである．オーケストレーション定義エディタの概略図を図\ref{graf:2}に示す．
+		オーケストレーション定義エディタとは，従来手動で行っていたテンプレートファイル作成をGUIベースで作成補助をすることによりテンプレートファイル作成にかかる時間を削減し，容易にHeatを用いた仮想環境構築を可能にするエディタである．オーケストレーション定義エディタの概略図を図\ref{graf:2}に示す．
 		\vspace{-2mm}
 		\begin{figure}[H]
 			\begin{center}
@@ -248,12 +248,30 @@
 			\end{center}
 		\end{figure}
 		
+		また，図\ref{pic:3}のように構成内容を決定した後でも，オーケストレーション定義エディタを終了させなければ構成内容の編集が可能である．図\ref{pic:3}の状態から一度インスタンスの接続先ネットワークを変更，作成するネットワークとインスタンスを増加させることも可能であり，図\ref{pic:5}と図\ref{pic:6}のように遷移する．
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.55]{Document/構成確認画面ex1.eps}
+				\caption{オーケストレーション定義エディタ-構成確認画面その4}
+				\label{pic:5}
+			\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.55]{Document/構成確認画面ex2.eps}
+				\caption{オーケストレーション定義エディタ-構成確認画面その5}
+				\label{pic:6}
+			\end{center}
+		\end{figure}
+		
+		
 		\subsection{詳細入力画面}
 		インスタンスに関する詳細入力は，構成確認画面から遷移できる詳細入力画面で行う．詳細入力画面の様子を図\ref{pic:4}に示す．詳細入力画面で入力できる4つの項目のうちインスタンス名を入力する項目1つを除き全てプルダウンメニューを採用している．インスタンス名のみ，自由に入力できる項目であるため手動入力形式であるが，その他3つの項目はある程度入力される内容が決まっているがインスタンス毎に入力内容が違う可能性がある．そこで選択肢を提供するためにプルダウンメニューを採用した．尚，構成確認画面でネットワークを追加した場合は「接続先」項目の選択肢が自動で追加される．
 		
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.55]{Document/詳細設定画面.eps}
+					\includegraphics[scale=1.1]{Document/詳細設定画面.eps}
 					\caption{オーケストレーション定義エディタ-詳細設定画面}
 					\label{pic:4}
 				\end{center}
@@ -279,7 +297,7 @@
 				評価要素 & 詳細\\ \hline \hline
 				学習時間 & 各方式についての前提知識を説明用ドキュメントを用いて学習するのにかかった時間\\ \hline
 				作成所要時間 & 各方式それぞれテンプレートファイル作成開始からテンプレートファイルをエラー無しの状態で正常に読み込ませるまでに要した時間\\ \hline
-				エラー発生回数 & テンプレートファイルをHeatに読み込ませた時にエラーが発生した回数.正常に読みこませられるまで修正したテンプレートファイルを読みこませ直し続けるのでその都度エラーが発生すればカウントする\\ \hline
+				エラー発生回数 & テンプレートファイルをHeatに読み込ませた時にエラーが発生した回数.正常に読み込み完了となるまで修正したテンプレートファイルを読みこませ直し続けるのでその都度エラーが発生すればカウントする\\ \hline
 			\end{tabular}
 		\end{center}
 	\end{table}
@@ -357,19 +375,18 @@
 					\label{graf:8}
 				\end{center}
 			\end{figure}
+		従来方式ではOpenStackに関する基本的な知識の他に，テンプレートファイル独特の書式について知識が必要であるため，学習すべき項目が多岐に渡ったからだと考えられる．
 		
-		従来方式ではOpenStackに関する基本的な知識の他に，Heatテンプレートファイル独特の書式について知識が必要であるため，学習すべき項目が多岐に渡ったからだと考えられる．
+		　一方オーケストレーション定義エディタはボタンとプルダウンメニュー，1箇所のみ手動入力項目に関する説明があるだけで学習すべき項目は従来方式に比べて大幅に少ないからだと考えられる．
 		
-		一方オーケストレーション定義エディタはボタンとプルダウンメニュー，1箇所のみ手動入力項目に関する説明があるだけで学習すべき項目は従来方式に比べて大幅に少ないからだと考えられる．
-		
-		以上のことから，学習時間の面において従来方式よりもオーケストレーション定義エディタのほうが導入が容易であることが示せたと考えられる．
+		　以上のことから，学習時間の面において従来方式よりもオーケストレーション定義エディタのほうが導入が容易であることが示せたと考えられる．
 		
 		\item[(作成所要時間について)]\mbox{}\\ 　記録する3つの評価要素のうち，従来方式とオーケストレーション定義エディタ大きく差がでたのが作成所要時間である．従来方式は5人の被験者間で作成所要時間に大きなばらつきがあり，なおかつ作成所要時間そのものも長時間に及んでいた．一方オーケストレーション定義エディタは5人の被験者間で作成所要時間にばらつきはほとんど無く，作成所要時間そのものも従来方式に比べると大幅に少ない．従来方式において最も短い所要時間でテンプレートファイルを作成した被験者Aと最も長い所要時間で作成した被験者Cの比較を図\ref{graf:4}に示す．
 		
 		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[scale=0.45]{Document/ManualComparisonAC.eps}
-				\caption{従来方式手動入力における所要時間比較(被験者A，被験者C)}
+				\caption{従来方式における所要時間比較(被験者A，被験者C)}
 				\label{graf:4}
 			\end{center}
 		\end{figure}
@@ -391,12 +408,12 @@
 				\label{graf:9}
 			\end{center}
 		\end{figure}
-		従来方式ではテンプレートファイルを作成する場合手動入力で全ての項目を入力しなければならない．入力する際はHeatテンプレートファイル独自の書式に注意しながら入力しなければならず，事前の学習で内容を把握しきっていなければ正確に入力することは困難である．本評価実験において従来方式の事前の学習時間は最長でも540秒であり，被験者たちは10分に満たない学習時間ではHeatテンプレートファイル独自の書式について満足に理解できなかったと考えられる．しかし，従来方式でのテンプレートファイル作成回数が増える毎に従来方式の手動入力に慣れてくる被験者も現れ，システム構成の内容が複雑になっても所要時間の増加幅が少なくなっていった被験者もいた．ただし従来方式の手動入力に慣れることができなかった被験者はシステム構成の内容が複雑になるにつれて所要時間がより多く増加していった．
+		　従来方式ではテンプレートファイルを作成する場合手動入力で全ての項目を入力しなければならない．入力する際はテンプレートファイル独自の書式に注意しながら入力しなければならず，事前の学習で内容を把握しきっていなければ正確に入力することは困難である．本評価実験において従来方式の事前の学習時間は最長でも540秒であり，被験者たちは10分に満たない学習時間ではテンプレートファイル独自の書式について満足に理解できなかったと考えられる．しかし，従来方式でのテンプレートファイル作成回数が増える毎に従来方式の手動入力に慣れてくる被験者も現れ，システム構成の内容が複雑になっても所要時間の増加幅が少なくなっていった被験者もいた．ただし従来方式の手動入力に慣れることができなかった被験者はシステム構成の内容が複雑になるにつれて所要時間がより多く増加していった．
 		
-		以上のことから，従来方式でのテンプレートファイル作成所要時間には個人差が生じやすく，なおかつ作成所要時間は膨大になりがちであるといえる．一方オーケストレーション定義エディタを使用することにより作成所要時間の個人差を無くし，作成所要時間そのものを大幅に削減できる．よって作成所要時間の面でオーケストレーション定義エディタの有用性を示せたと考えられる．
+		 以上のことから，従来方式でのテンプレートファイル作成所要時間には個人差が生じやすく，なおかつ作成所要時間は膨大になりがちであるといえる．一方オーケストレーション定義エディタを使用することにより作成所要時間の個人差を無くし，作成所要時間そのものを大幅に削減できる．よって作成所要時間の面でオーケストレーション定義エディタの有用性を示せたと考えられる．
 		
 		\item[(エラー発生回数について)]\mbox{}\\
-		表\ref{table:6}と\ref{table:7}のとおり，従来方式では，まだテンプレートファイル記述経験の浅いうちに作成したものである(I)作成時のエラー発生回数が最も多い．その後被験者がテンプレートファイル記述に慣れ，エラー発生回数は減少するが，(I\hspace{-1pt}V)においてインスタンス数だけでなくルーター（ネットワーク）数を増加，つまり新たな追加記述要素が加わることでエラー発生回数は増加した．被験者５人が従来方式にて発生させたエラー回数について図\ref{graf:6}に示す．
+		　表\ref{table:6}と\ref{table:7}のとおり，従来方式では，まだテンプレートファイル記述経験の浅いうちに作成したものである(I)作成時のエラー発生回数が最も多い．その後被験者がテンプレートファイル記述に慣れ，エラー発生回数は減少するが，(I\hspace{-1pt}V)においてインスタンス数だけでなくルーター（ネットワーク）数を増加，つまり新たな追加記述要素が加わることでエラー発生回数は増加した．被験者５人が従来方式にて発生させたエラー回数について図\ref{graf:6}に示す．
 		\vspace{-2.8mm}
 		\begin{figure}[H]
 			\begin{center}
@@ -405,30 +422,35 @@
 				\label{graf:6}
 			\end{center}
 		\end{figure}
-		一方オーケストレーション定義エディタを使用した際は表\ref{table:7}のとおりテンプレートファイル作成時にエラーは発生しなかった．これは，入力される内容が決まっている項目は予め文字列データとして保存，出力時に所定の位置へ出力をしており，尚且つテンプレートファイル毎に入力内容が異なるものに関してはプルダウンメニューを用いて選択肢を用意し利用者に選択させ決定後にテンプレートファイルに出力しているので，利用者が記述内容をミスし得ない状態だからである．
+		　一方オーケストレーション定義エディタを使用した際は表\ref{table:7}のとおりテンプレートファイル作成時にエラーは発生しなかった．これは，入力される内容が決まっている項目は予め文字列データとして保存，出力時に所定の位置へ出力をしており，尚且つテンプレートファイル毎に入力内容が異なるものに関してはプルダウンメニューを用いて選択肢を用意し利用者に選択させ決定後にテンプレートファイルに出力しているので，利用者が記述内容をミスし得ない状態だからである．
 		
-		よって，利用者はHeatテンプレートファイルに関する専門知識を意識すること無く容易且つ正確にテンプレートファイルを作成できるといえる．
+		　よって，利用者はテンプレートファイルに関する専門知識を意識すること無く容易且つ正確にテンプレートファイルを作成できるといえる．
 	\end{description}
 \chapter{おわりに}
 	\section{研究のまとめ}
-	本研究では，OpenStack内コンポーネントであるHeatを使用したシステム定義をテンプレートファイルに記述するうえで問題点となっていた「膨大なテキスト記述量」と，「構成情報把握のしづらさ」を解決するためにオーケストレーション定義エディタを定義した．
+	本研究では，OpenStack内コンポーネントであるHeatを使用したシステム定義をテンプレートファイルに記述するうえで問題点となっていた「膨大なテキスト記述量」と，「構成情報把握のしづらさ」，「テンプレートファイルの書式の複雑さ」を解決するためにオーケストレーション定義エディタを提案し，実現した．
 	
-	オーケストレーション定義エディタでは，構築毎に入力内容が変わらない項目は予め文字列データとして保管しておく．これらの内容は出力時に自動で適切なデータだけをテンプレートファイルへ出力する．一方構築毎に内容が変わる項目は専用のデータ保管用Classを用意し，利用者に入力された内容を保管する．尚，保管用Classへデータを保存する項目は詳細入力画面とよばれる画面でプルダウンメニューにより選択肢を提供される．その後出力時にテンプレートファイルへ出力される．これらにより，従来テキストで記述していた内容をほとんどプルダウンメニューによる選択と自動入力で記述できるようになり，問題点のひとつ「膨大なテキスト記述量」を解決できた．
+	操作インターフェイスをGUIにすることにより，構築中でも構成内容を把握できるようになった．複雑な書式でテキストのみで入力されたテンプレートファイルの構成内容を，GUIを用いて可視化させることができた．これにより「構成情報の把握しづらさ」を解決した．
 	
-	また，操作インターフェイスをGUIにすることにより，構築中でも構成内容を把握できるようになった．これにより「構成情報の把握しづらさ」を解決した．
+	オーケストレーション定義エディタでは，構築毎に入力内容が変わらない項目は予め文字列データとして保管しておく．これらの内容は出力時に自動で適切なデータだけをテンプレートファイルへ出力する．一方構築毎に内容が変わる項目は専用のデータ保管用Classを用意し，利用者から入力された内容を保管する．尚，保管用Classへデータを保存する項目は詳細入力画面とよばれる画面でプルダウンメニューにより選択肢を提供される．その後出力時にテンプレートファイルへ出力される．これらにより，従来テキストで記述していた内容をほとんどプルダウンメニューによる選択と自動入力で記述できるようになり，利用者はテンプレートファイルの複雑な書式を意識すること無く，プルダウンメニューを選択するだけで項目の入力が可能となった．これにより問題点である「テンプレートファイルの書式の複雑さ」と「膨大なテキスト記述量」を解決できた．
 	
-	第４章の評価実験により，オーケストレーション定義エディタを用いることによりテンプレートファイル作成時のエラーを激減させることができ，自動入力等の補助によりテンプレートファイル作成所要時間も大幅に減少させることができた．また，オーケストレーション定義エディタを使用してテンプレートファイルを作成した際，５人の被験者の各作成所要時間に大きな差が開いていなかったことから，利用者の能力に依存すること無く短時間かつ容易で正確にテンプレートファイルを構築し，仮想環境を構築できることがわかった．
+	第４章の評価実験により，オーケストレーション定義エディタを用いることによりテンプレートファイル作成時のエラー発生回数を激減させることができ，自動入力等の補助によりテンプレートファイル作成所要時間も大幅に減少させることができた．また，オーケストレーション定義エディタを使用してテンプレートファイルを作成した際，５人の被験者の各作成所要時間に大きな差が開いていなかった．以上のことから，利用者の能力に依存すること無く短時間かつ容易で正確にテンプレートファイルを構築し，仮想環境を構築できることがわかった．
 	
-	つまり，オーケストレーション定義エディタはHeatに関する専門的な知識を意識させること無く，利用者の能力に左右されること無く短時間かつ正確，そして容易にテンプレートファイルを作成可能であるといえる．
+	つまり，オーケストレーション定義エディタの実現によりテンプレートファイルに関する専門的な知識を意識させること無く，利用者の能力に左右されること無く短時間かつ正確，そして容易にテンプレートファイルを作成可能であることが示せた．
 	
-	また，オーケストレーション定義エディタはHeatテンプレートファイルへの記述補助エディタであるため，基本的に記述させる内容を追加することは容易である．つまり，Heatの機能内であれば機能や動作を追加できるので，拡張性は高いといえる．
+	また，オーケストレーション定義エディタはテンプレートファイルへの記述補助エディタであるため，基本的に記述させる内容を追加することは容易である．つまり，Heatの機能内であれば機能や動作を追加できるので，拡張性は高いといえる．
 	\section{今後の課題}
-	オーケストレーション定義エディタの問題点として，起動するインスタンスを追加する際，１つずつしか追加できない点があげられる．これでは，仮に同じ内容のインスタンスを複数個起動させようとした場合でも，起動するインスタンス数の回数だけ同じ内容の記述をそれぞれの詳細入力画面で繰り返さなければならない．これを改善する案として詳細入力画面に「起動させるインスタンス数」という項目を追加し，同時に起動させるインスタンス数を指定できるようにする方法が挙げられる．この機能を追加することにより，同じ内容のインスタンスを複数個起動させたい場合であれば現時点のオーケストレーション定義エディタでの操作よりも操作回数を減少させることができ，テンプレートファイル作成所要時間も減少させることができる．
+	オーケストレーション定義エディタの問題点として，起動するインスタンスを追加する際，１つずつしか追加できない点があげられる．これでは，仮に同じ内容のインスタンスを複数個起動させようとした場合でも，起動するインスタンスの数だけ同じ内容の記述をそれぞれの詳細入力画面で繰り返さなければならない．これを改善する案として詳細入力画面に「起動させるインスタンス数」という項目を追加し，同時に起動させるインスタンス数を指定できるようにする方法が挙げられる．この機能を追加することにより，同じ内容のインスタンスを複数個起動させたい場合であれば現時点のオーケストレーション定義エディタでの操作よりも操作回数を減少させることができ，テンプレートファイル作成所要時間も減少させることができる．
 	
 
 %% 謝辞 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{acknowledgement}
+本研究を進めるにあたり，研究指導及び論文審査の主査として，横山和俊教授には多くのご指導を頂きました．また，研究室での活動だけではなく就職活動や社会人としての心構えについて数多くのご指導を頂きました．心より感謝致します．本研究の副査をお引き受けいただき，数々のご質問，ご指摘を頂きました情報学群 岩田誠教授と鵜川始陽准教授に心より感謝致します．
+
+分散処理OS研究室の同期である大崎康平君，別役速斗君，小池主馬君には，日頃の勉学をはじめ各種研究室内イベントや卒業研究でたくさんお世話になりました．ありがとうございました．また，分散処理OS研究室の先輩である畑翔太氏には勉学や研究内容について数多くの手助けをしていただきました．ありがとうございました．後輩である松岡亨一君，川村郁哉君，手塚詞央里さん，濱田哲郎君，船越勇樹君，本研究の評価実験への協力をはじめとする，日頃の様々な場面において力になってくれて本当にありがとうございました．
+
+最後に，様々な側面から私を見守り，支えてくださった家族に心から感謝します．
 %\input{acknowledgement.tex}
 \end{acknowledgement}
 
@@ -441,6 +463,8 @@
 \url{http://www.ibm.com/cloud-computing/jp/ja/what-is-iaas.html}
 \bibitem{bib:3}OpenStack
 \url{https://www.openstack.org}
+\bibitem{bib:4}OpenStackCloudSoftware Heat Documentation
+\url{http://docs.openstack.org/developer/heat/index.html}
 \end{thebibliography}
 
 %% 付録 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

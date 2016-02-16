@@ -1,0 +1,9 @@
+heat_template_version: 2014-10-16
+
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      image: cirros-0.3.3-x86_64
+      flavor: m1.small

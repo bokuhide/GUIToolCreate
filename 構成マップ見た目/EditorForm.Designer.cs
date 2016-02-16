@@ -49,8 +49,7 @@ namespace 構成マップ見た目
             this.imageComboBox.Items.AddRange(new object[] {
             "centos-test",
             "cirros-0.3.3-i386",
-            "cirros-0.3.3-x86_64",
-            "windows-test"});
+            "cirros-0.3.3-x86_64"});
             this.imageComboBox.Location = new System.Drawing.Point(173, 164);
             this.imageComboBox.Name = "comboBox2";
             this.imageComboBox.Size = new System.Drawing.Size(121, 20);

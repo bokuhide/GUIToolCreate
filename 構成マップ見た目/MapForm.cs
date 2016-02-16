@@ -578,9 +578,6 @@ namespace 構成マップ見た目
 
         }
 
-<<<<<<< HEAD
-        private void BlindC_Click(object sender, EventArgs e)
-=======
         private void MapForm_Load(object sender, EventArgs e)
         {
 
@@ -592,7 +589,6 @@ namespace 構成マップ見た目
         }
 
         private void demo3A4b_Click(object sender, EventArgs e)
->>>>>>> c11fd1532e971d53ec990fa6d4b023882787a7a0
         {
 
         }
