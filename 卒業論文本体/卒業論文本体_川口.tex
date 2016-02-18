@@ -31,11 +31,11 @@
 \author{川口　貴大}
 \Eauthor{}
 \advisor{横山　和俊}
-\date{2016/02/15}
+\date{2016/02/19}
 \abstract{
 	近年，ITリソースの迅速な確保，コスト削減等の目的からシステムの基盤としてIaaSの需要が高まっている．通常，システムは複数マシンの構成となり，大規模なシステムになるにつれ，構成定義に時間が掛かる．
 	
-	OpenStackは最も開発が進んでいるIaaS基盤ソフトウェアの一つである．OpenStackはHeatと呼ばれるコンポーネントでシステム自動構築をする．Heatは，ITリソースの構成情報を記述した設計図(テンプレートファイル)を読み込ませることで，その構成情報を基に自動的にシステムの構築・起動を行う．そのため，テンプレートファイルの作成はシステムを構築する上で重要な役割を担っている．しかし，テンプレートファイルは書式が複雑であり，記述を行う際にはHeat独自の知識を要する．またテキストファイルであるため，記述量が膨大になり，更に構成要素の関係が把握し難い問題もある．
+	OpenStackは最も開発が進んでいるIaaS基盤ソフトウェアの一つである．OpenStackはHeatと呼ばれるコンポーネントでシステム自動構築をする．Heatは，ITリソースの構成情報を記述した設計図(テンプレートファイル)を読み込ませることで，その構成情報を基に自動的にシステムの構築・起動を行う．そのため，テンプレートファイルの作成はシステムを構築する上で重要な役割を担っている．しかし，テンプレートファイルは書式が複雑であり，記述を行う際にはHeat独自の知識を要する．またテキストファイルであるため，記述量が膨大になり，さらに構成要素の関係が把握し難い問題もある．
 	
 	本研究ではGUIを用い，オーケストレーション定義を行うことにより、従来のテキスト入力における問題点を解決する新規テンプレートファイル作成ツールの開発を行い，従来の方法に比べて短時間かつ容易にシステム定義できることを示した．
 	
@@ -43,9 +43,9 @@
 \keyword{OpenStack，IaaS，Heat，オーケストレーション
 }
 \Eabstract{
-	Recentry，there has been a growing demand for IaaS．The reason is rapid securing of T resources， cost reduction．As well as the one for which IaaS was used，By the construction of the system design in IT service， more than one machine often used．The reason is redundant， load sharing and Efficiency of processing．But， the situation from which diversion of a system and reuse are asked， it increases in a building process．The factor is number of machines increase by magnification of a system．Therefore operational efficiency in system reproduction is desired．
+	Recentry，there has been a growing demand for IaaS．The reason is rapid securing of IT resources， cost reduction．A system is usually the construction of more than one machines, and as it becomes large-scale, it takes time for a definition.
 	
-	OpenStack is one of the IaaS foundation software development is advancing most， and many famous enterprises participate in a community．OpenStack is to automate system building by the component called Heat， and reproduction of a system is made efficient．　Heat is to make them read the plan in which composition information on an IT resource was written， and a system is started automatically based on the composition information．Therefore when building a system， the making of a template file is charged with the important role．But a form is complicated and when describing， a template file needs original knowledge．The problem that enormous description amount and composition information are difficult to imagine from a text is also held because it's a text file．
+	OpenStack is one of the IaaS foundation software development is advancing most．OpenStack is to automate system building by the component called Heat．Heat is to make them read the plan in which composition information on an IT resource was written， and a system is built automatically based on the composition information．Therefore when building a system， the making of a template file is charged with the important role．But a form is complicated and when describing， a template file needs original knowledge．There is a problem that a relation between the problem that the description amount becomes enormous and a component is difficult to grasp because it's a text file.
 	
 	The new template file generation tool which settles a problem in conventional input in text-entry mode was developed by giving an orchestration definition using a GUI by this research， and a short time and the thing you can do system definition of easily were indicated compared with a conventional way．
 	
@@ -72,10 +72,10 @@
 		\end{center}
 	\end{figure}
 	
-	IaaS(Infrastructure as a Service)とは，システムの稼働に必要なサーバー，ストレージ，ネットワークなどのインフラを，ネットワーク経由で提供するサービスのことである．\cite{bib:2}IaaSを提供する側は物理サーバーや物理ネットワークを仮想化しIaaS基盤を構築してサービスを提供する．IaaSを提供される側は，仮想化されたリソースを組み合わせシステムを構築，サービスを提供させることが可能となる．
+	IaaS(Infrastructure as a Service)とは，システムの稼働に必要なサーバー，ストレージ，ネットワークなどのインフラを，ネットワーク経由で提供するサービスのことである\cite{bib:2}．IaaSを提供する側は物理サーバーや物理ネットワークを仮想化しIaaS基盤を構築してサービスを提供する．IaaSを提供される側は，仮想化されたリソースを組み合わせシステムを構築，サービスを提供させることが可能となる．
 	IaaSの代表的なサービスとして，「Amazon Web Services」や，「Microsoft Azure」等が挙げられる．これらのサービスは，提供しているベンダが１つであり，それぞれ独自仕様で開発されたIaaS基盤を用いている．
 	
-	それに対し，多くのベンダが参加するコミュニティで開発されているIaaS基盤構築ソフトウェアとしてOpenStackが存在する．\cite{bib:3}OpenStackはオープンソース・ソフトウェアとして開発されており，Amazon Web Service や Microsoft Azure　と違い独自仕様で開発されていない．コミュニティに参加している企業は，オープンソース・ソフトウェアとして開発されたOpenStackをベースとしてIaaSを提供している．
+	それに対し，多くのベンダが参加するコミュニティで開発されているIaaS基盤構築ソフトウェアとしてOpenStackが存在する\cite{bib:3}．OpenStackはオープンソース・ソフトウェアとして開発されており，Amazon Web Service や Microsoft Azure　と違い独自仕様で開発されていない．コミュニティに参加している企業は，オープンソース・ソフトウェアとして開発されたOpenStackをベースとしてIaaSを提供している．
 	
 	OpenStackは，2010年10月に初期バージョンであるAustinがリリースされ，その後定期的に新しいバージョンを公開した後，2015年10月16日に最新バージョンのLibertyが公開されている．機能別にコンポーネントが分かれており，各コンポーネントが相互に連携して動作する．OpenStackの主要コンポーネントを表\ref{table:1}に示す．
 	\begin{table}[H]
@@ -93,7 +93,7 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
-	Heatとは，本来OpenStack利用者が手動で，各コンポーネントに指示を出し行っている仮想環境構築の手順を自動化する機能を提供している．自動化の手順としては，各コンポーネントを実行するために必要な項目を「Heatテンプレートファイル（以降テンプレートファイルと呼ぶ）」に記述後，テンプレートファイルを読み込むことで各コンポーネントで実行される内容を定義した後，自動で実行し仮想環境を構築を行うというものである．尚，テンプレートファイルには独自の書式が存在する．\cite{bib:4}
+	Heatとは，本来OpenStack利用者が手動で，各コンポーネントに指示を出し行っている仮想環境構築の手順を自動化する機能を提供している．自動化の手順としては，各コンポーネントを実行するために必要な項目を「Heatテンプレートファイル（以降テンプレートファイルと呼ぶ）」に記述後，テンプレートファイルを読み込むことで各コンポーネントで実行される内容を定義した後，自動で実行し仮想環境を構築を行うというものである．尚，テンプレートファイルには独自の書式が存在する\cite{bib:4}．
 	
 	OpenStackの各コンポーネントを自動化することができるHeatだが，現状問題が存在する．図\ref{table:2}に問題点を示す.
 	
@@ -218,6 +218,18 @@
 \chapter{オーケストレーション定義エディタの実装}
 	\section{動作環境}
 	本研究で作成されたオーケストレーション定義エディタはプログラミング言語であるC\#を使用して作成されているので，動作には「Microsoft .NET Framework 4.6」環境が必要である.
+	
+	\section{モジュール構成}
+	図\ref{graf:module}に，オーケストレーション定義エディタ内モジュールの構成を示す．オーケストレーション定義エディタは構成確認画面についての処理を行っている「MapForm.cs」と，詳細設定画面についての処理を行っている「EditorForm.cs」，そしてEditorForm.csで受け取ったデータを一時保存しておくための「InstanceConfig.cs」から構成されている．各モジュールで処理を終えた後，出力情報をテンプレートファイルに出力する．その後Heatへ読み込ませることで仮想環境を構築する．
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.42]{Document/モジュール構成図.eps}
+			\caption{モジュール構成}
+			\label{graf:module}
+		\end{center}
+	\end{figure}
+	
 	\section{画面構成}
 	オーケストレーション定義エディタは\ref{graf:2}の概略図で示したとおり，大きく分けて2つの画面から構成されている．オーケストレーション定義エディタに表示される「構成確認画面」と呼ばれる画面と，構成確認画面内から遷移できる「詳細設定画面」という画面である．以下に各画面の詳細を示す．
 	\newpage
@@ -231,7 +243,7 @@
 				\label{pic:1}
 			\end{center}
 		\end{figure}
-		オーケストレーション定義エディタ起動時の画面を図\ref{pic:2}に示す．１セグメント目のルーターとネットワーク以外にセグメントを増やしたい場合は，画面下部のネットワーク作成ボタンを押すことで次のセグメントを追加する．追加されたネットワークは，接続先ネットワークとして詳細入力画面から参照可能となる．
+		オーケストレーション定義エディタ起動時の画面を図\ref{pic:2}に示す．１セグメント目のルーターとネットワーク以外にセグメントを増やしたい場合は，画面下部のネットワーク作成ボタンを押すことで次のセグメントを追加する．追加されたネットワークは，接続先ネットワークとして詳細設定画面から参照可能となる．
 		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[scale=0.55]{Document/構成確認画面2.eps}
@@ -239,7 +251,7 @@
 				\label{pic:2}
 			\end{center}
 		\end{figure}
-		インスタンスを作成したい場合は，画面下部のインスタンス作成ボタンを押すことで新規作成するインスタンスを追加できる．ただしここで作成ボタンを押しただけではインスタンスに関する詳細設定ができていない状態であるため，作成後はインスタンスアイコンの下部にある編集ボタンをクリックして詳細入力画面に遷移しなければならない．尚，詳細設定画面で項目を入力した後構成確認画面に戻り画面下部のネットワーク反映ボタンを押すと，図\ref{pic:3}のようにGUIで接続先が把握できる．
+		インスタンスを作成したい場合は，画面下部のインスタンス作成ボタンを押すことで新規作成するインスタンスを追加できる．ただしここで作成ボタンを押しただけではインスタンスに関する詳細設定ができていない状態であるため，作成後はインスタンスアイコンの下部にある編集ボタンをクリックして詳細設定画面に遷移しなければならない．尚，詳細設定画面で項目を入力した後構成確認画面に戻り画面下部のネットワーク反映ボタンを押すと，図\ref{pic:3}のようにGUIで接続先が把握できる．
 		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[scale=0.55]{Document/構成確認画面3.eps}
@@ -266,8 +278,8 @@
 		\end{figure}
 		
 		
-		\subsection{詳細入力画面}
-		インスタンスに関する詳細入力は，構成確認画面から遷移できる詳細入力画面で行う．詳細入力画面の様子を図\ref{pic:4}に示す．詳細入力画面で入力できる4つの項目のうちインスタンス名を入力する項目1つを除き全てプルダウンメニューを採用している．インスタンス名のみ，自由に入力できる項目であるため手動入力形式であるが，その他3つの項目はある程度入力される内容が決まっているがインスタンス毎に入力内容が違う可能性がある．そこで選択肢を提供するためにプルダウンメニューを採用した．尚，構成確認画面でネットワークを追加した場合は「接続先」項目の選択肢が自動で追加される．
+		\subsection{詳細設定画面}
+		インスタンスに関する詳細設定は，構成確認画面から遷移できる詳細設定画面で行う．詳細設定画面の様子を図\ref{pic:4}に示す．詳細設定画面で入力できる4つの項目のうちインスタンス名を入力する項目1つを除き全てプルダウンメニューを採用している．インスタンス名のみ，自由に入力できる項目であるため手動入力形式であるが，その他3つの項目はある程度入力される内容が決まっているがインスタンス毎に入力内容が違う可能性がある．そこで選択肢を提供するためにプルダウンメニューを採用した．尚，構成確認画面でネットワークを追加した場合は「接続先」項目の選択肢が自動で追加される．入力されたデータは図\ref{graf:module}，図\ref{graf:3}で示しているように「データ保管用class」へ一時保存され，テンプレートファイルへデータを出力する際に入力される．
 		
 			\begin{figure}[H]
 				\begin{center}
@@ -277,13 +289,17 @@
 				\end{center}
 			\end{figure}
 	\section{テンプレートファイル出力の流れ}
-	オーケストレーション定義エディタで受け付けた入力内容は最終的にテンプレートファイルへと出力される．
-		\subsection{ネットワークに関する記述}
-		ネットワークに関する記述である，ネットワークについての記述，サブネットについての記述，ルーターについての記述，ルーターインターフェイスは構成確認画面での入力内容に応じて記述内容が変化する．構成確認画面でネットワークに対して行える操作は，新たなネットワークの追加のみである．
+	オーケストレーション定義エディタで利用者から受け付けた入力データは，「3.3.1構成確認画面」と「3.3.2詳細設定画面」で説明した内容に沿い，最後にテンプレートファイル出力ボタンを押すことで，テンプレートファイルへと出力される．しかしこれでテンプレートファイルへ入力されるべき内容が全て入力されるわけではない．利用者側から入力された内容しかテンプレートファイルへ出力されず，本来ならばテンプレートファイルに入力されるべき内容が一部入力されていないままである．そこで，利用者側で入力しなかったデータがどのように扱われるか説明を行う．
+		\subsection{その他利用者側で入力しなかったデータについて}
+		構成確認画面と詳細設定画面で入力されなかったデータは，図\ref{graf:module}中に表されている「ネットワーク，ルーターデータ」としてMapForm.csから出力情報として自動で準備される．その後テンプレートファイルへ出力するタイミングで，ネットワーク，ルーターデータを自動でテンプレートファイルへ出力する．尚，この時同時にデータ保管用classに一時保存された入力データも出力される．自動で入力されるデータ量は膨大であるため，図\ref{graf:auto}にデータの一部と自動入力の様子を示す．
+			\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.42]{Document/自動入力の様子.eps}
+					\caption{自動入力の様子}
+					\label{graf:auto}
+				\end{center}
+			\end{figure}
 		
-		その他ネットワークに関する細かな記述は，記述量こそ多いが依存・参照するものが決まっているので，予め文字列データとして保存しておき，必要な箇所へ自動で出力される．
-		\subsection{インスタンスに関する記述}
-		インスタンスに関する記述である，インスタンス名，ディスクイメージ，フレーバー，接続先ネットワーク名は図\ref{graf:3}で示したデータ保管用Classへ一度保管される．その後ファイル出力時にテンプレートファイルへ出力される．
 \chapter{評価}
 	\section{評価の目的}
 	１章「はじめに」中で提示した「Heatの問題点」を解決できたか検証，従来方式との差を計測するために被験者の，各手法に関する前提知識の勉強時間,作成インスタンス数とルーター数の増加させての作成所要時間,テンプレートファイル読み込み時にチェックされる記述ミスによるエラー発生数を計測,従来方式とオーケストレーション定義エディタ使用時それぞれで同じシステム構成を構築してもらい比較する.
@@ -319,59 +335,181 @@
 	
 	I，I\hspace{-1pt}I，I\hspace{-1pt}I\hspace{-1pt}I 3つの構成は単純にインスタンスの数のみを増加させ，残るI\hspace{-1pt}V，V のシステム構成は基本的な構成はI\hspace{-1pt}I\hspace{-1pt}Iと同じだが,作成するルーターの数（内部のネットワーク,サブネットの数）を増加させている.これは,インスタンスに関する記述のみを増加させた場合とルーターに関する記述を増加させた場合,記述増加量の差があるため双方の記述所要時間とエラー発生回数の増加幅やデータの動きに差が生まれると予測したためである.
 	\section{結果}
-	評価実験の結果を，従来方式については表\ref{table:6},オーケストレーション定義エディタについては表\ref{table:7}に示す.
+	評価実験の結果を示す．各被験者の学習時間の計測結果を表\ref{table:6}に示す．被験者別の作成所要時間を表\ref{table:A}から順に表\ref{table:E}まで示す．また，被験者別のテンプレートファイル作成時エラー発生回数を表\ref{table:eA}から順に表\ref{table:eE}まで示す．
 	
 	\begin{table}[H]
 		\begin{center}
-				\vspace{-4mm}
-			\caption{各評価要素の実験結果-従来方式}
+			\caption{各被験者学習時間計測結果}
 			\label{table:6}
-			\begin{tabular}{|p{3cm}|p{2cm}|p{2cm}|}\hline
-				評価要素 & 最小値 & 最大値\\ \hline \hline
-				学習時間 & 413(秒)　& 540(秒)\\ \hline
-				作成所要時間 (I) & 685(秒) & 1328(秒)\\ \hline
-				作成所要時間 (I\hspace{-1pt}I) & 531(秒) & 1560(秒)\\ \hline
-				作成所要時間 (I\hspace{-1pt}I\hspace{-1pt}I) & 597(秒) & 931(秒)\\ \hline
-				作成所要時間 (I\hspace{-1pt}V) & 525(秒) & 1258(秒)\\ \hline
-				作成所要時間 (V) & 485(秒) & 1532(秒)\\ \hline
-				エラー発生回数 (I) & 1(回) &  7(回)\\ \hline
-				エラー発生回数 (I\hspace{-1pt}I) & 1(回) &  3(回)\\ \hline
-				エラー発生回数 (I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) &  5(回)\\ \hline
-				エラー発生回数 (I\hspace{-1pt}V) & 0(回) &  7(回)\\ \hline
-				エラー発生回数 (V) & 0(回) &  4(回)\\ \hline
+			\begin{tabular}{|r|r|r|}\hline
+				被験者 & オーケストレーション定義エディタ & 従来方式\\ \hline \hline
+				A & 180(秒)& 540(秒)\\ \hline
+				B & 72(秒) & 421(秒)\\ \hline
+				C & 90(秒) & 503(秒)\\ \hline
+				D & 90(秒) & 479(秒)\\ \hline
+				E & 103(秒) & 413(秒)\\ \hline
 			\end{tabular}
 		\end{center}
 	\end{table}
 	
 	\begin{table}[H]
 		\begin{center}
-			\vspace{-4mm}
-			\caption{各評価要素の実験結果-オーケストレーション定義エディタ}
-			\label{table:7}
-			\begin{tabular}{|p{3cm}|p{2cm}|p{2cm}|}\hline
-				評価要素 & 最小値 & 最大値\\ \hline \hline
-				学習時間 & 72(秒)　& 180(秒)\\ \hline
-				作成所要時間 (I) & 27(秒) & 71(秒)\\ \hline
-				作成所要時間 (I\hspace{-1pt}I) & 87(秒) & 166(秒)\\ \hline
-				作成所要時間 (I\hspace{-1pt}I\hspace{-1pt}I) & 105(秒) & 190(秒)\\ \hline
-				作成所要時間 (I\hspace{-1pt}V) & 113(秒) & 228(秒)\\ \hline
-				作成所要時間 (V) & 142(秒) & 229(秒)\\ \hline
-				エラー発生回数 (I) & 0(回) &  0(回)\\ \hline
-				エラー発生回数 (I\hspace{-1pt}I) & 0(回) &  0(回)\\ \hline
-				エラー発生回数 (I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) &  0(回)\\ \hline
-				エラー発生回数 (I\hspace{-1pt}V) & 0(回) &  0(回)\\ \hline
-				エラー発生回数 (V) & 0(回) &  0(回)\\ \hline
+			\caption{被験者A-作成所要時間計測結果}
+			\label{table:A}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 27(秒) & 685(秒)\\ \hline
+				(I\hspace{-1pt}I) & 87(秒) & 597(秒)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 105(秒) & 485(秒)\\ \hline
+				(I\hspace{-1pt}V) & 113(秒) & 594(秒)\\ \hline
+				(V) & 160(秒) & 660(秒)\\ \hline	
 			\end{tabular}
 		\end{center}
 	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者B-作成所要時間計測結果}
+			\label{table:B}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 28(秒) & 1216(秒)\\ \hline
+				(I\hspace{-1pt}I) & 166(秒) & 931(秒)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 190(秒) & 745(秒)\\ \hline
+				(I\hspace{-1pt}V) & 124(秒) & 862(秒)\\ \hline
+				(V) & 160(秒) & 730(秒)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者C-作成所要時間計測結果}
+			\label{table:C}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 36(秒) & 1328(秒)\\ \hline
+				(I\hspace{-1pt}I) & 148(秒) & 886(秒)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 106(秒) & 1532(秒)\\ \hline
+				(I\hspace{-1pt}V) & 228(秒) & 2070(秒)\\ \hline
+				(V) & 162(秒) & 2990(秒)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者D-作成所要時間計測結果}
+			\label{table:D}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 71(秒) & 1323(秒)\\ \hline
+				(I\hspace{-1pt}I) & 117(秒) & 916(秒)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 139(秒) & 868(秒)\\ \hline
+				(I\hspace{-1pt}V) & 188(秒) & 1173(秒)\\ \hline
+				(V) & 145(秒) & 1946(秒)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者E-作成所要時間計測結果}
+			\label{table:E}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 52(秒) & 1200(秒)\\ \hline
+				(I\hspace{-1pt}I) & 107(秒) & 683(秒)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 137(秒) & 731(秒)\\ \hline
+				(I\hspace{-1pt}V) & 189(秒) & 2296(秒)\\ \hline
+				(V) & 229(秒) & 1191(秒)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者A-テンプレートファイル作成時エラー発生回数}
+			\label{table:eA}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 0(回) & 6(回)\\ \hline
+				(I\hspace{-1pt}I) & 0(回) & 3(回)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) & 0(回)\\ \hline
+				(I\hspace{-1pt}V) & 0(回) & 0(回)\\ \hline
+				(V) & 0(回) & 2(回)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者B-テンプレートファイル作成時エラー発生回数}
+			\label{table:eB}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 0(回) & 7(回)\\ \hline
+				(I\hspace{-1pt}I) & 0(回) & 3(回)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) & 3(回)\\ \hline
+				(I\hspace{-1pt}V) & 0(回) & 0(回)\\ \hline
+				(V) & 0(回) & 0(回)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者C-テンプレートファイル作成時エラー発生回数}
+			\label{table:eC}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 0(回) & 6(回)\\ \hline
+				(I\hspace{-1pt}I) & 0(回) & 1(回)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) & 5(回)\\ \hline
+				(I\hspace{-1pt}V) & 0(回) & 7(回)\\ \hline
+				(V) & 0(回) & 4(回)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者D-テンプレートファイル作成時エラー発生回数}
+			\label{table:eD}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 0(回) & 3(回)\\ \hline
+				(I\hspace{-1pt}I) & 0(回) & 3(回)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) & 3(回)\\ \hline
+				(I\hspace{-1pt}V) & 0(回) & 2(回)\\ \hline
+				(V) & 0(回) & 4(回)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{被験者E-テンプレートファイル作成時エラー発生回数}
+			\label{table:eE}
+			\begin{tabular}{|r|r|r|}\hline
+				システム構成 & オーケストレーション定義エディタ& 従来方式\\ \hline \hline
+				(I) & 0(回) & 1(回)\\ \hline
+				(I\hspace{-1pt}I) & 0(回) & 1(回)\\ \hline
+				(I\hspace{-1pt}I\hspace{-1pt}I) & 0(回) & 0(回)\\ \hline
+				(I\hspace{-1pt}V) & 0(回) & 3(回)\\ \hline
+				(V) & 0(回) & 1(回)\\ \hline	
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
 	\section{考察}
-	\begin{description}
-		\item[(学習時間について)]\mbox{}\\ 　従来方式，オーケストレーション定義エディタ双方の学習時間を比較すると，全ての被験者がオーケストレーション定義エディタについての学習時間が従来方式よりも短いことがわかる．(図\ref{graf:8})
+		\subsection{学習時間について}
+		従来方式，オーケストレーション定義エディタ双方の学習時間を比較すると，全ての被験者がオーケストレーション定義エディタについての学習時間が従来方式よりも短いことがわかる．(図\ref{graf:8})
 		
 			\begin{figure}[H]
 				\begin{center}
 					\includegraphics[scale=0.42]{Document/studytime_all.eps}
-					\caption{各方式学習時間比較}
+					\caption{学習時間比較}
 					\label{graf:8}
 				\end{center}
 			\end{figure}
@@ -381,7 +519,8 @@
 		
 		　以上のことから，学習時間の面において従来方式よりもオーケストレーション定義エディタのほうが導入が容易であることが示せたと考えられる．
 		
-		\item[(作成所要時間について)]\mbox{}\\ 　記録する3つの評価要素のうち，従来方式とオーケストレーション定義エディタ大きく差がでたのが作成所要時間である．従来方式は5人の被験者間で作成所要時間に大きなばらつきがあり，なおかつ作成所要時間そのものも長時間に及んでいた．一方オーケストレーション定義エディタは5人の被験者間で作成所要時間にばらつきはほとんど無く，作成所要時間そのものも従来方式に比べると大幅に少ない．従来方式において最も短い所要時間でテンプレートファイルを作成した被験者Aと最も長い所要時間で作成した被験者Cの比較を図\ref{graf:4}に示す．
+		　\subsection{作成所要時間について}
+		　記録する3つの評価要素のうち，従来方式とオーケストレーション定義エディタ大きく差がでたのが作成所要時間である．従来方式は5人の被験者間で作成所要時間に大きなばらつきがあり，なおかつ作成所要時間そのものも長時間に及んでいた．一方オーケストレーション定義エディタは5人の被験者間で作成所要時間にばらつきはほとんど無く，作成所要時間そのものも従来方式に比べると大幅に少ない．従来方式において最も短い所要時間でテンプレートファイルを作成した被験者Aと最も長い所要時間で作成した被験者Cの比較を図\ref{graf:4}に示す．
 		
 		\begin{figure}[H]
 			\begin{center}
@@ -404,17 +543,18 @@
 		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[scale=0.42]{Document/Create_alltime.eps}
-				\caption{各方式作成所要時間比較}
+				\caption{作成所要時間比較}
 				\label{graf:9}
 			\end{center}
 		\end{figure}
+		
 		　従来方式ではテンプレートファイルを作成する場合手動入力で全ての項目を入力しなければならない．入力する際はテンプレートファイル独自の書式に注意しながら入力しなければならず，事前の学習で内容を把握しきっていなければ正確に入力することは困難である．本評価実験において従来方式の事前の学習時間は最長でも540秒であり，被験者たちは10分に満たない学習時間ではテンプレートファイル独自の書式について満足に理解できなかったと考えられる．しかし，従来方式でのテンプレートファイル作成回数が増える毎に従来方式の手動入力に慣れてくる被験者も現れ，システム構成の内容が複雑になっても所要時間の増加幅が少なくなっていった被験者もいた．ただし従来方式の手動入力に慣れることができなかった被験者はシステム構成の内容が複雑になるにつれて所要時間がより多く増加していった．
 		
 		 以上のことから，従来方式でのテンプレートファイル作成所要時間には個人差が生じやすく，なおかつ作成所要時間は膨大になりがちであるといえる．一方オーケストレーション定義エディタを使用することにより作成所要時間の個人差を無くし，作成所要時間そのものを大幅に削減できる．よって作成所要時間の面でオーケストレーション定義エディタの有用性を示せたと考えられる．
 		
-		\item[(エラー発生回数について)]\mbox{}\\
+		\subsection{エラー発生回数について}
 		　表\ref{table:6}と\ref{table:7}のとおり，従来方式では，まだテンプレートファイル記述経験の浅いうちに作成したものである(I)作成時のエラー発生回数が最も多い．その後被験者がテンプレートファイル記述に慣れ，エラー発生回数は減少するが，(I\hspace{-1pt}V)においてインスタンス数だけでなくルーター（ネットワーク）数を増加，つまり新たな追加記述要素が加わることでエラー発生回数は増加した．被験者５人が従来方式にて発生させたエラー回数について図\ref{graf:6}に示す．
-		\vspace{-2.8mm}
+
 		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[scale=0.45]{Document/TemplateFile_ErrorGraf.eps}
@@ -425,14 +565,13 @@
 		　一方オーケストレーション定義エディタを使用した際は表\ref{table:7}のとおりテンプレートファイル作成時にエラーは発生しなかった．これは，入力される内容が決まっている項目は予め文字列データとして保存，出力時に所定の位置へ出力をしており，尚且つテンプレートファイル毎に入力内容が異なるものに関してはプルダウンメニューを用いて選択肢を用意し利用者に選択させ決定後にテンプレートファイルに出力しているので，利用者が記述内容をミスし得ない状態だからである．
 		
 		　よって，利用者はテンプレートファイルに関する専門知識を意識すること無く容易且つ正確にテンプレートファイルを作成できるといえる．
-	\end{description}
 \chapter{おわりに}
 	\section{研究のまとめ}
 	本研究では，OpenStack内コンポーネントであるHeatを使用したシステム定義をテンプレートファイルに記述するうえで問題点となっていた「膨大なテキスト記述量」と，「構成情報把握のしづらさ」，「テンプレートファイルの書式の複雑さ」を解決するためにオーケストレーション定義エディタを提案し，実現した．
 	
 	操作インターフェイスをGUIにすることにより，構築中でも構成内容を把握できるようになった．複雑な書式でテキストのみで入力されたテンプレートファイルの構成内容を，GUIを用いて可視化させることができた．これにより「構成情報の把握しづらさ」を解決した．
 	
-	オーケストレーション定義エディタでは，構築毎に入力内容が変わらない項目は予め文字列データとして保管しておく．これらの内容は出力時に自動で適切なデータだけをテンプレートファイルへ出力する．一方構築毎に内容が変わる項目は専用のデータ保管用Classを用意し，利用者から入力された内容を保管する．尚，保管用Classへデータを保存する項目は詳細入力画面とよばれる画面でプルダウンメニューにより選択肢を提供される．その後出力時にテンプレートファイルへ出力される．これらにより，従来テキストで記述していた内容をほとんどプルダウンメニューによる選択と自動入力で記述できるようになり，利用者はテンプレートファイルの複雑な書式を意識すること無く，プルダウンメニューを選択するだけで項目の入力が可能となった．これにより問題点である「テンプレートファイルの書式の複雑さ」と「膨大なテキスト記述量」を解決できた．
+	オーケストレーション定義エディタでは，構築毎に入力内容が変わらない項目は予め文字列データとして保管しておく．これらの内容は出力時に自動で適切なデータだけをテンプレートファイルへ出力する．一方構築毎に内容が変わる項目は専用のデータ保管用Classを用意し，利用者から入力された内容を保管する．尚，保管用Classへデータを保存する項目は詳細設定画面とよばれる画面でプルダウンメニューにより選択肢を提供される．その後出力時にテンプレートファイルへ出力される．これらにより，従来テキストで記述していた内容をほとんどプルダウンメニューによる選択と自動入力で記述できるようになり，利用者はテンプレートファイルの複雑な書式を意識すること無く，プルダウンメニューを選択するだけで項目の入力が可能となった．これにより問題点である「テンプレートファイルの書式の複雑さ」と「膨大なテキスト記述量」を解決できた．
 	
 	第４章の評価実験により，オーケストレーション定義エディタを用いることによりテンプレートファイル作成時のエラー発生回数を激減させることができ，自動入力等の補助によりテンプレートファイル作成所要時間も大幅に減少させることができた．また，オーケストレーション定義エディタを使用してテンプレートファイルを作成した際，５人の被験者の各作成所要時間に大きな差が開いていなかった．以上のことから，利用者の能力に依存すること無く短時間かつ容易で正確にテンプレートファイルを構築し，仮想環境を構築できることがわかった．
 	
@@ -440,7 +579,7 @@
 	
 	また，オーケストレーション定義エディタはテンプレートファイルへの記述補助エディタであるため，基本的に記述させる内容を追加することは容易である．つまり，Heatの機能内であれば機能や動作を追加できるので，拡張性は高いといえる．
 	\section{今後の課題}
-	オーケストレーション定義エディタの問題点として，起動するインスタンスを追加する際，１つずつしか追加できない点があげられる．これでは，仮に同じ内容のインスタンスを複数個起動させようとした場合でも，起動するインスタンスの数だけ同じ内容の記述をそれぞれの詳細入力画面で繰り返さなければならない．これを改善する案として詳細入力画面に「起動させるインスタンス数」という項目を追加し，同時に起動させるインスタンス数を指定できるようにする方法が挙げられる．この機能を追加することにより，同じ内容のインスタンスを複数個起動させたい場合であれば現時点のオーケストレーション定義エディタでの操作よりも操作回数を減少させることができ，テンプレートファイル作成所要時間も減少させることができる．
+	オーケストレーション定義エディタの問題点として，起動するインスタンスを追加する際，１つずつしか追加できない点があげられる．これでは，仮に同じ内容のインスタンスを複数個起動させようとした場合でも，起動するインスタンスの数だけ同じ内容の記述をそれぞれの詳細設定画面で繰り返さなければならない．これを改善する案として詳細設定画面に「起動させるインスタンス数」という項目を追加し，同時に起動させるインスタンス数を指定できるようにする方法が挙げられる．この機能を追加することにより，同じ内容のインスタンスを複数個起動させたい場合であれば現時点のオーケストレーション定義エディタでの操作よりも操作回数を減少させることができ，テンプレートファイル作成所要時間も減少させることができる．
 	
 
 %% 謝辞 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -448,7 +587,7 @@
 \begin{acknowledgement}
 本研究を進めるにあたり，研究指導及び論文審査の主査として，横山和俊教授には多くのご指導を頂きました．また，研究室での活動だけではなく就職活動や社会人としての心構えについて数多くのご指導を頂きました．心より感謝致します．本研究の副査をお引き受けいただき，数々のご質問，ご指摘を頂きました情報学群 岩田誠教授と鵜川始陽准教授に心より感謝致します．
 
-分散処理OS研究室の同期である大崎康平君，別役速斗君，小池主馬君には，日頃の勉学をはじめ各種研究室内イベントや卒業研究でたくさんお世話になりました．ありがとうございました．また，分散処理OS研究室の先輩である畑翔太氏には勉学や研究内容について数多くの手助けをしていただきました．ありがとうございました．後輩である松岡亨一君，川村郁哉君，手塚詞央里さん，濱田哲郎君，船越勇樹君，本研究の評価実験への協力をはじめとする，日頃の様々な場面において力になってくれて本当にありがとうございました．
+分散処理OS研究室の同期である大崎康平君，別役速斗君，小池主馬君には，日頃の勉学をはじめ各種研究室内イベントや卒業研究でたくさんお世話になりました．ありがとうございました．また，分散処理OS研究室の先輩である畑翔太氏には勉学や研究内容について数多くの手助けをしていただきました．ありがとうございました．後輩である松岡亨一君，川村郁哉君，手塚詞央里さん，濱田哲郎君，舩越勇樹君，本研究の評価実験への協力をはじめとする，日頃の様々な場面において力になってくれて本当にありがとうございました．
 
 最後に，様々な側面から私を見守り，支えてくださった家族に心から感謝します．
 %\input{acknowledgement.tex}
