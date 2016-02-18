@@ -49,3 +49,6 @@ C:\Users\matsuoka\Documents\GitHub\makeenv\GUIToolCreate\構成マップ見た�
 C:\Users\matsuoka\Documents\GitHub\makeenv\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.MapForm.resources
 C:\Users\matsuoka\Documents\GitHub\makeenv\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.Properties.Resources.resources
 C:\Users\matsuoka\Documents\GitHub\makeenv\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.csproj.GenerateResource.Cache
+C:\Users\貴大\Documents\GUIToolCreate\構成マップ見た目\bin\Debug\構成マップ見た目.exe.config
+C:\Users\貴大\Documents\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.exe
+C:\Users\貴大\Documents\GUIToolCreate\構成マップ見た目\obj\Debug\構成マップ見た目.pdb
