@@ -26,28 +26,24 @@
 \years{平成27}
 \title{OpenStack環境でのオーケストレーション定義を容易にするGUIエディタの実現}
 \titlelength{19}		%% 表紙の表題の行長(全角文字数<20, default=19)
-\Etitle{Realization of the GUI editor the orchestration definition is made easy for which by the OpenStack environment}
+\Etitle{Implementation of GUI editor to facilitate the orchestration definition in OpenStack environment}
 \idnumber{1160304}
 \author{川口　貴大}
 \Eauthor{Takahiro Kawaguchi}
 \advisor{横山　和俊}
-\date{2016/02/20}
+\date{2016年02月22日}
 \abstract{
-	近年，ITリソースの迅速な確保，コスト削減等の目的からシステムの基盤としてIaaSの需要が高まっている．通常，システムは複数マシンの構成となり，大規模なシステムになるにつれ，構成定義に時間が掛かる．
+	近年，ITリソースを迅速に確保する目的やシステムのコストを抑制するため，IaaSが普及している．OpenStackは，IaaSを構築するためのソフトウェアである．通常，システムは，複数のサーバーや複数のネットワークから構成される．OpenStackのHeatコンポーネントは，複数のサーバーやネットワークを自動的に構築する機能を提供している．具体的には，Heatコンポーネントは，システム構成情報を記述したテンプレートファイルと呼ばれるファイルを読み込み，その情報に基づいて自動的にシステムを構築する．しかし，テンプレートファイルの書式が複雑であるため，OpenStackの初心者にとっては記述が難しい．また，テキストファイルであるため，記述量が膨大になる問題があり，また，記述内容間の関係が把握しづらい．
 	
-	OpenStackは最も開発が進んでいるIaaS基盤ソフトウェアの一つである．OpenStackはHeatと呼ばれるコンポーネントでシステム自動構築をする．Heatは，ITリソースの構成情報を記述した設計図(テンプレートファイル)を読み込ませることで，その構成情報を基に自動的にシステムの構築・起動を行う．そのため，テンプレートファイルの作成はシステムを構築する上で重要な役割を担っている．しかし，テンプレートファイルは書式が複雑であり，記述を行う際にはHeat独自の知識を要する．またテキストファイルであるため，記述量が膨大になり，さらに構成要素の関係が把握し難い問題もある．
-	
-	本研究ではGUIを用い，オーケストレーション定義を行うことにより、従来のテキスト入力における問題点を解決する新規テンプレートファイル作成ツールの開発を行い，従来の方法に比べて短時間かつ容易にシステム定義できることを示した．
+	本研究では，これらの問題点を解決するため，オーケストレーション定義を容易にするGUIエディタを提案する．提案するGUIをMicrosoft.Net frameworkを用い，C\#で実装し評価を行った．実験結果より，提案するGUIは，OpenStack初心者に対して，短い時間でテンプレートファイルを定義できることが示せた．
 	
 }
 \keyword{OpenStack，IaaS，Heat，オーケストレーション
 }
 \Eabstract{
-	Recentry，there has been a growing demand for IaaS．The reason is rapid securing of IT resources， cost reduction．A system usually consists of more than one machine, and as it becomes large-scale, it takes time for a definition.
+	In recent years, IaaS infrastructure is widely used to construct the system quickly, and to decrease system costs. OpenStack is the software to build IaaS infrastructure. Usually, the system is consists of several servers and several networks. Heat component of OpenStack constructs several servers and several networks automatically. Heat component builds the system from template files that describe the design information of the system. However, it is difficult to describe the template file for beginners of OpenStack because format of the template file is complex. Further, because the template file is a text file, amount of description is increase and understanding of relation of description is difficult.
 	
-	OpenStack is one of IaaS foundation software．That has been developed most．OpenStack builds a system automatically by the component called "Heat"．When the plan in which composition information on an IT resource was written (template file) is read, Heat does building of a system and a start automatically based on the composition information．Therefore when building a system， the making of a template file is charged with the important role．But a form is complicated and when describing， a template file needs original knowledge．There is a problem that the description amount often becomes enormous because it's a text file. When the description amount increases, and becomes enormous, there is also a problem that a relation of a component is difficult to grasp.
-	
-	Experimental results，shows GUI editor settles a conventional problem, than a usual method, a short time and, a system could be defined easily.
+	To overcome above problem, we propose the GUI editor to facilitate the orchestration definition. The GUI editor implemented in C\# language using on Microsoft .Net Framework. Experimental results show that proposed GUI editor enables beginners to define template files in short time.
 	
 	
 }				%% プロジェクト研究報告書の場合は不要
